@@ -33,6 +33,26 @@ If you have ever spent three hours building a content brief in Google Docs or fo
 
 ---
 
+## What people say about the underlying training
+
+These skills sit underneath the free [Hawk Academy](https://hawkacademy.co) course. The training the course teaches is what the skills automate.
+
+> "Hands down one of the most comprehensive SEO Courses I've encountered. A huge time saver."
+>
+> — **Daniel Gladki**, eCommerce Director, Uniqlo
+
+> "I thought I already knew SEO, having done it for 5 years, but the technical SEO and link-building stuff is incredible."
+>
+> — **Harvey**, Terrain Tamer
+
+> "We enrolled our entire team. The quizzes and real-world examples make it so much easier to actually retain and apply the knowledge."
+>
+> — **Will Rosindell**, Medicart
+
+More reviews on [hawkacademy.co](https://hawkacademy.co). Over 6,000 students are enrolled in the free course these skills come from.
+
+---
+
 ## Install (90 seconds)
 
 Drop into Claude Desktop's skills folder. No build step, no API keys, no dependencies.
@@ -135,6 +155,14 @@ These skills are built and maintained by the StudioHawk senior team, distributed
 - **[Lawrence Hitches](https://hawkacademy.co/about/lawrence-hitches)** is Chief of Staff at StudioHawk and an AI SEO consultant based in Melbourne. Young Search Professional of the Year (Semrush 2021). Speaker at SEO conferences across Asia-Pacific.
 
 The skills reflect how a 120-person SEO agency actually runs audits, briefs, and reports. They are not generic prompts.
+
+### StudioHawk has been recognised by
+
+US Search Awards · UK Search Awards · APAC Search Awards (4× Best Large SEO Agency) · Global Search Awards · SEMrush Search Awards · Global Digital Excellence Awards · Global Marketing Awards · Global Agency Awards · The Drum Awards · Marketing Innovation Awards · Mumbrella
+
+### StudioHawk clients (a sample)
+
+Nike · New Balance · Fujifilm · Officeworks · Kao · Weber · Bondi Sands · Intuit QuickBooks · Kogan · The Good Guys · Ryobi · Moonpig · Employment Hero · PETstock · Samsung
 
 ---
 
