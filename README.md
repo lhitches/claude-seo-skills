@@ -10,6 +10,12 @@ These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](htt
 
 Every skill has a matching landing page at [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) with worked examples, sample output, and the StudioHawk thinking behind it.
 
+### Watch first: "Don't Use Claude for SEO Until You Watch This"
+
+[![Don't Use Claude for SEO Until You Watch This](https://img.youtube.com/vi/S18roQFhxUQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=S18roQFhxUQ)
+
+A short walkthrough of how StudioHawk actually uses these Claude Skills on live client SEO work. Click the thumbnail to play on YouTube.
+
 ---
 
 ## Why we built this
