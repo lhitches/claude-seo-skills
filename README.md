@@ -1,9 +1,9 @@
 # Claude SEO Skills
 
-> 30 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 29 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-30-orange.svg)](#the-30-skills)
+[![Skills](https://img.shields.io/badge/skills-29-orange.svg)](#the-29-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -22,7 +22,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 30 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 29 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -91,7 +91,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 30 skills
+## The 29 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -136,7 +136,6 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [AI Visibility](https://hawkacademy.co/claude-seo-skills/ai-visibility) | Scores any page on the on-page factors most likely to win an AI citation. Run it before you publish. |
 | [AI Citation Monitor](https://hawkacademy.co/claude-seo-skills/ai-citation-monitor) | Tracks whether ChatGPT, Claude, and Perplexity cite your site for the queries that matter. |
 | [Claude Code SEO](https://hawkacademy.co/claude-seo-skills/claude-code-seo) | Plug Claude Code into your SEO workflow for code-level fixes, schema injection, and automated audits. |
-| [SOURC-E Auditor](https://hawkacademy.co/claude-seo-skills/sourc-e-auditor) | Scores your site against the six-pillar SOURC-E framework for AI search, runs the formula, and returns a do-this-week fix list. |
 | [Clarity AI Bot Auditor](https://hawkacademy.co/claude-seo-skills/clarity-ai-bot-auditor) | Paste your Microsoft Clarity AI bot data. Diagnoses every AI bot as healthy, blocked, throttled, or over-scraping, with one decisive fix per bot. |
 | [Citation Share Auditor](https://hawkacademy.co/claude-seo-skills/citation-share-auditor) | Reads your Bing Citation Share data and shows your slice of AI answers, the topics and intents you own, and where to grow it. |
 
