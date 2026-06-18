@@ -1,6 +1,6 @@
 # Claude SEO Skills
 
-> 29 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 30 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-29-orange.svg)](#the-29-skills)
@@ -22,7 +22,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 29 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 30 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -91,7 +91,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 29 skills
+## The 30 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -112,6 +112,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | Skill | What it does |
 |---|---|
 | [Ecommerce SEO Audit](https://hawkacademy.co/claude-seo-skills/ecommerce-seo-audit) | Product, collection, and category-page audit. The issues StudioHawk fixes on every ecommerce client. |
+| [Agentic Product Page Auditor](https://hawkacademy.co/claude-seo-skills/agentic-product-page-auditor) | Audits whether an AI shopping agent can read and buy from your product page. Scores the product graph across six layers and gives one template-level fix per problem, ranked by what blocks a sale. |
 | [B2B SEO Audit](https://hawkacademy.co/claude-seo-skills/b2b-seo-audit) | Long sales cycles, decision committees, and the content that actually converts the buyer. |
 | [SaaS SEO Audit](https://hawkacademy.co/claude-seo-skills/saas-seo-audit) | Feature pages, comparison pages, free tools, and product-led growth content that compounds. |
 | [Local SEO Audit](https://hawkacademy.co/claude-seo-skills/local-seo-audit) | GBP, NAP citations, local landing pages, and review strategy in one skill. |
