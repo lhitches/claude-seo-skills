@@ -1,9 +1,9 @@
 # Claude SEO Skills
 
-> 30 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 32 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-29-orange.svg)](#the-29-skills)
+[![Skills](https://img.shields.io/badge/skills-32-orange.svg)](#the-32-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -22,7 +22,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 30 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 32 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -91,7 +91,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 30 skills
+## The 32 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -106,6 +106,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Screaming Frog Analyser](https://hawkacademy.co/claude-seo-skills/screaming-frog-analyser) | Drop your Screaming Frog export, get a StudioHawk-style audit back. |
 | [Google Trust Check](https://hawkacademy.co/claude-seo-skills/google-trust) | Scores any page on the trust signals Google actually weights. Author entity, E-E-A-T, brand authority. |
 | [Cannibalization Detector](https://hawkacademy.co/claude-seo-skills/cannibalization-detector) | Finds the queries where two of your own pages compete and split the signal. Picks the keeper and gives one fix: consolidate, canonical, or differentiate. |
+| [Schema Markup Generator](https://github.com/lhitches/claude-seo-skills/blob/main/skills/schema-generator.md) | Generates and validates clean JSON-LD for any page type, with required vs recommended properties and a rich-result test checklist. |
 
 ### Industry-specific audits
 
@@ -126,6 +127,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Information Gain](https://hawkacademy.co/claude-seo-skills/information-gain) | Finds the unique angle competitors are missing on a query. Use before you write. |
 | [Title Tag Optimizer](https://hawkacademy.co/claude-seo-skills/title-tag-optimizer) | The title-tag rewrite skill. Tested against Google's CTR signals StudioHawk monitors. |
 | [Topical Authority Map](https://hawkacademy.co/claude-seo-skills/topical-authority-map) | Builds the cluster architecture for an entire topic from a single seed keyword. |
+| [Keyword Clustering](https://github.com/lhitches/claude-seo-skills/blob/main/skills/keyword-clustering.md) | Groups a raw keyword list into page-level clusters by search intent, with target pages and cannibalisation flags. |
 | [Website Gap](https://hawkacademy.co/claude-seo-skills/website-gap) | Compares your site to a competitor and tells you the keywords, topics, and pages they cover that you do not. |
 | [Competitor Gap](https://hawkacademy.co/claude-seo-skills/competitor-gap) | Inverse of website-gap. Identifies the topics you cover that competitors miss, so you can defend them. |
 | [3 Ranking Laws Cheat Sheet](https://hawkacademy.co/claude-seo-skills/3-ranking-laws-cheat-sheet) | Every Google patent and the 2024 API leak distilled into 3 laws. Audits your site against NavBoost, siteFocusScore, and information gain. |
