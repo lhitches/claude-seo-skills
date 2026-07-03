@@ -105,6 +105,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [GSC Quick Start](https://hawkacademy.co/claude-seo-skills/gsc-quick-start) | Pulls your Google Search Console data and ranks the highest-leverage pages to fix first. |
 | [Screaming Frog Analyser](https://hawkacademy.co/claude-seo-skills/screaming-frog-analyser) | Drop your Screaming Frog export, get a StudioHawk-style audit back. |
 | [Google Trust Check](https://hawkacademy.co/claude-seo-skills/google-trust) | Scores any page on the trust signals Google actually weights. Author entity, E-E-A-T, brand authority. |
+| [Entity SEO Auditor](https://hawkacademy.co/claude-seo-skills/entity-seo-auditor) | Audits whether Google's Knowledge Graph and AI search recognise your brand as an entity. Entity home, schema, sameAs, Wikidata presence, cross-web consistency. One fix per layer. |
 | [Cannibalization Detector](https://hawkacademy.co/claude-seo-skills/cannibalization-detector) | Finds the queries where two of your own pages compete and split the signal. Picks the keeper and gives one fix: consolidate, canonical, or differentiate. |
 | [Schema Markup Generator](https://github.com/lhitches/claude-seo-skills/blob/main/skills/schema-generator.md) | Generates and validates clean JSON-LD for any page type, with required vs recommended properties and a rich-result test checklist. |
 
@@ -217,7 +218,7 @@ You can use these skills in client work, in commercial products, in agency engag
 
 ## Links
 
-- **Hawk Academy SEO Skills hub:** [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) (canonical home, all 25 skills with worked examples)
+- **Hawk Academy SEO Skills hub:** [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) (canonical home, all 33 skills with worked examples)
 - **The Hawk Academy SEO Roadmap:** [hawkacademy.co/resources/seo-roadmap](https://hawkacademy.co/resources/seo-roadmap)
 - **Free Hawk Academy course:** [learn.hawkacademy.co/register](https://learn.hawkacademy.co/register)
 - **StudioHawk:** [studiohawk.com.au](https://studiohawk.com.au) (the parent agency)
