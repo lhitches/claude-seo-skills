@@ -30,18 +30,18 @@ The title tag is the blue clickable link people see in Google results. A better 
 
 ### If they pasted GSC data:
 
-1. **Find the opportunities** — Look for queries/pages with:
+1. **Find the opportunities**: Look for queries/pages with:
    - High impressions but low CTR (below 5% for position 1-3, below 3% for position 4-10)
    - These pages are showing up in Google but people aren't clicking
 
-2. **Fetch each opportunity page** — Read the current title tag, meta description, H1, and first 100 words.
+2. **Fetch each opportunity page**: Read the current title tag, meta description, H1, and first 100 words.
 
-3. **Generate optimised titles** — For each page, create 3-5 title tag options.
+3. **Generate optimised titles**: For each page, create 3-5 title tag options.
 
 ### If they gave a URL + keyword:
 
-1. **Fetch the page** — Read the current title tag, meta description, H1, and content.
-2. **Generate optimised titles** — Create 3-5 options for the target keyword.
+1. **Fetch the page**: Read the current title tag, meta description, H1, and content.
+2. **Generate optimised titles**: Create 3-5 options for the target keyword.
 
 ## Title Tag Formula
 
@@ -49,11 +49,11 @@ Every title should follow one of these proven patterns:
 
 | Pattern | Example |
 |---------|---------|
-| Keyword + Benefit | "Emergency Plumber Melbourne — Available 24/7, Fixed Prices" |
-| Keyword + Proof | "Best Dentist Brunswick — 500+ 5-Star Reviews" |
-| Keyword + Specificity | "Kitchen Renovations Sydney — From $15K, 6-Week Turnaround" |
+| Keyword + Benefit | "Emergency Plumber Melbourne: Available 24/7, Fixed Prices" |
+| Keyword + Proof | "Best Dentist Brunswick: 500+ 5-Star Reviews" |
+| Keyword + Specificity | "Kitchen Renovations Sydney: From $15K, 6-Week Turnaround" |
 | Question + Answer | "How Much Does a Bathroom Reno Cost? Melbourne 2026 Prices" |
-| Number + Keyword | "7 Signs You Need a New Roof — Melbourne Roofing Experts" |
+| Number + Keyword | "7 Signs You Need a New Roof: Melbourne Roofing Experts" |
 
 ## Rules
 
@@ -86,7 +86,7 @@ OPTIMISED OPTIONS:
 3. "[new title]" ([character count])
    Why it works: [one line explanation]
 
-RECOMMENDED: Option [X] — [reason]
+RECOMMENDED: Option [X]: [reason]
 
 [Repeat for each page]
 
@@ -99,7 +99,7 @@ HOW TO CHANGE YOUR TITLE TAG:
 
 ## Voice
 
-- Frame this as "getting more from what you already have" — no new content needed
+- Frame this as "getting more from what you already have", no new content needed
 - Show the maths: "If your CTR goes from 2% to 5%, that's 2.5x more clicks from the same ranking"
 - Every suggestion must be copy-paste ready
 - Always explain WHY each title works, so they can write their own for other pages

@@ -71,7 +71,7 @@ For every HTML file in the repo, score against these categories:
 
 ## Workflow
 
-1. **Detect the codebase shape.** Run `find . -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | head -200` and report how many HTML files you'll audit. If more than 200, sample (every nth page) and tell the user.
+1. **Detect the codebase shape.** Run `find - -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | head -200` and report how many HTML files you'll audit. If more than 200, sample (every nth page) and tell the user.
 
 2. **Resolve the live domain.** Use what the user provided, or git remote, or homepage in package.json, or ask.
 
