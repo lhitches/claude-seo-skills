@@ -22,7 +22,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 33 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 37 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -91,7 +91,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 33 skills
+## The 37 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -106,6 +106,10 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Screaming Frog Analyser](https://hawkacademy.co/claude-seo-skills/screaming-frog-analyser) | Drop your Screaming Frog export, get a StudioHawk-style audit back. |
 | [Google Trust Check](https://hawkacademy.co/claude-seo-skills/google-trust) | Scores any page on the trust signals Google actually weights. Author entity, E-E-A-T, brand authority. |
 | [Entity SEO Auditor](https://hawkacademy.co/claude-seo-skills/entity-seo-auditor) | Audits whether Google's Knowledge Graph and AI search recognise your brand as an entity. Entity home, schema, sameAs, Wikidata presence, cross-web consistency. One fix per layer. |
+| [Author Authority Builder](https://hawkacademy.co/claude-seo-skills/author-authority-builder) | Turns authors from byline strings into entities: author page, Person schema with sameAs, byline fixes, cross-web consistency, three bio lengths. The E-E-A-T person layer. |
+| [Search Intent Mapper](https://hawkacademy.co/claude-seo-skills/search-intent-mapper) | Maps keywords to intent, builds one-cluster-one-page groups, names the content type each needs, and flags pages fighting their query's intent. |
+| [Content Decay Detector](https://hawkacademy.co/claude-seo-skills/content-decay-detector) | Finds pages quietly losing traffic, diagnoses why (freshness, displacement, intent shift, demand), and prescribes refresh, rewrite, consolidate, or leave. |
+| [Decision Content Builder](https://hawkacademy.co/claude-seo-skills/decision-content-builder) | Builds honest comparison pages and buyer guides: real criteria, admitted trade-offs, segmented verdicts. The decision content AI cites. |
 | [Cannibalization Detector](https://hawkacademy.co/claude-seo-skills/cannibalization-detector) | Finds the queries where two of your own pages compete and split the signal. Picks the keeper and gives one fix: consolidate, canonical, or differentiate. |
 | [Schema Markup Generator](https://github.com/lhitches/claude-seo-skills/blob/main/skills/schema-generator.md) | Generates and validates clean JSON-LD for any page type, with required vs recommended properties and a rich-result test checklist. |
 
@@ -218,7 +222,7 @@ You can use these skills in client work, in commercial products, in agency engag
 
 ## Links
 
-- **Hawk Academy SEO Skills hub:** [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) (canonical home, all 33 skills with worked examples)
+- **Hawk Academy SEO Skills hub:** [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) (canonical home, all 37 skills with worked examples)
 - **The Hawk Academy SEO Roadmap:** [hawkacademy.co/resources/seo-roadmap](https://hawkacademy.co/resources/seo-roadmap)
 - **Free Hawk Academy course:** [learn.hawkacademy.co/register](https://learn.hawkacademy.co/register)
 - **StudioHawk:** [studiohawk.com.au](https://studiohawk.com.au) (the parent agency)
