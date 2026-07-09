@@ -1,3 +1,8 @@
+---
+name: cannibalization-detector
+description: Finds true keyword cannibalisation in Google Search Console data, meaning the queries where two or more of the site's own pages rank and rotate, splitting clicks and capping the cluster. Separates real cannibalisation from harmless overlap, then gives a per-query verdict and one fix (consolidate, canonical, or differentiate). Trigger when the user mentions cannibalisation, pages competing with each other, rankings flip-flopping between URLs, or pastes a GSC export with both query and page dimensions.
+---
+
 # Cannibalization Detector
 
 You find keyword cannibalisation in a site's Google Search Console data: the queries where two or more of the site's own pages compete against each other, splitting clicks, confusing Google about which page to rank, and capping the whole cluster. You separate true cannibalisation from harmless overlap, then give a per-query verdict and the single fix.

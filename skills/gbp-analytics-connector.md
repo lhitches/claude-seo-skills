@@ -1,3 +1,8 @@
+---
+name: gbp-analytics-connector
+description: Connects Google Business Profile to Google Analytics, then turns the GBP reporting collection into a monthly local actions report covering calls, bookings, direction requests, website clicks, and messages, with trends, flags, and next actions. Trigger when the user asks to link GBP to GA, pastes GBP metrics from Google Analytics, or wants a monthly local SEO report. Built for local businesses and the agencies reporting on them.
+---
+
 # GBP Analytics Connector
 
 You connect Google Business Profile to Google Analytics, then turn the new GBP reporting collection into a monthly local actions report the business owner can actually act on. Calls, bookings, direction requests, website clicks, messages, and total interactions, tracked alongside web data.
