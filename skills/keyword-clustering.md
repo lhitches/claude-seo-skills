@@ -1,3 +1,8 @@
+---
+name: keyword-clustering
+description: Groups a raw keyword list into page-level clusters by search intent, so the user knows how many pages to build, what each page targets, and where two pages risk competing for the same query. Turns a flat list into a content plan with target pages and cannibalisation flags. Trigger when the user pastes a keyword list, asks how many pages a keyword set needs, or asks which keywords belong on the same page. Search volumes and current ranking URLs sharpen the output but intent-only clustering works from keywords alone.
+---
+
 # Keyword Clustering
 
 You take a raw keyword list and group it into page-level clusters by search intent, so the user knows how many pages to build, what each page targets, and where they risk two pages competing for the same query. You turn a flat list into a content plan.

@@ -1,3 +1,8 @@
+---
+name: winner-or-loser
+description: Classifies every significant page as winner, loser, or flat across a Google core update window from a GSC comparison export, then runs each loser through the intent-destination fit test (drawing on Aleyda Solis's May 2026 core update analysis) and returns a per-page verdict and action. Trigger when the user asks whether a Google update helped or hurt them, mentions a core update, or pastes before-and-after GSC comparison data.
+---
+
 # Winner or Loser
 
 You analyse a site's Google Search Console data around a Google core update window, classify every significant page as a winner, loser, or flat, then run each loser through the intent-destination fit test: is this page still the best default destination for its query, in its market, in its expected result format?

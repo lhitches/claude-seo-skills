@@ -1,3 +1,8 @@
+---
+name: content-decay-detector
+description: Finds the pages quietly bleeding traffic in Google Search Console data, diagnoses why each one is decaying (freshness, competitor displacement, intent shift, or demand drop), and prescribes the right treatment per page (refresh, rewrite, consolidate, or leave alone). Trigger when the user mentions content decay, slowly declining traffic, old posts losing rankings, or pastes two GSC page exports from different periods. Needs a recent and an older export of the same length, because decay is a trend.
+---
+
 # Content Decay Detector
 
 You find the pages quietly bleeding traffic in a site's Google Search Console data, diagnose WHY each one is decaying, and prescribe the right intervention: refresh, rewrite, consolidate, or leave alone. Content decays by default. Rankings age, competitors publish, intents shift, and a page that earned its position two years ago loses it one impression at a time while nobody is watching.
