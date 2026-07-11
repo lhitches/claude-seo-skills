@@ -1,11 +1,11 @@
 # Claude SEO Skills
 
-> 33 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 40 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 >
 > **Official site: [claudeseoskills.com.au](https://claudeseoskills.com.au)**, install commands, real sample output from every flagship skill, and the full directory.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-33-orange.svg)](#the-33-skills)
+[![Skills](https://img.shields.io/badge/skills-40-orange.svg)](#the-40-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -24,7 +24,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 38 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 40 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -93,7 +93,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 38 skills
+## The 40 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -105,6 +105,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Website Score](https://hawkacademy.co/claude-seo-skills/website-score) | Free SEO score for any URL via Claude. The opening move on every StudioHawk audit. |
 | [Striking Distance Finder](https://hawkacademy.co/claude-seo-skills/striking-distance-finder) | Surfaces the pages you rank positions 8 to 20 for. Small CTR or content gains push them onto page one. |
 | [GSC Quick Start](https://hawkacademy.co/claude-seo-skills/gsc-quick-start) | Pulls your Google Search Console data and ranks the highest-leverage pages to fix first. |
+| [Rank Tracker](https://github.com/lhitches/claude-seo-skills/blob/main/skills/rank-tracker.md) | Turns GSC position data into a rank tracking system: two-period compare, movement verdicts weighted by impressions, priority keywords first, and the average-position artifacts explained. |
 | [Screaming Frog Analyser](https://hawkacademy.co/claude-seo-skills/screaming-frog-analyser) | Drop your Screaming Frog export, get a StudioHawk-style audit back. |
 | [Google Trust Check](https://hawkacademy.co/claude-seo-skills/google-trust) | Scores any page on the trust signals Google actually weights. Author entity, E-E-A-T, brand authority. |
 | [Entity SEO Auditor](https://hawkacademy.co/claude-seo-skills/entity-seo-auditor) | Audits whether Google's Knowledge Graph and AI search recognise your brand as an entity. Entity home, schema, sameAs, Wikidata presence, cross-web consistency. One fix per layer. |
