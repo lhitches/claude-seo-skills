@@ -229,7 +229,7 @@ You can use these skills in client work, in commercial products, in agency engag
 
 ## Links
 
-- **Hawk Academy SEO Skills hub:** [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) (canonical home, all 39 skills with worked examples)
+- **Hawk Academy SEO Skills hub:** [hawkacademy.co/claude-seo-skills](https://hawkacademy.co/claude-seo-skills) (canonical home, the full skill library with worked examples)
 - **The Hawk Academy SEO Roadmap:** [hawkacademy.co/resources/seo-roadmap](https://hawkacademy.co/resources/seo-roadmap)
 - **Free Hawk Academy course:** [learn.hawkacademy.co/register](https://learn.hawkacademy.co/register)
 - **StudioHawk:** [studiohawk.com.au](https://studiohawk.com.au) (the parent agency)
