@@ -1,11 +1,11 @@
 # Claude SEO Skills
 
-> 40 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 42 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 >
 > **Official site: [claudeseoskills.com.au](https://claudeseoskills.com.au)**, install commands, real sample output from every flagship skill, and the full directory.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-40-orange.svg)](#the-40-skills)
+[![Skills](https://img.shields.io/badge/skills-42-orange.svg)](#the-42-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -24,7 +24,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 40 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 42 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -93,7 +93,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 40 skills
+## The 42 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -114,6 +114,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Content Decay Detector](https://hawkacademy.co/claude-seo-skills/content-decay-detector) | Finds pages quietly losing traffic, diagnoses why (freshness, displacement, intent shift, demand), and prescribes refresh, rewrite, consolidate, or leave. |
 | [Decision Content Builder](https://hawkacademy.co/claude-seo-skills/decision-content-builder) | Builds honest comparison pages and buyer guides: real criteria, admitted trade-offs, segmented verdicts. The decision content AI cites. |
 | [Helpful Content Audit](https://hawkacademy.co/claude-seo-skills/helpful-content-audit) | Grades any page against Google's 32 helpful-content self-assessment questions: evidence per verdict, YMYL-aware weighting, letter grade, prioritised fixes. |
+| [Log File Analyser](https://github.com/lhitches/claude-seo-skills/blob/main/skills/log-file-analyser.md) | Turns raw access logs into crawl budget findings and a per-bot AI readiness verdict: Googlebot waste, sitemap coverage, and whether GPTBot, ClaudeBot and PerplexityBot are healthy, blocked or absent. |
 | [Cannibalization Detector](https://hawkacademy.co/claude-seo-skills/cannibalization-detector) | Finds the queries where two of your own pages compete and split the signal. Picks the keeper and gives one fix: consolidate, canonical, or differentiate. |
 | [Schema Markup Generator](https://github.com/lhitches/claude-seo-skills/blob/main/skills/schema-generator.md) | Generates and validates clean JSON-LD for any page type, with required vs recommended properties and a rich-result test checklist. |
 
@@ -157,6 +158,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 |---|---|
 | [Data PR Outreach](https://hawkacademy.co/claude-seo-skills/data-pr-outreach) | The pitch process StudioHawk uses for Digital PR campaigns at scale. |
 | [Google Review Handler](https://hawkacademy.co/claude-seo-skills/google-review-handler) | Drafts review responses that protect rank without sounding canned. |
+| [Internal Linking Optimizer](https://github.com/lhitches/claude-seo-skills/blob/main/skills/internal-linking-optimizer.md) | Maps the internal link graph, rescues orphans, feeds starved money pages, and outputs the exact from-page, to-page, anchor and sentence for every placement. |
 
 ### Calculators and helpers
 
