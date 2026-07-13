@@ -103,6 +103,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 |---|---|
 | [Technical SEO Audit](https://hawkacademy.co/claude-seo-skills/technical-seo-audit) | Finds the technical issues stopping Google from reading your site. Redirect chains, duplicate titles, indexing problems, orphan pages, cannibalisation. |
 | [Merchant Center Optimizer](https://hawkacademy.co/claude-seo-skills/merchant-center-optimizer) | Optimises your Google Merchant Center feed: disapproval triage, query-matching title rewrites, attribute completeness, feed-to-page consistency. Ranked by revenue. |
+| [Product Page Optimizer](https://hawkacademy.co/claude-seo-skills/product-page-optimizer) | Audits and rewrites a product page for search and AI shopping: eight-point evaluation, buyer constraint questions, rebuilt description, FAQ and schema. Paste-ready. |
 | [Website Score](https://hawkacademy.co/claude-seo-skills/website-score) | Free SEO score for any URL via Claude. The opening move on every StudioHawk audit. |
 | [Striking Distance Finder](https://hawkacademy.co/claude-seo-skills/striking-distance-finder) | Surfaces the pages you rank positions 8 to 20 for. Small CTR or content gains push them onto page one. |
 | [GSC Quick Start](https://hawkacademy.co/claude-seo-skills/gsc-quick-start) | Pulls your Google Search Console data and ranks the highest-leverage pages to fix first. |
