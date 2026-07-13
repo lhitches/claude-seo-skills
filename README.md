@@ -24,7 +24,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 43 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 44 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -93,7 +93,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 43 skills
+## The 44 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -104,6 +104,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Technical SEO Audit](https://hawkacademy.co/claude-seo-skills/technical-seo-audit) | Finds the technical issues stopping Google from reading your site. Redirect chains, duplicate titles, indexing problems, orphan pages, cannibalisation. |
 | [Merchant Center Optimizer](https://hawkacademy.co/claude-seo-skills/merchant-center-optimizer) | Optimises your Google Merchant Center feed: disapproval triage, query-matching title rewrites, attribute completeness, feed-to-page consistency. Ranked by revenue. |
 | [Product Page Optimizer](https://hawkacademy.co/claude-seo-skills/product-page-optimizer) | Audits and rewrites a product page for search and AI shopping: eight-point evaluation, buyer constraint questions, rebuilt description, FAQ and schema. Paste-ready. |
+| [Category Page Optimizer](https://hawkacademy.co/claude-seo-skills/category-page-optimizer) | Turns bare product grids into decision-support pages: intro answer, buying guide with comparison table, FAQ, faceted-navigation read, ItemList schema. |
 | [Website Score](https://hawkacademy.co/claude-seo-skills/website-score) | Free SEO score for any URL via Claude. The opening move on every StudioHawk audit. |
 | [Striking Distance Finder](https://hawkacademy.co/claude-seo-skills/striking-distance-finder) | Surfaces the pages you rank positions 8 to 20 for. Small CTR or content gains push them onto page one. |
 | [GSC Quick Start](https://hawkacademy.co/claude-seo-skills/gsc-quick-start) | Pulls your Google Search Console data and ranks the highest-leverage pages to fix first. |
