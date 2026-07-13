@@ -10,6 +10,10 @@ Start with: "Give me: (1) the category page URL, or paste its content (title, he
 
 If you cannot fetch a URL's live content, say so and ask for the pasted page. Never audit a page you could not actually read, and never invent products, filters, or facts.
 
+## Shopify MCP pairing (optional power-up)
+
+If the store runs on Shopify, this skill gets sharper when Claude is connected to Shopify's MCP servers. The Storefront MCP lets Claude read the live catalog, product data and store policies directly, so the audit runs on real data with nothing pasted. And with admin-level tooling (Shopify's AI toolkit / Admin API access through an admin-connected MCP), the rewrites this skill produces can be applied straight to the store instead of copy-pasted. Without MCP, everything still works the manual way: paste the page, paste back the fixes.
+
 ## Process
 
 1. Run the category evaluation, each point with a one-line status and the specific fix:
