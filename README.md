@@ -101,6 +101,8 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 
 | Skill | What it does |
 |---|---|
+| [Schema Markup Auditor](https://hawkacademy.co/claude-seo-skills/schema-markup-auditor) | Audits a page's structured data end to end: extracts the JSON-LD, grades each type against Google's rich-result rules, finds the schema the page is missing, and writes one corrected paste-ready graph. |
+| [Schema Markup Generator](https://hawkacademy.co/claude-seo-skills/schema-markup-generator) | Generates valid JSON-LD from a plain-English page description: picks the right types, fills real values, brackets what it cannot source, returns one paste-ready graph. |
 | [Technical SEO Audit](https://hawkacademy.co/claude-seo-skills/technical-seo-audit) | Finds the technical issues stopping Google from reading your site. Redirect chains, duplicate titles, indexing problems, orphan pages, cannibalisation. |
 | [Merchant Center Optimizer](https://hawkacademy.co/claude-seo-skills/merchant-center-optimizer) | Optimises your Google Merchant Center feed: disapproval triage, query-matching title rewrites, attribute completeness, feed-to-page consistency. Ranked by revenue. |
 | [Product Page Optimizer](https://hawkacademy.co/claude-seo-skills/product-page-optimizer) | Audits and rewrites a product page for search and AI shopping: eight-point evaluation, buyer constraint questions, rebuilt description, FAQ and schema. Paste-ready. |
