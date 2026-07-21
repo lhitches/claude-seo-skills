@@ -125,6 +125,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Review Sentiment Optimizer](https://hawkacademy.co/claude-seo-skills/review-sentiment-optimizer) | Turns customer reviews into a plan: sentiment map, the brand description AI learned from them, response priorities, pull-quote bank, keyword mining. |
 | [Cannibalization Detector](https://hawkacademy.co/claude-seo-skills/cannibalization-detector) | Finds the queries where two of your own pages compete and split the signal. Picks the keeper and gives one fix: consolidate, canonical, or differentiate. |
 | [Schema Markup Generator](https://github.com/lhitches/claude-seo-skills/blob/main/skills/schema-generator.md) | Generates and validates clean JSON-LD for any page type, with required vs recommended properties and a rich-result test checklist. |
+| [Affiliate Traffic Auditor](https://hawkacademy.co/claude-seo-skills/affiliate-traffic-auditor) | Cross-checks your GA4 referral traffic against affiliate payouts to find commission claimed by sources that did not drive the sale. The last-click hijacking pattern. Flags for review, never accuses. |
 
 ### Industry-specific audits
 
