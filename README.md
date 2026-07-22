@@ -63,15 +63,23 @@ More reviews on [hawkacademy.co](https://hawkacademy.co). Over 6,000 students ar
 
 ## Install (90 seconds)
 
-Drop into Claude Desktop's skills folder. No build step, no API keys, no dependencies.
+Each skill installs as its own folder containing a `SKILL.md` file, which is the structure Claude expects. No build step, no API keys, no dependencies.
 
 ### macOS / Linux
 
 ```bash
 git clone https://github.com/lhitches/claude-seo-skills.git
-mkdir -p ~/.claude/skills/
-cp claude-seo-skills/skills/*.md ~/.claude/skills/
-cp -r claude-seo-skills/skills/topical-authority-map ~/.claude/skills/
+cd claude-seo-skills
+
+# Each skill needs its own folder with the file named SKILL.md
+for f in skills/*.md; do
+  name=$(basename "$f" .md)
+  mkdir -p ~/.claude/skills/"$name"
+  cp "$f" ~/.claude/skills/"$name"/SKILL.md
+done
+
+# Skills that ship as folders already
+cp -r skills/topical-authority-map ~/.claude/skills/
 ```
 
 Restart Claude Desktop. The skills appear in your Skills picker.
@@ -80,9 +88,17 @@ Restart Claude Desktop. The skills appear in your Skills picker.
 
 ```powershell
 git clone https://github.com/lhitches/claude-seo-skills.git
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills" | Out-Null
-Copy-Item claude-seo-skills\skills\*.md "$env:USERPROFILE\.claude\skills\"
-Copy-Item -Recurse claude-seo-skills\skills\topical-authority-map "$env:USERPROFILE\.claude\skills\"
+cd claude-seo-skills
+
+# Each skill needs its own folder with the file named SKILL.md
+Get-ChildItem skills\*.md | ForEach-Object {
+  $name = $_.BaseName
+  New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills\$name" | Out-Null
+  Copy-Item $_.FullName "$env:USERPROFILE\.claude\skills\$name\SKILL.md"
+}
+
+# Skills that ship as folders already
+Copy-Item -Recurse skills\topical-authority-map "$env:USERPROFILE\.claude\skills\"
 ```
 
 Restart Claude Desktop.
