@@ -177,6 +177,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Claude Code SEO](https://hawkacademy.co/claude-seo-skills/claude-code-seo) | Plug Claude Code into your SEO workflow for code-level fixes, schema injection, and automated audits. |
 | [Clarity AI Bot Auditor](https://hawkacademy.co/claude-seo-skills/clarity-ai-bot-auditor) | Paste your Microsoft Clarity AI bot data. Diagnoses every AI bot as healthy, blocked, throttled, or over-scraping, with one decisive fix per bot. |
 | [Citation Share Auditor](https://hawkacademy.co/claude-seo-skills/citation-share-auditor) | Reads your Bing Citation Share data and shows your slice of AI answers, the topics and intents you own, and where to grow it. |
+| [AI Fetchability Audit](https://hawkacademy.co/claude-seo-skills/ai-fetchability-audit) | Fetches your page as a crawler and as a browser, then names the answer-bearing passages that vanish when JavaScript does not run. Also grades llms.txt, the markdown twin, and the boilerplate ratio. |
 
 ### Outreach, links, and reviews
 
