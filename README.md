@@ -1,11 +1,11 @@
 # Claude SEO Skills
 
-> 43 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 54 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 >
 > **Official site: [claudeseoskills.com.au](https://claudeseoskills.com.au)**, install commands, real sample output from every flagship skill, and the full directory.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-53-orange.svg)](#the-53-skills)
+[![Skills](https://img.shields.io/badge/skills-54-orange.svg)](#the-54-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -142,7 +142,6 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Listicle Builder](https://hawkacademy.co/claude-seo-skills/listicle-builder) | Builds list articles designed to be cited: format-fit check, ruthless item selection, liftable micro-summaries, evidence per item, anti-farm guard. |
 | [Review Sentiment Optimizer](https://hawkacademy.co/claude-seo-skills/review-sentiment-optimizer) | Turns customer reviews into a plan: sentiment map, the brand description AI learned from them, response priorities, pull-quote bank, keyword mining. |
 | [Cannibalization Detector](https://hawkacademy.co/claude-seo-skills/cannibalization-detector) | Finds the queries where two of your own pages compete and split the signal. Picks the keeper and gives one fix: consolidate, canonical, or differentiate. |
-| [Schema Markup Generator](https://github.com/lhitches/claude-seo-skills/blob/main/skills/schema-generator.md) | Generates and validates clean JSON-LD for any page type, with required vs recommended properties and a rich-result test checklist. |
 | [Affiliate Traffic Auditor](https://hawkacademy.co/claude-seo-skills/affiliate-traffic-auditor) | Cross-checks your GA4 referral traffic against affiliate payouts to find commission claimed by sources that did not drive the sale. The last-click hijacking pattern. Flags for review, never accuses. |
 
 ### Industry-specific audits
@@ -178,6 +177,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Claude Code SEO](https://hawkacademy.co/claude-seo-skills/claude-code-seo) | Plug Claude Code into your SEO workflow for code-level fixes, schema injection, and automated audits. |
 | [Clarity AI Bot Auditor](https://hawkacademy.co/claude-seo-skills/clarity-ai-bot-auditor) | Paste your Microsoft Clarity AI bot data. Diagnoses every AI bot as healthy, blocked, throttled, or over-scraping, with one decisive fix per bot. |
 | [Citation Share Auditor](https://hawkacademy.co/claude-seo-skills/citation-share-auditor) | Reads your Bing Citation Share data and shows your slice of AI answers, the topics and intents you own, and where to grow it. |
+| [AI Crawler Edge Audit](https://hawkacademy.co/claude-seo-skills/ai-crawler-edge-audit) | Tests what each AI crawler gets at your edge, then splits the verdict by citation cost: which blocks remove you from AI answers, and which cost you nothing. Names the layer doing the blocking. |
 
 ### Outreach, links, and reviews
 
