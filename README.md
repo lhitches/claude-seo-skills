@@ -1,11 +1,11 @@
 # Claude SEO Skills
 
-> 43 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 55 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 >
 > **Official site: [claudeseoskills.com.au](https://claudeseoskills.com.au)**, install commands, real sample output from every flagship skill, and the full directory.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-53-orange.svg)](#the-53-skills)
+[![Skills](https://img.shields.io/badge/skills-55-orange.svg)](#the-55-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -24,7 +24,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 54 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 55 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -109,7 +109,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 54 skills
+## The 55 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -121,6 +121,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Schema Markup Generator](https://hawkacademy.co/claude-seo-skills/schema-markup-generator) | Generates valid JSON-LD from a plain-English page description: picks the right types, fills real values, brackets what it cannot source, returns one paste-ready graph. |
 | [What's My Website Missing for AI Search?](https://hawkacademy.co/claude-seo-skills/whats-my-website-missing) | Walks a site through the five things Google's leaked Content Warehouse documentation shows Google can measure: link index tiers, page effort, engagement, mentions beyond your own site, and query fan-out coverage. Returns a grade of desk, shelves or basement and one fix. |
 | [Rate My Page Like a Google Quality Rater](https://hawkacademy.co/claude-seo-skills/google-quality-rater) | Grades a page using the criteria in Google's published 182-page General Guidelines: reputation, uniqueness and effort, and Needs Met relevance. Returns a scorecard plus the one thing to fix first. |
+| [Website Migration](https://hawkacademy.co/claude-seo-skills/website-migration) | Plans a migration before it launches: writes a dated baseline of the old site, maps every URL to where it is going, flags the pages with nowhere to land, then gives the launch-day checklist and four dated check-ins. Covers a new domain, platform, URL structure, HTTPS, subdomains and merges. |
 | [Technical SEO Audit](https://hawkacademy.co/claude-seo-skills/technical-seo-audit) | Finds the technical issues stopping Google from reading your site. Redirect chains, duplicate titles, indexing problems, orphan pages, cannibalisation. |
 | [Merchant Center Optimizer](https://hawkacademy.co/claude-seo-skills/merchant-center-optimizer) | Optimises your Google Merchant Center feed: disapproval triage, query-matching title rewrites, attribute completeness, feed-to-page consistency. Ranked by revenue. |
 | [Product Page Optimizer](https://hawkacademy.co/claude-seo-skills/product-page-optimizer) | Audits and rewrites a product page for search and AI shopping: eight-point evaluation, buyer constraint questions, rebuilt description, FAQ and schema. Paste-ready. |
