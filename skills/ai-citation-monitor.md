@@ -1,6 +1,12 @@
 ---
 name: ai-citation-monitor
-description: Tracks whether your brand is cited by ChatGPT, Claude, Perplexity, and Gemini for your target queries. Generates the prompt batch you paste into each LLM, then analyses what you paste back: who got cited, who got recommended over you, what shifted vs last run, and the per-query action that would move you from "not cited" to "cited". Trigger when the user wants to monitor AI search citations, track brand mentions in AI search, set up generative engine optimisation (GEO) tracking, or compare citation share across ChatGPT/Claude/Perplexity/Gemini.
+description: >
+  Tracks whether your brand is cited by ChatGPT, Claude, Perplexity, and Gemini for your target
+  queries. Generates the prompt batch you paste into each LLM, then analyses what you paste back:
+  who got cited, who got recommended over you, what shifted vs last run, and the per-query action
+  that would move you from "not cited" to "cited". Use when the user wants to monitor AI search
+  citations, track brand mentions in AI search, set up generative engine optimisation (GEO)
+  tracking, or compare citation share across ChatGPT, Claude, Perplexity and Gemini.
 ---
 
 # AI Citation Monitor
@@ -46,9 +52,17 @@ INTENT: [Informational / Commercial / Local / Navigational]
 "[exact prompt to paste]"
 ```
 
-Generate all 4 LLM variants for every target query. Then stop and instruct the user:
+Generate all 4 LLM variants for every target query.
 
-> "Run each prompt in the matching LLM. Copy the full response back to me, labelled with the query number and LLM name. Send them in any order. I will analyse them as they come in."
+Prompt rules, so the test measures what a real customer would see:
+- Never add the user's brand name or a competitor's name to a customer query that does not already contain one. Write it the way a buyer who has not heard of them would ask. Naming the brand only tests whether the LLM can describe it, not whether it recommends it.
+- If a target query already names a brand ("alternatives to [competitor]", "[competitor] vs [brand]"), keep the names exactly as the user wrote them: they are part of what the buyer asks. Label these queries BRANDED and report them separately from unbranded queries.
+- Keep the intent identical across the four variants. Only the phrasing style changes.
+- Brand-perception queries ("what is [brand] known for") are the exception: those name the brand on purpose. Label them INTENT: Navigational.
+
+Then stop and instruct the user:
+
+> "Run each prompt in the matching LLM, in a new chat, ideally a temporary or logged-out chat with memory off, so your own history does not skew the answer. Copy the full response back to me, labelled with the query number and LLM name. Send them in any order. I will analyse them as they come in."
 
 ## When the user pastes responses
 
@@ -57,9 +71,9 @@ For each pasted response, return this analysis:
 ```
 QUERY [n] - [LLM]
 
-CITED: Yes / No / Mentioned but not recommended
+BRAND STATUS: Recommended / Cited as a source / Recommended and cited / Mentioned only / Absent
 CITATION POSITION: First named / In a list / In passing / Only in a footnote
-COMPETITOR CITATIONS: [List the competitors that WERE recommended, in order of prominence]
+COMPETITORS RECOMMENDED: [List the competitors that WERE recommended, in order of prominence]
 SOURCES NAMED: [If the LLM cited URLs or sources, list them]
 SENTIMENT: Positive / Neutral / Negative / Not applicable
 DIFFERENTIATION CLAIMED: [What the LLM said the brand stands for, if anything]
@@ -85,12 +99,18 @@ Brand: [name]
 Queries tracked: [n]
 LLMs: ChatGPT, Claude, Perplexity, Gemini
 
-CITATION SHARE
-ChatGPT: [X/n queries cited]
-Claude: [X/n]
-Perplexity: [X/n]
-Gemini: [X/n]
-OVERALL: [X/(4n) total impressions]
+RESPONSES RECEIVED: [X of 4n expected. List any missing query and LLM pairs.]
+
+CITATION SHARE (cited = recommended, cited as a source, or both; every figure is out of the responses actually received, never out of 4n when some are missing)
+ChatGPT: [X cited / responses received from ChatGPT]
+Claude: [X / received]
+Perplexity: [X / received]
+Gemini: [X / received]
+OVERALL: [X cited / total responses received]
+RECOMMENDED: [X / received, counting "Recommended and cited" here too]
+CITED AS A SOURCE: [X / received, counting "Recommended and cited" here too]
+MENTIONED ONLY: [count, listed separately, not added to the cited total]
+BRANDED vs UNBRANDED: [the figures above split by query type, if any queries are BRANDED]
 
 WIN: Queries where brand is cited everywhere
 [List]
@@ -121,13 +141,13 @@ NEW COMPETITORS APPEARING: [Names that did not appear in the previous run]
 CITATION POSITION SHIFTS: [Queries where brand moved from "first named" to "in a list" or vice versa]
 
 INTERPRETATION
-[2-3 sentences on what changed and why it likely changed]
+[2-3 sentences on what changed and why it likely changed. LLM answers vary from one run to the next, so treat a change on a single query in a single LLM as a signal to re-check, not a trend. Call something a trend only when it repeats across runs or across LLMs.]
 ```
 
 ## Rules
 
-- Do not invent citations the user did not paste. If a response is missing, mark the query as "No data, re-run needed" for that LLM.
-- Distinguish "cited" (the LLM named the brand as an option) from "mentioned" (the LLM said the brand exists but did not recommend it) from "absent" (no mention at all). Score them differently.
+- Do not invent citations the user did not paste. If a response is missing, mark the query as "No data, re-run needed" for that LLM and leave it out of every share figure.
+- Distinguish "recommended" (the LLM named the brand as an option to choose), "cited as a source" (the LLM linked to or credited the brand's own site, research or content), "mentioned only" (named, but neither recommended nor cited as a source) and "absent" (no mention at all). Score them separately. A source citation counts as cited even when the brand is not recommended, which is common on informational queries; only a bare mention stays out of the cited total.
 - If the LLM hallucinated a competitor or service that does not exist, flag it. The action might be to publish content that disambiguates.
 - Action plan items must reference a specific page slug or signal. "Improve content" is not an action. "Publish /comparison/brand-vs-[competitor] with a 50-word summary paragraph and a comparison table" is.
 - Australian English in the analysis text.
@@ -145,5 +165,5 @@ INTERPRETATION
 
 - **One query only.** Run it. Tracking one query is fine for spot-checks.
 - **No competitors listed.** Run the analysis and surface whoever the LLMs name. Add them to the next run.
-- **Brand name is ambiguous (multiple companies share the name).** Note this in the run summary. Disambiguate the prompts ("Brand X, the [vertical] in [location]") in the next run.
+- **Brand name is ambiguous (multiple companies share the name).** Note this in the run summary. Disambiguate the brand-perception prompts ("Brand X, the [vertical] in [location]") in the next run, and when scoring customer queries, check the LLM meant the right company before counting it as cited.
 - **Pasted responses from only 2 LLMs.** Run the analysis on what you have. Note the missing LLMs. Encourage re-running the missing ones before the next diff.

@@ -1,6 +1,11 @@
 ---
 name: winner-or-loser
-description: Classifies every significant page as winner, loser, or flat across a Google core update window from a GSC comparison export, then runs each loser through the intent-destination fit test (drawing on Aleyda Solis's May 2026 core update analysis) and returns a per-page verdict and action. Trigger when the user asks whether a Google update helped or hurt them, mentions a core update, or pastes before-and-after GSC comparison data.
+description: >
+  Analyses Google Search Console data around a Google core update window, classifies every
+  significant page as a winner, loser, or flat, then runs each loser through the intent-
+  destination fit test. Paste your GSC data from before and after. Use when someone asks "was my
+  site hit by the core update", "why did my traffic drop after the Google update", "winners and
+  losers", or pastes a Search Console comparison export from around a core update.
 ---
 
 # Winner or Loser
@@ -16,9 +21,9 @@ Your three jobs:
 
 ## Intake (do this FIRST)
 
-Start with: "Paste your Google Search Console comparison data. In GSC: Performance, then Date, then Compare. Set the two ranges to before and after the update (for the May 2026 core update: compare the 4 weeks before 21 May against the 4 weeks after 2 June). Switch to the Pages tab and export or paste. Then do the same for Queries if you can. Minimum columns: page, clicks both periods, impressions both periods. Position comparison is a bonus."
+Start with: "Paste your Google Search Console comparison data. In GSC: Performance, then Date, then Compare. Set the two ranges to before and after the update (for the May 2026 core update: compare the 3 weeks before 21 May, 30 April to 20 May, against the 3 weeks after 2 June, 3 to 23 June, which keeps the June 2026 spam update that began 24 June out of the after window). Switch to the Pages tab and export or paste. Then do the same for Queries if you can. Minimum columns: page, clicks both periods, impressions both periods. Position comparison is a bonus."
 
-If they don't know which update window: the May 2026 core update rolled out 21 May to 2 June 2026. For any other update, ask them to check the Google Search Status Dashboard for rollout dates.
+If they don't know which update window: the May 2026 core update rolled out 21 May to 2 June 2026. For any other update, or to check whether a newer one has landed, ask them to look at the Google Search Status Dashboard (status.search.google.com) for rollout dates. Whatever the update, check the dashboard for any other confirmed update (a spam update, say) inside either comparison window. If one overlaps, say the result mixes the two.
 
 ## Process
 
@@ -37,7 +42,7 @@ If they don't know which update window: the May 2026 core update rolled out 21 M
    - Same format mismatch (text pages losing where SERPs now show video, tools, or marketplaces)
 
 4. Fit test per significant loser (top 10 by click impact). Score each question YES / PARTIAL / NO:
-   a. SOURCE-TYPE FIT: What source type does Google now reward for this page's top query? Search the query, look at what ranks: canonical reference, official source, marketplace, local result, tool, video, forum. Is this page that type?
+   a. SOURCE-TYPE FIT: What source type does Google now reward for this page's top query? Search the query, look at what ranks: canonical reference, official source, marketplace, local result, tool, video, forum. Is this page that type? If you cannot search, ask the user what ranks now for the top lost queries, or mark source-type and format fit UNCHECKED. Never describe a SERP you have not seen.
    b. TASK COMPLETION: Can the user finish their task on this page, or does it summarise something they complete elsewhere? Derivative layers (roundups of others' data, comparison-of-comparisons, thin affiliate) need a much stronger reason to exist now.
    c. MARKET FIT: Does the page match the user's market? Local entity for local queries, right country signals (currency, shipping, spelling, ccTLD or hreflang) for country-specific queries.
    d. FORMAT FIT: Does the page format match the expected result format? A text explainer cannot win a query where the SERP shows calculators or video.
@@ -63,7 +68,7 @@ TOP LOSERS DIAGNOSED (up to 10, each:)
   PAGE: [URL]
   CLICKS: [before] to [after] ([change])
   TOP LOST QUERY: [query]
-  FIT TEST: source-type [Y/P/N], task completion [Y/P/N], market [Y/P/N], format [Y/P/N]
+  FIT TEST: source-type [Y/P/N/U], task completion [Y/P/N], market [Y/P/N], format [Y/P/N/U] (U = unchecked)
   VERDICT: [FIXABLE FIT GAP / WRONG SOURCE TYPE / COLLATERAL FLAT]
   ACTION: [one concrete, shippable change, or "stop investing, redirect to X"]
 

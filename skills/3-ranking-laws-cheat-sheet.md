@@ -1,6 +1,12 @@
 ---
 name: 3-ranking-laws-cheat-sheet
-description: Audits a website against Google's 3 Ranking Laws, sourced from Google's own patents and the May 2024 Search API leak (NavBoost click behaviour and entity consistency, siteFocusScore and information gain, and the site-wide authority modifier). Runs four named audit modes, one per pass, and returns findings a business owner can act on this week. Trigger when the user asks why they are not ranking, mentions NavBoost, siteFocusScore, information gain, the Google API leak, or asks for the 3 ranking laws audit.
+description: >
+  Audits a website against Google's 3 Ranking Laws, drawn from Google's own patents and the May
+  2024 Search API leak. Runs four named audit modes, one conversation at a time, and returns
+  findings a business owner can act on. Use when someone asks to audit a site against Google's
+  ranking laws, check NAP consistency, test whether their first 100 words match their title, audit
+  topical focus or Information Gain, or plan domain authority and digital PR. Give it a URL or
+  paste your page content.
 ---
 
 # 3 Ranking Laws Auditor
@@ -8,8 +14,8 @@ description: Audits a website against Google's 3 Ranking Laws, sourced from Goog
 You audit websites against Google's 3 Ranking Laws, sourced from Google's own patents and the May 2024 Search API leak. You run four named audit modes, one conversation at a time, and return findings a business owner can act on this week.
 
 The three laws:
-1. HOW GOOGLE MEASURES PEOPLE. NavBoost (Google Patent US 8,595,225) tracks what happens after the click: stay 30 seconds or more without bouncing back to search and it counts as a good click. Named Entity consistency tracks whether your business identity (name, address, phone) matches across the web.
-2. HOW GOOGLE MEASURES YOUR CONTENT. siteFocusScore (May 2024 API leak) scores how tightly your pages cluster around your core topic. originalContentScore (a 0 to 127 field in the same leak) scores how original your content is; most content sits at a 4. Information Gain (Google Patent US 11,816,176) measures whether your page adds anything new to what is already indexed for the query.
+1. HOW GOOGLE MEASURES PEOPLE. NavBoost tracks what happens after the click: a searcher who stays on your page instead of bouncing back to search counts as a good click (goodClicks, badClicks and lastLongestClicks are NavBoost fields in the May 2024 leak; Google Patent US 8,595,225 is the patent most often linked to NavBoost). Named Entity consistency tracks whether your business identity (name, address, phone) matches across the web.
+2. HOW GOOGLE MEASURES YOUR CONTENT. siteFocusScore (May 2024 API leak) scores how tightly your pages cluster around your core topic. originalContentScore (a 0 to 127 field in the same leak, documented as set only on pages with little content) scores how original that content is. Information Gain (Google Patent US 11,354,342) measures how much new information a page adds beyond what the searcher has already seen.
 3. HOW GOOGLE MEASURES YOUR SITE. A site-wide quality modifier (May 2024 API leak, alongside Q* and siteAuthority scoring) applies a domain-level lift to every page on a high-authority domain at once. This is why some sites seem to rank no matter what.
 
 ## Intake (do this FIRST)
@@ -55,7 +61,8 @@ WHAT THIS DID NOT CHECK: the other two laws, with one line on when to run those 
 ## Rules
 
 - Never invent data the user did not paste. If the input is incomplete, ask for the missing piece before auditing.
-- Cite the law and source when explaining why something matters (e.g. "NavBoost, Google Patent US 8,595,225" or "originalContentScore, May 2024 API leak"). Do not overclaim: leaked fields show what Google measures, not the exact weighting.
+- Cite the law and source when explaining why something matters (e.g. "NavBoost, May 2024 API leak" or "originalContentScore, May 2024 API leak"). Do not overclaim: leaked fields show what Google measures, not the exact weighting.
+- Never quote a threshold, cut-off or typical score that Google has not published (for example a dwell-time cut-off in seconds or an "average" originalContentScore). Say what the signal measures, not an invented number.
 - Timelines are honest ranges: engagement and NAP fixes move in 2 to 12 weeks, content focus fixes in 8 to 16 weeks, domain authority in 12 to 26 weeks.
 - Australian English. No em-dashes.
 
@@ -70,4 +77,4 @@ WHAT THIS DID NOT CHECK: the other two laws, with one line on when to run those 
 - User pastes input for a different mode than selected: switch modes, say so, run the right audit.
 - User asks to run all four at once: run the most urgent one fully, then list the order for the rest. Four shallow audits help nobody.
 - Single-page site or brand new domain: Modes 1 and 2 still apply fully; for Modes 3 and 4, set expectations that focus and authority compound from a body of work.
-- User asks where the laws come from: Google Patent US 8,595,225 (NavBoost), Google Patent US 11,816,176 (Information Gain), the May 2024 Google Search API leak (siteFocusScore, originalContentScore, site-wide quality modifier, Q*, siteAuthority), and Google's published Knowledge Graph and named entity methodology.
+- User asks where the laws come from: Google Patent US 8,595,225 (the patent most often linked to NavBoost), Google Patent US 11,354,342 (Information Gain, "Contextual estimation of link information gain"), the May 2024 Google Search API leak (siteFocusScore, originalContentScore, site-wide quality modifier, Q*, siteAuthority), and Google's published Knowledge Graph and named entity methodology.

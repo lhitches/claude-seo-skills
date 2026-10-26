@@ -21,9 +21,9 @@ Start with:
 
 > "Export your competitor's backlinks and paste the CSV here. In most tools that is Site Explorer or Backlink Analytics, then Backlinks, then Export. I can read exports from Ahrefs, Semrush, Moz or Majestic, or plain pasted rows.
 >
-> The columns I need are the source URL and the target URL. Two more decide how good the shortlist is, so keep them if your export offers them: **the traffic to the linking page** (Ahrefs calls it Referring page traffic) and **the number of keywords that page ranks for**. Those let me judge a prospect on whether its page actually ranks rather than on a domain score, which is the entire point of this scan. Anchor text, first seen date, do-follow status and a page-level score (URL rating, or Page ascore in Semrush) all help too.
+> The columns I need are the source URL and the target URL. Two more decide how good the shortlist is, so keep them if your export offers them: **the traffic to the linking page** (Page traffic in Ahrefs) and **the number of keywords that page ranks for**. Those let me judge a prospect on whether its page actually ranks rather than on a domain score, which is the entire point of this scan. Anchor text, first seen date, do-follow status and a page-level score (URL rating, or Page ascore in Semrush) all help too.
 >
-> If the page-level columns are missing I will still work, I will fall back to the page score, and I will tell you plainly which prospects I could not properly qualify."
+> If the page-level columns are missing I will still work, I will fall back to the page score, and I will tell you plainly which prospects I could not properly qualify.
 >
 > Two more things so the shortlist is actually useful: what page of yours are you trying to build links to, and why would somebody reference it? A tool, a stat nobody else has, a better guide, a comparison. If there is no reason, outreach is spam and I will say so."
 
@@ -65,6 +65,8 @@ If the user gives you a competitor domain but no export, say plainly that you ca
    - **Better or fresher data.** You hold a number the page would want.
    - **Missing alternative.** A comparison or alternatives page that omits the user.
    - **Expert reference.** The page would be improved by a quote or a supporting source.
+
+   Only assign an angle you can support from the export or from a page you actually opened. Claim a broken target only when the export's status or lost-link columns, or a live check, show it. Claim out of date only after reading the page. If you could not open the page, write the angle as "to confirm" and say what the user should look for.
 
 6. **Find the contact path.** For the top prospects only, name the best public route: an author byline, a contact or editorial-guidelines page, an about or team page, a masthead, a public profile. Record the URL you found it on. Never guess an address from a name-and-domain pattern.
 

@@ -1,6 +1,11 @@
 ---
 name: cannibalization-detector
-description: Finds true keyword cannibalisation in Google Search Console data, meaning the queries where two or more of the site's own pages rank and rotate, splitting clicks and capping the cluster. Separates real cannibalisation from harmless overlap, then gives a per-query verdict and one fix (consolidate, canonical, or differentiate). Trigger when the user mentions cannibalisation, pages competing with each other, rankings flip-flopping between URLs, or pastes a GSC export with both query and page dimensions.
+description: >
+  Finds keyword cannibalisation in Google Search Console data: the queries where two or more of
+  your own pages compete, splitting clicks and confusing Google about which page to rank. Paste
+  your GSC query and page export. Use when someone asks about keyword cannibalisation, two pages
+  ranking for the same keyword, pages competing with each other, or rankings that swap between
+  URLs.
 ---
 
 # Cannibalization Detector
@@ -11,9 +16,9 @@ Cannibalisation is not "two pages mention the same keyword". It is two pages tha
 
 ## Intake (do this FIRST)
 
-Start with: "Paste your Google Search Console data grouped by query AND page. Easiest path: GSC, Performance, set your date range, open the Queries tab, then add Pages as a second dimension and export. Or export Pages with Queries from Looker Studio or the API. I need rows that show, for each query, every page that received impressions and the clicks, impressions, and position for each. Minimum columns: query, page, clicks, impressions, position."
+Start with: "Paste your Google Search Console data grouped by query AND page. The export button in the Search Console Performance report gives Queries and Pages as separate tabs, which is not enough on its own. Easiest ways to get both in one table: a Looker Studio report with the Search Console connector (URL impression table, dimensions Query and Landing Page), the free Search Analytics for Sheets add-on (group by query and page), or the Search Console API. To check one query by hand: in Performance, filter by that query, then open the Pages tab. I need rows that show, for each query, every page that received impressions and the clicks, impressions, and position for each. Minimum columns: query, page, clicks, impressions, position."
 
-If they paste query-only data with no page dimension: stop and explain you cannot detect cannibalisation without the page dimension, because the whole point is seeing multiple pages per query. Tell them exactly how to add the Pages dimension.
+If they paste query-only data with no page dimension: stop and explain you cannot detect cannibalisation without the page dimension, because the whole point is seeing multiple pages per query. Tell them exactly how to get query and page in one table (the options above).
 
 ## Process
 
@@ -46,7 +51,7 @@ TRUE CANNIBALISATION (the priority list, worst first by combined impressions)
   WHY IT IS REAL: one line on the split
   KEEPER: [url] and why
   FIX: [CONSOLIDATE / CANONICAL / DIFFERENTIATE / DEMOTE INTERNAL LINKS] with the specific action
-  EXPECTED RESULT: consolidated signal should lift the keeper toward the top of page 1
+  EXPECTED RESULT: what should improve once the signal is consolidated (the keeper's position and click share for this query), as a direction to check in GSC after 4 to 8 weeks, never a promised position
 
 SECONDARY DRAG (lighter touch, listed: query, winner, nibbler, one-line action)
 

@@ -1,11 +1,11 @@
 # Claude SEO Skills
 
-> 55 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 60 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 >
 > **Official site: [claudeseoskills.com.au](https://claudeseoskills.com.au)**, install commands, real sample output from every flagship skill, and the full directory.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-55-orange.svg)](#the-55-skills)
+[![Skills](https://img.shields.io/badge/skills-60-orange.svg)](#the-60-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -24,7 +24,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 55 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 60 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -47,15 +47,15 @@ These skills sit underneath the free [Hawk Academy](https://hawkacademy.co) cour
 
 > "Hands down one of the most comprehensive SEO Courses I've encountered. A huge time saver."
 >
-> — **Daniel Gladki**, eCommerce Director, Uniqlo
+> **Daniel Gladki**, eCommerce Director, Uniqlo
 
 > "I thought I already knew SEO, having done it for 5 years, but the technical SEO and link-building stuff is incredible."
 >
-> — **Harvey**, Terrain Tamer
+> **Harvey**, Terrain Tamer
 
 > "We enrolled our entire team. The quizzes and real-world examples make it so much easier to actually retain and apply the knowledge."
 >
-> — **Will Rosindell**, Medicart
+> **Will Rosindell**, Medicart
 
 More reviews on [hawkacademy.co](https://hawkacademy.co). Over 6,000 students are enrolled in the free course these skills come from.
 
@@ -79,7 +79,7 @@ for f in skills/*.md; do
 done
 
 # Skills that ship as folders already
-cp -r skills/topical-authority-map ~/.claude/skills/
+cp -r skills/topical-authority-map skills/review-proof-sorter ~/.claude/skills/
 ```
 
 Restart Claude Desktop. The skills appear in your Skills picker.
@@ -98,7 +98,7 @@ Get-ChildItem skills\*.md | ForEach-Object {
 }
 
 # Skills that ship as folders already
-Copy-Item -Recurse skills\topical-authority-map "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse skills\topical-authority-map, skills\review-proof-sorter "$env:USERPROFILE\.claude\skills\"
 ```
 
 Restart Claude Desktop.
@@ -109,7 +109,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 55 skills
+## The 60 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -169,6 +169,8 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Website Gap](https://hawkacademy.co/claude-seo-skills/website-gap) | Compares your site to a competitor and tells you the keywords, topics, and pages they cover that you do not. |
 | [Competitor Gap](https://hawkacademy.co/claude-seo-skills/competitor-gap) | Inverse of website-gap. Identifies the topics you cover that competitors miss, so you can defend them. |
 | [3 Ranking Laws Cheat Sheet](https://hawkacademy.co/claude-seo-skills/3-ranking-laws-cheat-sheet) | Every Google patent and the 2024 API leak distilled into 3 laws. Audits your site against NavBoost, siteFocusScore, and information gain. |
+| [Does My Page Match My ICP?](https://hawkacademy.co/claude-seo-skills/does-my-page-match-my-icp) | Builds personas and scores any page against each one: relevance, questions answered, tone fit and fixes. |
+| [Internal Linking](https://hawkacademy.co/claude-seo-skills/internal-linking) | Finds the pages on your site already getting clicks, matches them to the pages you want to grow, and writes every link with its sentence and anchor text. |
 
 ### AI search
 
@@ -179,6 +181,7 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Claude Code SEO](https://hawkacademy.co/claude-seo-skills/claude-code-seo) | Plug Claude Code into your SEO workflow for code-level fixes, schema injection, and automated audits. |
 | [Clarity AI Bot Auditor](https://hawkacademy.co/claude-seo-skills/clarity-ai-bot-auditor) | Paste your Microsoft Clarity AI bot data. Diagnoses every AI bot as healthy, blocked, throttled, or over-scraping, with one decisive fix per bot. |
 | [Citation Share Auditor](https://hawkacademy.co/claude-seo-skills/citation-share-auditor) | Reads your Bing Citation Share data and shows your slice of AI answers, the topics and intents you own, and where to grow it. |
+| [AI Visibility Dashboard](https://hawkacademy.co/claude-seo-skills/ai-visibility-dashboard) | Builds your AI search board slide: four gauges (Eligible, Chosen, Arriving, Paying off) from real AI answers, GA4 and Search Console. |
 
 ### Outreach, links, and reviews
 
@@ -188,6 +191,8 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | [Competitor Backlink Scanner](https://hawkacademy.co/claude-seo-skills/competitor-backlink-scanner) | Reads a competitor backlink export, removes the sitewide noise and the link types nobody can win, then shortlists the pages worth approaching, qualified on whether the linking page actually ranks rather than on domain authority, with an outreach angle and a draft for each. |
 | [Google Review Handler](https://hawkacademy.co/claude-seo-skills/google-review-handler) | Drafts review responses that protect rank without sounding canned. |
 | [Internal Linking Optimizer](https://github.com/lhitches/claude-seo-skills/blob/main/skills/internal-linking-optimizer.md) | Maps the internal link graph, rescues orphans, feeds starved money pages, and outputs the exact from-page, to-page, anchor and sentence for every placement. |
+| [Review Engine](https://hawkacademy.co/claude-seo-skills/review-engine) | Turns your reviews into a search asset: inventories what you have, ranks who to ask, writes the outreach and plans your reviews page. |
+| [Review Proof Sorter](https://hawkacademy.co/claude-seo-skills/review-proof-sorter) | Sorts your Google reviews by service and suburb and writes a proof block for each service page, with the best quotes word for word. |
 
 ### Calculators and helpers
 
@@ -233,7 +238,7 @@ Nike · New Balance · Fujifilm · Officeworks · Kao · Weber · Bondi Sands ·
 
 These skills sit inside a larger 10-step SEO roadmap. If you want to know where each skill fits in a complete SEO programme, see:
 
-**[The Hawk Academy SEO Roadmap](https://hawkacademy.co/resources/seo-roadmap)** — 10 steps from SEO fundamentals to AI search, with every step linked to a free Hawk Academy resource plus the specific course module that teaches it inside the free Hawk Academy course.
+**[The Hawk Academy SEO Roadmap](https://hawkacademy.co/resources/seo-roadmap)**: 10 steps from SEO fundamentals to AI search, with every step linked to a free Hawk Academy resource plus the specific course module that teaches it inside the free Hawk Academy course.
 
 If you want the structured course version of the same material with video walkthroughs and quizzes, [enrol free at learn.hawkacademy.co/register](https://learn.hawkacademy.co/register).
 

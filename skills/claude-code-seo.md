@@ -1,6 +1,6 @@
 ---
 name: claude-code-seo
-description: Drop-in Claude Code skill that audits a website codebase directly from the CLI. Reads every HTML file in the repo, checks for canonical tags, OG tags, schema, internal linking patterns, and on-page SEO basics, then writes a full report to SEO_REPORT.md and offers to commit fixes. Trigger when the user runs Claude Code in a website repo and asks for an SEO audit, mentions Claude Code SEO, asks to audit a static site, or wants CLI-driven SEO automation. Built for developers, devops-leaning SEOs, and agencies maintaining their own static-site codebases (Astro, Next.js, Jekyll, Hugo, hand-built HTML).
+description: Drop-in Claude Code skill that audits a website codebase directly from the CLI. Reads every HTML file in the repo, checks for canonical tags, OG tags, schema, internal linking patterns, and on-page SEO basics, then writes a full report to SEO_REPORT.md and proposes fixes for you to approve and commit yourself. Trigger when the user runs Claude Code in a website repo and asks for an SEO audit, mentions Claude Code SEO, asks to audit a static site, or wants CLI-driven SEO automation. Built for developers, devops-leaning SEOs, and agencies maintaining their own static-site codebases (Astro, Next.js, Jekyll, Hugo, hand-built HTML).
 ---
 
 # Claude Code SEO Skill
@@ -11,9 +11,9 @@ Your three jobs, in order:
 
 1. Audit every HTML file in the repo against on-page SEO basics + AI search readiness.
 2. Write the findings to `SEO_REPORT.md` in the repo root.
-3. Offer to fix-forward the highest-leverage items as a new git commit, only with the user's explicit go-ahead.
+3. Offer to fix-forward the highest-leverage items, editing files only with the user's explicit go-ahead.
 
-You never push, deploy, or run destructive git commands. You write the report and stage the suggested fixes for review.
+You never commit, push, deploy, or run destructive git commands. You write the report, apply only the fixes the user approves, and suggest a commit message. The user commits.
 
 ## Intake (do this FIRST in every new conversation)
 
@@ -29,8 +29,8 @@ For every HTML file in the repo, score against these categories:
 
 ### A. Structural baseline (10 checks per page)
 
-1. `<title>` present, under 60 characters, not duplicated across pages
-2. `<meta name="description">` present, 120-160 characters, not duplicated
+1. `<title>` present, more than just the brand name, not duplicated across pages. No length target: Google sets no limit and cuts the displayed title to fit the screen, so check the words that matter come first
+2. `<meta name="description">` present and not duplicated. No length target: Google sets no limit and truncates the snippet to fit the screen
 3. Exactly one `<h1>` per page
 4. `<link rel="canonical">` present, points to the clean URL on the live domain
 5. `<meta property="og:title">` + `og:description` + `og:type` + `og:url` + `og:image` present
@@ -58,7 +58,7 @@ For every HTML file in the repo, score against these categories:
 
 ### D. Content basics
 
-21. Word count above a sensible threshold for the page type (300 for product/landing, 800 for guide)
+21. Word count above a sensible threshold for the page type (300 for product/landing, 800 for guide). This is a heuristic to flag possibly thin pages, not a Google rule: never recommend padding a page to hit a number
 22. Image alt text present on every `<img>` that is not purely decorative
 23. No keyword stuffing in the title (same word repeated 3+ times)
 24. The H1 contains the primary keyword (heuristic: matches a token in the page's slug or title)
@@ -71,7 +71,7 @@ For every HTML file in the repo, score against these categories:
 
 ## Workflow
 
-1. **Detect the codebase shape.** Run `find - -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | head -200` and report how many HTML files you'll audit. If more than 200, sample (every nth page) and tell the user.
+1. **Detect the codebase shape.** Run `find . -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | wc -l` to count the HTML files, then list them. Report how many you'll audit. If more than 200, sample (every nth page) and tell the user.
 
 2. **Resolve the live domain.** Use what the user provided, or git remote, or homepage in package.json, or ask.
 
@@ -79,7 +79,7 @@ For every HTML file in the repo, score against these categories:
 
 4. **Audit the infrastructure** (E). Check repo root files.
 
-5. **Score the site.** Out of 100. The categories are weighted: A=40, B=20, C=20, D=15, E=5.
+5. **Score the site.** Out of 100. The categories are weighted: A=40, B=20, C=20, D=15, E=5. Each category score = its weight x (checks passed / checks that apply, across all audited pages). Skip checks that do not apply to a page (for example Article schema on a contact page) rather than failing them, and say in the report which checks could not run.
 
 6. **Write the report.** Create `SEO_REPORT.md` in the repo root with the structure below.
 
@@ -100,7 +100,7 @@ The SEO_REPORT.md you write:
 **Live domain:** [domain]
 **Files audited:** [count]
 **Score:** [X/100]
-**Generated:** [date from filesystem, do not invent]
+**Generated:** [today's date from the system clock, e.g. the `date` command, do not invent]
 
 ## Headline findings
 
@@ -175,7 +175,7 @@ After applying, summarise what changed and what to do next.
 - Never `git push` for any reason.
 - Never run `git reset --hard`, `git clean -f`, or any destructive command.
 - Never delete a file. If a file is broken, propose the fix; don't replace the file wholesale.
-- Stage files by name when you offer fixes. Don't propose `git add -A`.
+- If the user asks you to stage files, stage them by name. Don't propose `git add -A`.
 - Australian English in the SEO_REPORT.md (recognise, organise, behaviour).
 - Don't generate em-dashes in any output (the user's house style). Use periods, colons, or "and".
 - If `_redirects` (Cloudflare Pages) or `vercel.json` or `_headers` exists, respect that the host is rewriting URLs. Canonical checks must match the rewritten URL pattern.

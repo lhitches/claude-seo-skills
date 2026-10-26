@@ -1,6 +1,11 @@
 ---
 name: search-intent-mapper
-description: Maps a keyword set to search intent, groups queries into intent clusters, names the content type each cluster needs, and flags every page that is the wrong type for the query it targets. Trigger when the user asks about search intent, pastes a keyword or GSC query list for classification, or asks why a page ranks poorly despite good content. Intent classification works from keywords alone, and mismatch detection needs keyword-to-URL pairs.
+description: >
+  Maps a keyword set to search intent and tells you exactly which content type each query needs,
+  because ranking is an intent-matching game. Groups queries into one-cluster-one-page clusters and
+  flags pages whose type fights their query. Use when someone pastes a keyword list or Search Console
+  query export and asks to "map search intent", "classify these keywords", "what content type does
+  this keyword need", or why a page is losing to a different kind of page.
 ---
 
 # Search Intent Mapper
@@ -18,11 +23,13 @@ If they give keywords with no URLs, run the classification and cluster map, and 
 ## Process
 
 1. Classify each query's intent from its language, not from guesswork. Read the modifiers:
-   - INFORMATIONAL: what, how, why, guide, examples, meaning, vs early-research phrasing. Wants a guide or explainer.
+   - INFORMATIONAL: what, how, why, guide, examples, meaning, early-research phrasing. Wants a guide or explainer.
    - COMMERCIAL INVESTIGATION: best, top, review, vs, alternative, comparison, for [use case], pricing. Wants a comparison, buyer guide, or honest review.
    - TRANSACTIONAL: buy, price, cost, near me, hire, book, quote, discount, [product name] alone with buying context. Wants a product, service, or category page.
    - NAVIGATIONAL: brand names, login, contact. Wants the exact page. Rarely worth new content.
    Where a query is ambiguous, say which two intents it straddles and which one the SERP currently rewards.
+
+   Check the SERP when you can. If you have web search, look at what ranks for every ambiguous query and for the head query of each of the top clusters, and correct your call to match. If you cannot search, say so once at the top of the map, make the call from the query language, and mark ambiguous calls "unverified against the SERP". Never describe what a SERP shows unless you actually looked at it.
 
 2. Add the AI-search layer. For each cluster, note whether the query is the kind AI engines now answer directly (definitions, how-tos, comparisons) or the kind that still sends clicks (local, transactional, tools, current data). This changes the content decision: answer-engine queries need answer-first pages that win the citation; click queries need pages built to convert the visit.
 
@@ -30,7 +37,7 @@ If they give keywords with no URLs, run the classification and cluster map, and 
 
 4. Map each cluster to its content type: guide, pillar page, comparison page, product or category page, landing page, tool, FAQ. Name the type and the working title, never the label alone.
 
-5. If keyword-to-page pairs were provided, run mismatch detection: flag every query whose current page type fights its intent (a product page targeting a how-to query, a blog post targeting a buy query). These mismatches are the highest-leverage fixes on the whole map, because the demand is already there and the page is simply the wrong shape.
+5. If keyword-to-page pairs were provided, run mismatch detection. Judge each page's type from the page itself if you can fetch it, otherwise from its URL pattern (/blog/, /products/, /services/) and say which you used. Flag every query whose current page type fights its intent (a product page targeting a how-to query, a blog post targeting a buy query). These mismatches are the highest-leverage fixes on the whole map, because the demand is already there and the page is simply the wrong shape.
 
 6. Rank the output by opportunity: mismatches first (fastest wins), then uncovered clusters by size, then covered-and-correct clusters (leave alone).
 

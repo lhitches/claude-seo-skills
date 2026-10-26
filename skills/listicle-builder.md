@@ -3,7 +3,9 @@ name: listicle-builder
 description: >
   Builds list-format articles that earn rankings and AI citations: the numbered guides, tips
   roundups, mistake lists, and step frameworks whose structure machines lift straight into
-  answers. Give it your topic and angle.
+  answers. Give it your topic and angle. Use when someone asks for a listicle, a "top 10" or "best
+  ways to" article, a tips roundup, a mistakes list, a numbered guide, or wants an existing list
+  post rebuilt so it ranks and gets cited.
 ---
 
 # Listicle Builder
@@ -16,7 +18,7 @@ The line between a listicle that ranks and the listicle farm that gets penalised
 
 Start with: "Tell me: (1) the topic and target keyword, (2) who the reader is and what they are trying to do, (3) anything only you can add: first-hand results, examples, screenshots you have, tools you have actually used, and (4) roughly how many items you had in mind (I will push back if the topic deserves fewer, deeper items)."
 
-Before writing anything, run the format-fit check: does this query actually want a list? If the top results for the keyword are guides, comparisons, or product pages rather than lists, say so and recommend the format that ranks instead. A listicle forced onto a non-list query loses to weaker pages in the right shape.
+Before writing anything, run the format-fit check: does this query actually want a list? If the top results for the keyword are guides, comparisons, or product pages rather than lists, say so and recommend the format that ranks instead. A listicle forced onto a non-list query loses to weaker pages in the right shape. If you cannot search, ask the user what format the top 3 results use, or make the call from the query's wording and say it is a judgement, not a SERP check.
 
 ## Process
 
@@ -38,9 +40,9 @@ Before writing anything, run the format-fit check: does this query actually want
    - A closing that tells the reader what to do first, never a summary that repeats the list.
    - An FAQ of 3 to 5 real follow-up questions (the People Also Ask kind) with answer-first responses.
 
-6. Add the machine layer: recommend ItemList schema for ranked lists (or HowTo for step lists), note the FAQ block should carry FAQPage schema, and suggest 2 to 4 internal links from item bodies to relevant deeper pages.
+6. Add the machine layer, honestly. Google no longer shows FAQ rich results (retired May 2026) or HowTo rich results (retired 2023), and ItemList only powers carousels for a few content types: courses, movies, recipes and restaurants, plus a beta that only runs in the EEA, Türkiye and South Africa, where the eligible types differ by market: hotels and holiday rentals in all three, local businesses in the EEA and Türkiye only, and products and events in the EEA and South Africa only. An ordinary editorial list (tips, mistakes, steps, ideas) isn't one of those, so none of this markup adds a rich result to it. If the list really is a set of eligible items (restaurants, say, or products or events for searches in the EEA or South Africa), say ItemList may qualify for a carousel when each item also carries its own markup, and tell the user to check Google's carousel documentation for the current rules. What AI answers and snippets lift is the visible structure: numbered items, descriptive H2s, self-contained first lines. ItemList (and FAQPage for the FAQ block) is optional and harmless when it matches the visible content; say so rather than promising a SERP feature. Then suggest 2 to 4 internal links from item bodies to relevant deeper pages.
 
-7. Run the anti-pattern check before output. This is one honest list, never a template for scale: no programmatic "best X for Y" variants across dozens of pages, no ranking your own product first without evidence (if the list is a buying decision, the honest comparison rules apply and the Decision Content Builder skill is the better tool, say so), no fake testing claims. If the request smells like listicle farming, refuse the scale-out and explain the documented penalty risk in one line.
+7. Run the anti-pattern check before output. This is one honest list, never a template for scale: no programmatic "best X for Y" variants across dozens of pages, no ranking your own product first without evidence (if the list is a buying decision, the honest comparison rules apply and the Decision Content Builder skill is the better tool, say so), no fake testing claims. If the request smells like listicle farming, refuse the scale-out and explain the risk in one line: Google's scaled content abuse spam policy targets many pages made mainly to rank, however they are produced.
 
 ## Output structure
 
@@ -51,7 +53,7 @@ THE LISTICLE (written in full)
 Title options (2 or 3, keyword-led, no clickbait), the intro, the numbered items each with descriptive H2, micro-summary first line, evidence, and action, the closing, and the FAQ.
 
 THE MACHINE LAYER
-Schema recommendation (ItemList or HowTo, plus FAQPage), suggested internal-link anchors from item bodies, and a meta description.
+Schema note (optional ItemList and FAQPage markup that matches the visible content, with a plain statement of whether it can produce a rich result: for an ordinary editorial list it will not), suggested internal-link anchors from item bodies, and a meta description.
 
 WHAT WOULD MAKE IT STRONGER (the 2 or 3 additions only the user can supply: the screenshot, the real number, the first-hand example, marked by item)
 

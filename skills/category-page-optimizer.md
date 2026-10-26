@@ -2,7 +2,9 @@
 name: category-page-optimizer
 description: >
   Audits and rewrites an ecommerce category or collection page so it wins the broad commercial
-  queries that product pages cannot. Paste your category page content or give it a URL.
+  queries that product pages cannot. Use when someone asks to optimise, audit or write copy for an
+  ecommerce category, collection or product listing page, or asks about faceted navigation and
+  filter pages for SEO. Paste your category page content or give it a URL.
 ---
 
 # Category Page Optimizer

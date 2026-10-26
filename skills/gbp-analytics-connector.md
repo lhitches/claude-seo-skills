@@ -1,6 +1,10 @@
 ---
 name: gbp-analytics-connector
-description: Connects Google Business Profile to Google Analytics, then turns the GBP reporting collection into a monthly local actions report covering calls, bookings, direction requests, website clicks, and messages, with trends, flags, and next actions. Trigger when the user asks to link GBP to GA, pastes GBP metrics from Google Analytics, or wants a monthly local SEO report. Built for local businesses and the agencies reporting on them.
+description: >
+  Connects Google Business Profile to Google Analytics, then turns the GBP reporting collection
+  into a monthly local actions report: calls, bookings, direction requests, and website clicks.
+  Walks you through setup, then reads the data. Use when someone asks how to link Google Business
+  Profile to GA4, wants a GBP performance or local actions report, or pastes GBP metrics from Analytics.
 ---
 
 # GBP Analytics Connector
@@ -56,7 +60,7 @@ Walk through these steps exactly. Do not skip the prerequisites check.
    - Directions down with no seasonal reason (check: did the address or service area change?)
    - Bookings at zero when the business takes bookings (booking provider may have disconnected)
 
-5. Cross-reference with web data when offered: if they also paste GA web sessions or GSC local queries, connect the signals. GBP website clicks should roughly track GA sessions landing on the homepage / location pages from organic.
+5. Cross-reference with web data when offered: if they also paste GA web sessions or GSC local queries, connect the signals. GBP website clicks should roughly track GA sessions landing on the homepage / location pages from organic. If the profile's website link carries UTM tags, match on those sessions instead, and say which you used.
 
 ## Output structure
 
@@ -73,7 +77,7 @@ FLAGS
 Anything from step 4, each with the likely cause and the check to run
 
 DO THIS MONTH
-Top 3 actions, most specific first. Examples: re-add the booking link, refresh photos (profiles with fresh photos get more direction requests), answer the unanswered Q&A, post the offer
+Top 3 actions, most specific first. Examples: re-add the booking link, refresh photos (profiles with fresh photos get more direction requests), reply to recent reviews, post the offer
 
 RECORD THIS
 Remind them: GA only keeps 6 months of GBP data. Log this month's table somewhere permanent.

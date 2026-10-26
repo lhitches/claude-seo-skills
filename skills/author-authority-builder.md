@@ -1,6 +1,11 @@
 ---
 name: author-authority-builder
-description: Turns authors from byline strings into entities Google's quality systems trust and AI engines cite. Builds the canonical author page, Person schema with sameAs, consistent bylines, and the corroborating cross-web profiles, plus three bio lengths. Trigger when the user asks about E-E-A-T, author pages, author schema, building a writer's authority, or making Google trust who wrote the content. Works only with real credentials and surfaces real experience instead of inflating titles.
+description: >
+  Builds the author layer of a website: the named humans whose expertise makes content
+  trustworthy to Google's quality systems and citable by AI engines. Covers author pages, bios,
+  credentials, and Person schema. Use when someone asks for an author page or author bio, Person
+  schema, E-E-A-T or author authority help, or wants their writers recognised by Google and AI
+  search. Give it your site and author details.
 ---
 
 # Author Authority Builder
@@ -17,7 +22,7 @@ If the author has thin credentials, say so early and honestly: the fix for thin 
 
 ## Process
 
-1. Audit what exists (if a bio URL or current bio text was given). Score the current author presence: does a dedicated author page exist, does it carry real credentials or filler, is there Person schema, does sameAs point anywhere, do bylines link to the page, do the web profiles agree with the site's claims? Most authors score 2 of 6.
+1. Audit what exists (if a bio URL or current bio text was given). Score the current author presence: does a dedicated author page exist, does it carry real credentials or filler, is there Person schema, does sameAs point anywhere, do bylines link to the page, do the web profiles agree with the site's claims? If you cannot open the bio URL or profiles, say so and ask the user to paste the current bio text and profile headlines; score only what you have seen.
 
 2. Build the author page structure. One canonical page per author, their entity home:
    - Name, role, and the one-line positioning (what they are known for, bound to the site's topic).
@@ -26,7 +31,7 @@ If the author has thin credentials, say so early and honestly: the fix for thin 
    - Topics they cover on this site, linking to their best pieces (the page flows authority to the content).
    - Links out to their live profiles: the same list that goes in sameAs.
 
-3. Write the Person schema for the page: @type Person, a stable @id, name, jobTitle, worksFor (the Organization), description matching the visible bio, knowsAbout for their topics, and sameAs listing only profiles that are genuinely them and ideally link back. Alumni, credentials, and awards properties where real ones exist.
+3. Write the Person schema for the page: @type Person, a stable @id, name, jobTitle, worksFor (the Organization), description matching the visible bio, knowsAbout for their topics, and sameAs listing only profiles that are genuinely them and ideally link back. alumniOf, hasCredential and award where real ones exist.
 
 4. Fix the byline layer. Every article by the author: byline links to the author page (not a tag archive), the article's schema names the same Person @id, and the bio blurb under articles matches the author page's positioning. One consistent identity everywhere; five different job titles across five surfaces is how machines lose confidence.
 

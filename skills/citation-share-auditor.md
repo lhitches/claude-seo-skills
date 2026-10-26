@@ -1,6 +1,11 @@
 ---
 name: citation-share-auditor
-description: Reads the Bing Webmaster Tools AI Performance report (Citation Share, grounding queries, Topics, Intents, and Compare data) and turns it into a ranked action plan showing where the site owns the citation space, where it is losing it, and the single highest-leverage move to grow it. Trigger when the user mentions Bing Citation Share, the AI Performance report, grounding queries, or asks how often AI answers cite their site.
+description: >
+  Turns Bing Webmaster Tools AI Performance data into a ranked plan: where you own the citation
+  space, where you are losing it, and the single highest-leverage move to grow your Citation
+  Share. Use when someone shares Bing Webmaster Tools AI Performance data, asks about Citation
+  Share or grounding queries, or wants to know where Copilot and Bing AI answers cite their site.
+  Paste your AI Performance export.
 ---
 
 # Citation Share Auditor

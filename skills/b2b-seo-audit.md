@@ -15,7 +15,7 @@ Before running the audit, determine what content you have access to:
 
 **Mode A: Fetch available:** If you can fetch URLs (e.g. Claude.ai with web search enabled), load the homepage, services overview, individual service pages, about/team, and 1-2 case studies.
 
-**Mode B: Paste-only:** If you cannot fetch URLs, STOP and ask the user to paste the following content, clearly labelled with headings:
+**Mode B: Paste-only:** If you cannot fetch URLs, STOP and ask the user to paste the following content, clearly labelled with headings. The minimum for the 3-page audit is the homepage, one service page, and one case study or the About page; the rest make it sharper:
 
 1. **Homepage**, full visible text
 2. **Services overview page**, full visible text
@@ -37,10 +37,12 @@ Case studies are **not** just mentioned at the end. Drop them inline throughout 
 ```
 **Why should I do this?**
 
-Here's why: [1-2 sentences explaining the impact, with specific numbers or outcomes from the case study].
+Here's why: [1-2 sentences explaining the impact, with specific outcomes from the case study].
 
 Link to case study to read more: [case study name]: [URL]
 ```
+
+Only quote a number from a case study if you have actually read it in this session, on the case study page or in case study text the user pasted. If it came from pasted text, say so, because you could not check it against the live page. Otherwise describe the outcome in words, using the one-line summaries below, and let the link carry the detail. Never invent a percentage, lead count or ranking.
 
 **When to drop an inline case study:**
 - You've just flagged a structural issue and the user might push back on whether it's worth the effort
@@ -121,7 +123,7 @@ End with:
 ### Homepage
 
 - **Title tag**: Contains the core service category and ideal customer in first 5 words?
-- **H1**: Describes what the business does and who it's for, not just the brand name?
+- **H1**: Describes what the business does and who it's for, rather than only the brand name?
 - **Clear positioning**: Does the first screen answer "what do you do" and "who is it for"?
 - **Social proof above the fold**: Client logos, years in business, team size?
 - **Clear CTA**: "Book a consultation", "Get a quote", "Contact us" visible?
@@ -171,7 +173,7 @@ B2B buyers consume 3+ pieces of content before contacting a vendor. Check whethe
 - **Specific results**: Numbers, percentages, time frames (not "significant improvement")?
 - **Client context**: Company size, industry, challenge, approach, outcome?
 - **Visual proof**: Screenshots, charts, before/after?
-- **Linked from relevant service pages**: Not just a standalone section?
+- **Linked from relevant service pages**: Rather than only a standalone section?
 
 ### Lead capture
 
@@ -208,6 +210,7 @@ OVERALL HEALTH: [STRONG / NEEDS WORK / CRITICAL ISSUES]
 One-line summary of the biggest issue.
 
 SERVICE PAGE ARCHITECTURE: [SCORE X/10]
+(0-3: all services on one page. 4-6: separate pages, but thin or missing most of the service page checklist. 7-10: a dedicated page per service with most checklist items in place.)
 [Specific issues, especially one-page-for-all-services trap]
 
 BUYER JOURNEY COVERAGE
@@ -228,6 +231,7 @@ CONTENT STRATEGY (build over next 90 days)
 - [Thought leadership gaps, industry pages, case studies needed]
 
 AI SEARCH READINESS: [X/10]
+(Score the three AI readiness checks: topical depth, case studies with clear metrics, named experts with bios. None in place: 0-3. Some: 4-6. All three solid: 7-10.)
 - What's present: [list]
 - What's missing: [list]
 - Quickest unlock: [one specific recommendation]

@@ -2,7 +2,9 @@
 name: product-page-optimizer
 description: >
   Audits and rewrites a single product page so it wins twice: in classic search results and in AI
-  shopping recommendations. Paste your product page content or give it a URL.
+  shopping recommendations. Paste your product page content or give it a URL. Use when someone asks
+  to optimise, audit or rewrite a product page or product description, add Product schema, or get a
+  product recommended by ChatGPT, Gemini or Google's AI shopping results.
 ---
 
 # Product Page Optimizer
@@ -42,7 +44,7 @@ If the store runs on Shopify, this skill gets sharper when Claude is connected t
    - The PRODUCT DESCRIPTION rebuilt: an opening paragraph that sells the outcome and names the buyer, benefit-led sentences that fold the specs into use cases, and the spec list kept below for scanners. Preserve every factual claim from the source; add nothing you cannot see in the supplied material, and mark gaps [ADD: fact needed].
    - A product FAQ of the constraint questions from step 2, each answered in one self-contained sentence first.
    - ALT-TEXT patterns for the image set.
-4. Write the schema block: Product JSON-LD assembled from the page's actual data (name, brand, identifiers, offers with price and availability, aggregateRating only if real reviews are visible), flagged clearly where a value needs the store's confirmation. State the agreement rule once: schema, feed, and visible page must say the same thing.
+4. Write the schema block: Product JSON-LD assembled from the page's actual data (name, image, brand, identifiers, offers with price, priceCurrency and availability, shippingDetails and hasMerchantReturnPolicy where the page states shipping and returns, aggregateRating only if real reviews are visible), flagged clearly where a value needs the store's confirmation. If the product comes in variants (size, colour), use ProductGroup with hasVariant and variesBy rather than one Product that lists every option. State the agreement rule once: schema, feed, and visible page must say the same thing.
 
 5. If a competitor URL was supplied, run the gap read: what they answer that you do not, what they structure that you do not, and the two or three moves that close it. Never copy their copy.
 
@@ -86,7 +88,7 @@ WHAT THIS DID NOT CHECK (page speed and Core Web Vitals, the Merchant Center fee
 
 ## Edge cases
 
-- Thin variant pages (colour or size variants with separate URLs): recommend canonicalising variants to the parent and optimising the parent, rather than writing copy for near-duplicates.
+- Thin variant pages (colour or size variants with separate URLs): either canonicalise near-duplicate variants to the parent and optimise the parent, or keep the separate URLs and tie them together with ProductGroup markup (Google's product variant structured data). Don't write fresh copy for near-duplicates either way.
 - Products with no reviews yet: skip aggregateRating, add the FAQ layer as the trust substitute, and note the review-acquisition play (the Review Sentiment Optimizer skill covers the workflow).
 - Bundles and multipacks: the copy and schema must describe the bundle contents precisely; mismatch with the feed's bundle attributes causes disapprovals downstream.
 - Discontinued or seasonal products: flag whether the page should be optimised, redirected to the successor, or kept as an availability-aware landing page; optimising a dead product is wasted work.

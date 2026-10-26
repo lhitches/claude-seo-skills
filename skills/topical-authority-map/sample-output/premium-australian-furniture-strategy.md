@@ -47,7 +47,9 @@
 | Customer language | "Australian-made dining tables", "solid oak", "handmade in Australia", "30-year furniture", "heirloom" |
 | Knowledge Panel test | "Atlas & Oak is an Australian furniture maker producing premium hardwood dining tables, sideboards, and bedroom collections from its Melbourne workshop, with national delivery and a 25-year structural guarantee." |
 
-### Persona
+### Persona (illustrative example)
+
+The persona below is an illustrative example that goes with the sample brand, not an author to publish. In a real run, the persona is the actual author or reviewer, with credentials you can check. Never publish an example persona as a real author.
 
 | Field | Value |
 |---|---|
@@ -117,8 +119,8 @@ Key entities in the cluster, with topic distance:
 ```
 
 **Why this structure:**
-- Five Core hubs (dining tables, sideboards, bedroom, coffee tables, custom) so Google sees the product taxonomy.
-- All AOR content lives under `/guides/[sub-topic]/` so the URL signals "supporting content" not "buying intent".
+- Five Core hubs (dining tables, sideboards, bedroom, coffee tables, custom) so the product taxonomy is clear. The folders keep things organised; the links from the navigation and hub pages are what show Google the structure.
+- All AOR content lives under `/guides/[sub-topic]/` so supporting content is kept together and easy to report on.
 - `/dining-tables/` is the deepest folder because it is the highest-revenue product category. Every AOR article on dining tables routes back here.
 
 ---
@@ -139,13 +141,13 @@ Apply on every page.
 
 ---
 
-## 6. NLP Category Target
+## 6. NLP Category Check (optional)
 
-Target: `/Home and Garden/Home Furnishings/Furniture` for every page.
+Main category: `/Home & Garden/Home Furnishings`. Most pages should land here; the ones that drift are worth a look. This is an optional diagnostic using Google Cloud's Natural Language API, a separate Google Cloud product, not a Google Search ranking test.
 
 **Drift risks:**
-- "Modern Australian interior design" articles can drift toward `/Arts and Entertainment/Visual Art and Design`. Anchor with at least two product mentions and one internal link to a Core page.
-- "Sustainable timber" articles can drift toward `/Science/Ecology`. Anchor with timber-as-material framing, not forestry-as-environmental-cause framing.
+- "Modern Australian interior design" articles can drift toward `/Arts & Entertainment/Visual Art & Design`. Anchor with at least two product mentions and one internal link to a Core page.
+- "Sustainable timber" articles can drift toward `/Science/Ecology & Environment`. Anchor with timber-as-material framing, not forestry-as-environmental-cause framing.
 - "Australian craft heritage" articles can drift toward `/Reference/Humanities/History`. Keep the angle on cabinet-making craft, not on cultural history broadly.
 
 ---
@@ -154,16 +156,16 @@ Target: `/Home and Garden/Home Furnishings/Furniture` for every page.
 
 | Direction | Rule | Notes |
 |---|---|---|
-| AOR to Core | MANDATORY in body content | Every AOR article links to one or two Core pages with exact-match or partial-match anchor. |
+| AOR to Core | MANDATORY in body content | Every AOR article links to one or two Core pages, usually with an exact-match or partial-match anchor. |
 | AOR to AOR | ENCOURAGED | Helps cluster depth. |
-| Core to AOR | RARE | Core pages link out only to a "buying guide" or "care guide" sidebar at most. |
+| Core to AOR | ENCOURAGED | Link wherever it helps the reader, for example a dining table page linking to the sizing guide and the care guide. |
 | Homepage to Core | ALL FIVE HUBS | Direct from homepage nav and hero. |
-| Homepage to AOR | NONE | Homepage stays commercial. |
+| Homepage to AOR | OPTIONAL | A link to a key buying guide can help visitors who are still researching. |
 
-**Anchor text mix per Core page:**
-- First incoming link: exact match (e.g. "Australian-made dining tables").
-- Second incoming link: partial match (e.g. "our dining table collection").
-- Third incoming link: branded (e.g. "Atlas & Oak dining tables").
+**Anchor text mix per Core page (a guide, not a fixed order):**
+- Exact match (e.g. "Australian-made dining tables").
+- Partial match (e.g. "our dining table collection").
+- Branded (e.g. "Atlas & Oak dining tables").
 
 **Reader-relevance check:** every link is paired with a sentence that would make sense to the reader of the source page. No "related products" widgets. No automated "you might also like" sidebars.
 
@@ -207,8 +209,9 @@ Queries no major competitor covers in depth. These are where Atlas & Oak can cre
 **Phase 0. Foundation (already in place):**
 - Homepage live with new central entity template applied.
 - Five Core hub pages live (dining tables, sideboards, bedroom, coffee tables, custom).
-- About page rewritten around Marcus Hale and the workshop.
+- About page rewritten around the real founder and the workshop.
 - Contact page.
+- Anything broken on a Core page (wrong intent, thin content, not indexed) fixed first, not saved for Phase 3.
 
 **Phase 1. AOR Wave (weeks 1 to 6, 30 articles):**
 - Five articles per week.
@@ -222,11 +225,11 @@ Queries no major competitor covers in depth. These are where Atlas & Oak can cre
 - Plus the remaining 28 AOR articles from the cluster.
 
 **Phase 3. Core Optimisation (weeks 11 to 12, 20 articles):**
-- All 15 Core pages get rewritten using the central entity template.
+- All 15 Core pages get their big rewrite using the central entity template, now that the supporting articles are live to link to.
 - Five new BOFU sub-pages launched (e.g. "extending oak dining tables Melbourne", "round Tasmanian oak dining tables").
 - Internal linking sweep: confirm every Phase 1 and Phase 2 article links into the right Core page.
 
-By week 12, Google has six weeks of authority signals routed in from 30+ articles, four weeks of MOFU buyer guides feeding warm traffic into the comparison decision, and only then do the Core pages get optimised. The compounding effect lands on the Core pages.
+The order is the point: supporting articles first, MOFU buyer guides next, then the big Core rewrites, which can link to everything already published. Timing varies by site, so treat the weeks as a plan, not a ranking forecast.
 
 See the Publishing Order tab for the exact 90-row sequence.
 
@@ -271,12 +274,12 @@ If the audit shows gaps, the skill adds them automatically. For Atlas & Oak the 
 
 Every article in this map must meet:
 
-1. **Length matches intent.** Buyer guides 2,000+ words. Definitions 600 to 1,000 words. Comparisons 1,500+ words. Care guides 800 to 1,200 words.
+1. **Length matches intent.** As a rough guide only: buyer guides often run 2,000+ words, definitions 600 to 1,000, comparisons 1,500+, care guides 800 to 1,200. Cover what the reader needs, then stop.
 2. **First-party photography.** Every product mention has a real Atlas & Oak photo. No stock images of generic furniture.
-3. **Persona attribution.** AOR articles signed by Marcus Hale or a named workshop joiner.
+3. **Real authorship.** AOR articles signed by the real person who wrote or reviewed them (in a real run, the founder or a named workshop joiner), with credentials that can be checked.
 4. **One central entity mention** in intro paragraph plus one in supplementary section plus one internal link to a Core page. No more, no less.
 5. **No keyword stuffing.** Natural language, customer phrasing.
-6. **No AI-generated padding.** Concrete details, real measurements, real timber characteristics. If the writer cannot speak with authority, the persona is wrong for that topic.
+6. **No AI-generated padding.** Concrete details, real measurements, real timber characteristics. If the writer cannot speak with authority, bring in a real expert to write or review it.
 
 A topical map filled with low-quality articles will hurt Atlas & Oak. The map is permission to publish with strategy, not permission to publish more.
 

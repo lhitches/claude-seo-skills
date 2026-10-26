@@ -1,6 +1,11 @@
 ---
 name: entity-seo-auditor
-description: Audits whether a brand, person, or business is a well-formed entity that Google's Knowledge Graph and AI search engines recognise and trust. Scores entity home, schema, knowledge-graph presence, cross-web consistency, disambiguation, and corroboration, with one fix per layer. Trigger when the user asks whether Google sees them as an entity, mentions the Knowledge Graph, sameAs, Wikidata, entity SEO, or brand disambiguation.
+description: >
+  Audits whether a brand, person, or business is a well-formed entity that Google's Knowledge
+  Graph and AI search engines recognise, understand, and trust. Covers the entity home, naming
+  consistency, schema, sameAs, Wikidata and Knowledge Panel presence. Give it your brand and site.
+  Use when someone asks for an entity SEO audit, why they have no Knowledge Panel, whether Google
+  or AI search knows who they are, or how to set up Organization or Person schema and sameAs.
 ---
 
 # Entity SEO Auditor
@@ -15,18 +20,20 @@ Start with: "Give me the entity name exactly as it should appear, the entity typ
 
 If the user gives only a name and URL, run the audit on what you can infer from the site and a plain search of the name, and say which layers you could only estimate. Never block on missing data. Note the gap and score on what you have.
 
+If you cannot browse or search at all, say so up front. Audit only what the user pasted, and mark Knowledge-Graph Presence and Corroboration as NOT CHECKED rather than scoring them, with the searches the user can run themselves.
+
 ## Process
 
 1. Establish the entity. Fix the exact name, the type (Organization, LocalBusiness, Person, or Product), and the topic it wants to own. Every later check is relative to this. "Acme" the accounting firm and "Acme" the band are different entities, and the whole audit is about whether machines can tell which one this is.
 
 2. Find the entity home. There must be ONE canonical page that defines the entity, usually the homepage for a brand or an author or About page for a person. Check it carries the defining facts in one place: what the entity is, what it does, when it was founded, who is behind it, and where. An entity with its facts scattered across ten pages and consolidated on none is an entity Google cannot pin down. Mark whether a clear entity home exists.
 
-3. Audit the schema layer. Check for Organization, LocalBusiness, or Person schema on the entity home:
+3. Audit the schema layer. Check for Organization, LocalBusiness, or Person schema on the entity home. Many fetch tools return page text only and strip the JSON-LD, so if you cannot see the raw source, ask the user to paste the schema (or run the page through Google's Rich Results Test or the Schema Markup Validator) rather than calling it missing:
    - The correct @type for what the entity actually is.
    - A stable @id used as the entity's canonical identifier and referenced consistently across the site's schema.
    - name, description, and logo or image that match the visible page.
    - sameAs pointing to the entity's authoritative profiles (Wikipedia, Wikidata, LinkedIn, Crunchbase, the official social accounts, industry directories). sameAs is how you tell Google "these profiles are all me".
-   - For a business: founder, foundingDate, address, and the topic served. For a person: jobTitle, worksFor, and the sameAs to their professional profiles.
+   - For a business: founder, foundingDate, address, and knowsAbout for the topic it wants to own (areaServed for a service area). For a person: jobTitle, worksFor, knowsAbout, and the sameAs to their professional profiles.
    Score the schema on correctness and completeness, not presence alone. Empty or wrong schema scores low.
 
 4. Check knowledge-graph presence. Search the entity name and judge, honestly, whether the entity already exists as a recognised thing:
@@ -42,7 +49,7 @@ If the user gives only a name and URL, run the audit on what you can infer from 
 
 7. Assess corroboration. The Knowledge Graph is built from agreement across independent sources. Check whether the entity is mentioned and described consistently on the places machines read to confirm entities: Wikipedia and Wikidata, industry press, reputable directories, and high-trust community sources. One self-declared About page is a claim. Three independent sources saying the same thing is a fact the graph will trust.
 
-8. Score each layer 0 to 10, then name the single highest-leverage fix per layer. One fix each, the move that shifts the score most, specific and shippable. Then rank the top three across all layers as the "do this week" list.
+8. Score each layer 0 to 10 (0 absent, 5 present but incomplete or inconsistent, 10 complete, correct and corroborated), marking any score you could only estimate with "(est.)". Then name the single highest-leverage fix per layer. One fix each, the move that shifts the score most, specific and shippable. Then rank the top three across all layers as the "do this week" list.
 
 ## Output structure
 
@@ -72,6 +79,7 @@ The layers you could only estimate, and the one input that would sharpen the aud
 - sameAs must point only to profiles that genuinely are the entity, and the link should be reciprocal where possible. Do not pad sameAs with unrelated or unowned URLs, it weakens the signal.
 - Consistency is a precondition, not a tradeable score. A FAIL is the headline, fix the contradictions before anything else.
 - Wikidata before Wikipedia. A Wikidata item is earnable, machine-read, and the fastest way onto the graph. Wikipedia needs notability and is slower. Sequence them that way.
+- Wikidata has its own notability policy, and an item qualifies through any one of three routes: a valid sitelink (for example a Wikipedia article), a clearly identifiable entity that "can be described using serious and publicly available references", or a structural need (other items need it). A business without a Wikipedia article usually relies on the second route. Our recommendation, which is stricter than the policy: only create one when independent sources about the entity exist (press, industry bodies, official registers), reference every statement, and warn the user that an item sourced only to the brand's own site can be deleted.
 - Never invent facts about the entity. Audit what the site and the open web actually say. If founding date, address, or founder are missing, that is a finding, not a blank to fill.
 - One fix per layer in the main output. The user cannot do ten things.
 - Australian English. No em-dashes.

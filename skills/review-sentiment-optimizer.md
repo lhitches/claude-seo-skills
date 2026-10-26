@@ -2,7 +2,9 @@
 name: review-sentiment-optimizer
 description: >
   Turns a pile of customer reviews into an optimisation plan, because AI tools reference review
-  sentiment when they describe and recommend brands. Paste your reviews.
+  sentiment when they describe and recommend brands. Paste your reviews. Use when someone pastes
+  customer reviews and wants sentiment analysis, asks what their reviews say about the brand, which
+  negative reviews to answer first, or how to turn reviews into keywords, FAQs and testimonials.
 ---
 
 # Review Sentiment Optimizer
@@ -13,19 +15,19 @@ Reviews are also a keyword goldmine nobody reads properly: customers describe pr
 
 ## Intake (do this FIRST)
 
-Start with: "Paste your reviews: a Google reviews export, Trustpilot, product reviews, or any industry platform (Tripadvisor, Clutch, G2, wherever your customers talk). Include star ratings and dates where you have them, and tell me which reviews already have replies. Also tell me the brand's one-line positioning, so I can check whether your reviews tell the same story you do."
+Start with: "Paste your reviews: your Google reviews (copied from your profile or a review tool export), Trustpilot, product reviews, or any industry platform (Tripadvisor, Clutch, G2, wherever your customers talk). Include star ratings and dates where you have them, and tell me which reviews already have replies. Also tell me the brand's one-line positioning, so I can check whether your reviews tell the same story you do."
 
 If the user has few or no reviews yet, switch to acquisition mode: build them the ask-workflow first (who to ask, when, on which platforms), because optimisation needs raw material. Never fabricate example reviews as if they were real.
 
 ## Process
 
-1. Map the sentiment. Split reviews into positive, neutral, and negative, by platform and by recency. Note the trajectory: improving, stable, or declining over the last 6 to 12 months, because AI systems weight the recent story.
+1. Map the sentiment. Split reviews into positive, neutral, and negative, by platform and by recency. Note the trajectory: improving, stable, or declining over the last 6 to 12 months, because the recent story is what new customers read first. If the reviews have no dates, say the trajectory can't be read.
 
 2. Extract the themes, both directions:
    - PRAISE THEMES: the specific things customers repeatedly love, in their own words. These are the brand's citable strengths, and the phrases AI is most likely to repeat when describing the brand.
    - COMPLAINT THEMES: the repeated problems. Separate fixable operations issues (slow shipping) from positioning mismatches (customers expecting something the brand never promised, which is a messaging problem upstream).
 
-3. Read it as AI does. Write the two or three sentence description of the brand that an AI would plausibly generate from these reviews alone. Compare it against the brand's own positioning line: aligned, partially aligned, or telling a different story. This is the sentence the user is really optimising.
+3. Read it as AI does. Write the two or three sentence description of the brand that an AI would plausibly generate from these reviews alone. Label it as a simulation from the reviews, not a quote of what any AI tool actually says. Compare it against the brand's own positioning line: aligned, partially aligned, or telling a different story. This is the sentence the user is really optimising.
 
 4. Prioritise the response queue. Unanswered negative reviews first, ranked by visibility and recency (a fresh unanswered one-star on Google outranks an old one on a quiet platform). Note which need a reply, which need an operational fix first, and which merit a follow-up request once fixed. For drafting the replies themselves on Google, route to the Google Review Handler skill, which writes compliant responses to every review type; this skill decides the priority order, that one writes the words.
 
@@ -34,7 +36,7 @@ If the user has few or no reviews yet, switch to acquisition mode: build them th
    - CUSTOMER-LANGUAGE KEYWORDS: the phrases customers use that the site's pages do not, which are often exactly what other buyers search. Map each to the page that should carry it.
    - OBJECTION LIST: the hesitations and pre-purchase questions visible in reviews, each one an FAQ entry or a product-page paragraph waiting to be written.
 
-6. Audit the acquisition workflow against the standard playbook: are happy customers being asked at the right moment (post-delivery, post-result), on the platforms that matter for the industry (Google first, then Trustpilot or the vertical's own platform), with a low-friction link? Is every review, good or bad, getting a reply? Name the gaps as concrete workflow steps.
+6. Audit the acquisition workflow against the standard playbook: are customers being asked at the right moment (post-delivery, post-result), and are customers asked consistently, not just the happy ones (every eligible customer, or an unbiased selection, never chosen by expected sentiment: Google's policy bans selectively soliciting positive reviews), on the platforms that matter for the industry (Google first, then Trustpilot or the vertical's own platform), with a low-friction link? Is every review, good or bad, getting a reply? Name the gaps as concrete workflow steps.
 
 7. Note the schema layer honestly: review and rating markup belongs on genuine third-party or on-site product reviews per the platform's rules; self-serving misuse of review schema is a documented spam pattern. One line of guidance, no more.
 
@@ -44,7 +46,7 @@ SENTIMENT MAP
 Counts and shares by sentiment and platform, the 6-12 month trajectory, and reply coverage (answered vs unanswered, by sentiment).
 
 WHAT AI LIKELY SAYS ABOUT YOU
-The 2 or 3 sentence brand description an AI would generate from these reviews, and the verdict against your positioning: aligned / partial / different story. Check it for real with the AI Visibility Tester.
+The 2 or 3 sentence brand description an AI would generate from these reviews (a simulation), and the verdict against your positioning: aligned / partial / different story. Check it for real with the free AI Visibility Tester (hawkacademy.co/seo-tools/ai-visibility).
 
 THEMES
 Praise themes and complaint themes, each with representative quotes and counts, complaints split into operational fixes vs positioning mismatches.
@@ -61,7 +63,7 @@ DO THIS WEEK (top 3 actions by impact across everything above)
 ## Rules
 
 - Never fabricate reviews, quotes, ratings, or counts. Every quote in the output is verbatim from the supplied reviews.
-- Never recommend fake, incentivised-for-positive, or gated reviews (asking only happy customers to post while diverting unhappy ones is against most platforms' rules). The ask-workflow targets genuinely happy customers honestly.
+- Never recommend fake, incentivised, or gated reviews. Google's policy bans offering anything (payment, discounts, free goods) in exchange for a review, discouraging negative reviews, and selectively asking only happy customers. The ask-workflow asks customers consistently at the right moment, honestly: every eligible customer (the simplest option) or an unbiased selection, never chosen by expected sentiment.
 - Negative reviews are data, never something to suppress. The play is reply, fix, and earn better ones.
 - Pull-quotes used publicly should respect the platform's display rules; note attribution requirements once.
 - If reviews are too few to read sentiment from (under roughly 10), say so and lead with acquisition, not analysis.

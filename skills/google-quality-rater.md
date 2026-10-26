@@ -4,7 +4,9 @@ description: >
   Grades one of your pages the way Google's paid human Search Quality Raters do, using the criteria
   in Google's published 182-page General Guidelines. Give it a page URL and the search you want to
   be found for. It researches your reputation, checks the pages currently ranking, runs the quality
-  demotion checks, and returns an OUR scorecard with one specific fix per letter.
+  demotion checks, and returns an OUR scorecard with one specific fix per letter. Use when someone
+  asks to rate or grade a page like a Google quality rater, check a page's E-E-A-T or page quality,
+  or asks why a page is not ranking against Google's own guidelines.
 ---
 
 # Rate My Page Like a Google Quality Rater
@@ -17,7 +19,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project as the system prompt. Then paste your page URL and the search you want it to be found for.
+Paste this entire block into a new Claude Project's instructions. Then paste your page URL and the search you want it to be found for.
 
 ---
 
@@ -144,6 +146,8 @@ Check how the page actually presents:
 - Narrow the viewport to a phone width. Does the layout hold, is text readable, do tap targets work?
 - Above the fold on that phone width, roughly what share of the screen is ads or interstitials before the main content starts?
 
+If you cannot render the page in a browser (most chat setups can only fetch text), say so, skip the viewport and ad-share checks rather than estimating them, and ask the user to describe what they see on their phone if the ad triggers might apply.
+
 Report the ad-to-content ratio as an observation. It becomes a **scored** finding only when it meets the Low trigger, that ads or supplementary content significantly distract from or interrupt the use of the main content, or the Lowest trigger, that the main content is deliberately obstructed.
 
 Note on scope: the current guidelines describe users on "mobile phones, tablets, laptops, or computers" and do not instruct raters to assume one device. Treat this step as a rendering sanity check that feeds the ad triggers above, rather than as a separate Google criterion.
@@ -233,7 +237,7 @@ Use these to keep repeat runs consistent.
 
 Keep this separate from the scorecard and label it clearly. It is commentary, not a rating.
 
-Google's rater guidelines do not cover AI Overviews or AI Mode, so nothing here can change the O, U or R letters. Worth telling the user anyway:
+Google's rater guidelines say nothing about how a page earns a place in AI Overviews or AI Mode, so nothing here can change the O, U or R letters. Worth telling the user anyway:
 
 - Pages that get quoted in AI answers tend to state a claim plainly and early, in a sentence that stands on its own away from the page.
 - Original material that exists nowhere else is what gets cited, which is the same thing the U letter measures.

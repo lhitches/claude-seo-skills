@@ -2,7 +2,10 @@
 name: merchant-center-optimizer
 description: >
   Optimises a store's Google Merchant Center product feed so products appear in Shopping results,
-  free listings, and AI-assisted shopping answers. Paste your feed fields or product data.
+  free listings, and AI-assisted shopping answers. Paste your feed fields or product data. Use when
+  someone asks about Google Merchant Center, product feed optimisation, Shopping titles, disapproved
+  products, GTIN or identifier warnings, free listings, or why products aren't showing in Google
+  Shopping.
 ---
 
 # Merchant Center Optimizer
@@ -25,7 +28,7 @@ If you only get a handful of products with no diagnostics, run the optimisation 
    - THE ID/SKU: never overwrite it. The ID is how Google tracks a product's entire performance history; changing it creates a brand-new product with zero history, and campaign performance drops immediately. Whole catalogues have been sunk this way.
    - PRICE, CURRENCY, AVAILABILITY, SALE PRICE and SALE DATES: fix these at the data source (the Shopify or WooCommerce product, or the feed app mapping), never as Merchant Center overrides. Google re-checks these against the landing page constantly, and a discrepancy disapproves the product fast.
 
-3. Audit and rewrite titles, the highest-leverage field in the feed. Think like a shopper typing a query: product type plus the narrowing attributes buyers actually search (scent, material, colour, size, count, burn time, model). Working structures by vertical: apparel leads with gender and category then brand, attributes and size; hard goods lead with brand and product type then key attributes. Front-load what matters: display truncates around the first 70 characters but Google indexes up to the 150-character limit, so query-matching terms go first and the attribute long tail fills the rest. Rewrite the supplied titles before-and-after, and state the pattern per product type so the store can apply it at scale. Specific and descriptive, never stuffed: no word-salad titles, no promo text, no ALL CAPS, no "best" or "free shipping" (policy violations).
+3. Audit and rewrite titles, the highest-leverage field in the feed. Think like a shopper typing a query: product type plus the narrowing attributes buyers actually search (scent, material, colour, size, count, burn time, model). Working structures by vertical: apparel leads with gender and category then brand, attributes and size; hard goods lead with brand and product type then key attributes. Front-load what matters: display truncates around the first 70 characters but Google indexes up to the 150-character limit, so query-matching terms go first and the attribute long tail fills the rest. Rewrite the supplied titles before-and-after, and state the pattern per product type so the store can apply it at scale. Specific and descriptive, never stuffed: no word-salad titles, no ALL CAPS, and no promotional text such as "free shipping", "sale" or "best price" (Google's title rules don't allow it, and it can trigger disapprovals).
 
 4. Audit the identifier layer, where the most common warnings live:
    - GTIN (UPC/EAN/ISBN, the barcode number): enter it wherever the product genuinely has one. Google presses hard for GTINs because the same product sold by other sellers carries cross-seller performance history it uses to optimise; an accurate GTIN plugs your product into that history.
@@ -38,7 +41,7 @@ If you only get a handful of products with no diagnostics, run the optimisation 
    - product_type: your own taxonomy, as deep as the store structures it; it is for your organisation, and it makes product grouping and campaign segmentation possible later.
    - VARIANT ATTRIBUTES: colour, size, gender, age_group, material, pattern, with item_group_id tying every variant of a product together (unique per product, identical across its variants).
    - The apparel attribute set is worth filling even for non-apparel where relevant: a couch has colour, size, material and pattern; a kids bike has gender and age_group. Shoppers filter by these.
-   - COLOUR: the dominant colour first, up to three separated by slashes, then stop; many colours with none dominant means multicoloured. Keep names simple and filterable: grey, not dusty ash; pink, not blushing rose.
+   - COLOUR: the dominant colour first, then up to two more, separated by slashes (red/grey/white), never commas. Never a value that isn't a colour, such as "variety" or "N/A". Use the colour name the landing page shows, even a marketing name like "Dusty Ash": Google requires the feed to match the landing page, so never simplify it to "grey" in the colour attribute. Put the plain colour a shopper would search (grey) in the title instead.
    - SIZE: keep it standard and simple (S, M, L; 11.5 for shoes). size_type and size_system are apparel-only.
    - MULTIPACK vs BUNDLE: multipack is two or more of the SAME item packaged together (enter the count); bundle is different items packaged as one. Confusing them misdescribes the offer.
    - Adult-oriented products: flag the adult attribute where it applies; it is separate from age_group, and unflagged adult products are a policy problem.
@@ -69,7 +72,7 @@ DISAPPROVAL TRIAGE (grouped by cause: what it blocks, the fix, where to apply it
 
 TITLE REWRITES (before and after for every supplied product, plus the reusable title pattern per product type, with the front-load rule stated)
 
-IDENTIFIER AND ATTRIBUTE FIX LIST (GTIN/MPN calls per product, categories, variants and item_group_id, colour and size normalisation, multipack and bundle corrections, product highlights drafted, custom-label segmentation suggested)
+IDENTIFIER AND ATTRIBUTE FIX LIST (GTIN/MPN calls per product, categories, variants and item_group_id, colour names matched to the landing page, size normalisation, multipack and bundle corrections, product highlights drafted, custom-label segmentation suggested)
 
 CONSISTENCY CHECKS (feed vs landing page: price, availability, schema agreement, feed refresh cadence)
 

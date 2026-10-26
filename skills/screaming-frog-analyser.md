@@ -1,6 +1,11 @@
 ---
 name: screaming-frog-analyser
-description: Turns Screaming Frog crawl data into a prioritised technical SEO fix plan, weighted by how much link equity and indexation each issue touches. Drives the crawl itself through the Screaming Frog v24+ MCP server when available, otherwise analyses a pasted crawl export. Trigger when the user mentions Screaming Frog, pastes a crawl export, or asks what to fix first from a site crawl. Built for SEOs who have the crawl and need the judgement.
+description: >
+  Turns Screaming Frog crawl data into a prioritised technical SEO fix plan, weighted by how much
+  link equity and indexation each issue actually affects. Drives the crawl itself when the Screaming
+  Frog SEO Spider MCP is connected, or reads a pasted or attached export. Use when someone shares a
+  Screaming Frog, Sitebulb, Ahrefs or Semrush crawl export, asks to "analyse my crawl", "crawl my
+  site with Screaming Frog", or wants to know which technical issues to fix first.
 ---
 
 # Screaming Frog Analyser
@@ -8,7 +13,7 @@ description: Turns Screaming Frog crawl data into a prioritised technical SEO fi
 You turn Screaming Frog crawl data into a prioritised technical SEO fix plan. Screaming Frog finds everything; your job is to tell the user what actually matters, in what order, weighted by how much link equity and indexation each issue touches.
 
 You work in two modes:
-- MCP MODE: Screaming Frog v24+ ships an MCP server. If the SEO Spider MCP tools are available in this conversation, drive the crawl and pull the data yourself.
+- MCP MODE: Screaming Frog v24+ ships an MCP server (paid licence only, it does not run in the free version). If the SEO Spider MCP tools are available in this conversation, drive the crawl and pull the data yourself.
 - EXPORT MODE: no MCP connected. The user pastes a crawl export and you analyse it.
 
 The analysis framework is identical in both modes. Only the data source changes.
@@ -17,13 +22,13 @@ The analysis framework is identical in both modes. Only the data source changes.
 
 Check whether Screaming Frog MCP tools are available in this conversation.
 
-If MCP tools ARE available: ask "What should I crawl? Give me the site URL (or a list of URLs) and I'll run the crawl through Screaming Frog and analyse it." For full-site crawls over ~2,000 URLs, tell the user to run the crawl in the Screaming Frog desktop app instead and export, because driving a big crawl through chat is slow; then analyse via the MCP's data access or the export.
+If MCP tools ARE available: ask "What should I crawl? Give me the site URL (or a list of URLs) and I'll run the crawl through Screaming Frog and analyse it. If you already have a saved crawl, tell me and I'll list your recent crawls and load it instead." For full-site crawls over ~2,000 URLs, tell the user to run the crawl in the Screaming Frog desktop app instead and export, because driving a big crawl through chat is slow; then analyse via the MCP's data access or the export.
 
-If MCP tools are NOT available: say "Two options. Fast: paste your Screaming Frog export (Internal tab, filter HTML, Export: that CSV has every column I need). Better: connect the Screaming Frog MCP so I can drive crawls directly. Setup takes 2 minutes: you need Screaming Frog 24.0+, then Settings > MCP Server > Start MCP Server in the Spider, download the SEO Spider MCP extension from the Screaming Frog documentation, and in Claude Desktop go to Settings > Extensions > Advanced settings > Install Extension and pick the file you downloaded. Restart the chat and I'll see the tools."
+If MCP tools are NOT available: say "Two options. Fast: paste your Screaming Frog export (Internal tab, filter HTML, Export: that CSV has every column I need). Better: connect the Screaming Frog MCP so I can drive crawls directly. Setup takes a few minutes: you need Screaming Frog 24.0+ with a paid licence. In the Spider, open File > Settings > MCP Server and accept the Node.js runtime. Download the STDIO MCP extension from Screaming Frog's MCP Server documentation, then in Claude Desktop go to Settings > Extensions > Advanced settings > Install Extension and pick the .mcpb file. Fully quit Claude (on Windows, from the system tray) and reopen it, and I'll see the tools."
 
-Big pasted crawl (10,000+ URLs)? Ask for the top 2,000 rows sorted by Unique Inlinks descending, plus Bulk Export > Response Codes > Client Error (4xx) Inlinks if broken links exist.
+Big pasted crawl (10,000+ URLs)? Ask for the top 2,000 rows sorted by Unique Inlinks descending, plus Bulk Export > Response Codes > Internal & External > Client Error (4xx) Inlinks if broken links exist.
 
-Useful columns (use what's present, never demand all): Address, Status Code, Indexability, Indexability Status, Title 1, Title 1 Length, Meta Description 1, Meta Description 1 Length, H1-1, Word Count, Crawl Depth, Inlinks, Unique Inlinks, Outlinks, Canonical Link Element 1, Response Time.
+Useful columns (use what's present, never demand all): Address, Status Code, Indexability, Indexability Status, Title 1, Title 1 Length, Title 1 Pixel Width, Meta Description 1, Meta Description 1 Length, H1-1, Word Count, Crawl Depth, Inlinks, Unique Inlinks, Outlinks, Canonical Link Element 1, Response Time.
 
 If the export is from Ahrefs, Sitebulb, or Semrush instead: detect it, map the columns, say which checks you can and cannot run from it.
 
@@ -42,7 +47,7 @@ Run every check the columns allow. Each issue gets a severity class:
 
 4. CANONICAL ISSUES. Canonical Link Element differs from Address on indexable-looking pages. Distinguish deliberate (parameters, variants) from likely accidents (whole template canonicalised to one URL: BLOCKER).
 
-5. TITLES. Missing, duplicate (group identical Title 1 values, report the largest groups), over 60 characters where the keyword is truncated, or under 30 (wasted slot).
+5. TITLES. Missing, duplicate (group identical Title 1 values, report the largest groups), likely to truncate before the keyword, or half-empty (little beyond the brand name, one of the reasons Google gives for rewriting a title). Google cuts titles by pixel width, not character count, so use Title 1 Pixel Width (Screaming Frog's Over X Pixels filter) when the column is there, and treat over 60 characters only as a rough proxy when it is not.
 
 6. META DESCRIPTIONS. Missing or duplicate on indexable pages with inlinks. Over ~155 characters is a minor flag, not a fix campaign.
 
@@ -96,7 +101,7 @@ Top 5 actions by impact-to-effort. Title fixes are minutes; template canonical f
 ## Edge cases
 
 - MCP crawl returns partial columns: the MCP exposes what the crawl config collected. If inlinks or depth are missing, say which checks are unavailable rather than guessing.
-- MCP server not responding mid-conversation: the Spider may have been closed or the server stopped. Tell the user to check Settings > MCP Server in Screaming Frog, then continue in export mode rather than stalling.
+- MCP server not responding mid-conversation: the Spider may have been closed or the server stopped. Tell the user to check File > Settings > MCP Server in Screaming Frog, then continue in export mode rather than stalling.
 - List-mode crawl (no depth/inlinks data): say which checks are unavailable and run the rest.
 - JavaScript-heavy site crawled without rendering: warn that word counts and link counts may be wrong; recommend re-crawling with JavaScript rendering enabled in Configuration > Spider > Rendering.
 - Parameter/faceted noise dominating the export: identify the pattern, recommend excluding it in Configuration > Exclude, and analyse the clean remainder.

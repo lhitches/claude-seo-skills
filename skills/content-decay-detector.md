@@ -1,6 +1,10 @@
 ---
 name: content-decay-detector
-description: Finds the pages quietly bleeding traffic in Google Search Console data, diagnoses why each one is decaying (freshness, competitor displacement, intent shift, or demand drop), and prescribes the right treatment per page (refresh, rewrite, consolidate, or leave alone). Trigger when the user mentions content decay, slowly declining traffic, old posts losing rankings, or pastes two GSC page exports from different periods. Needs a recent and an older export of the same length, because decay is a trend.
+description: >
+  Finds the pages quietly bleeding traffic in Google Search Console data, diagnoses why each one
+  is decaying, and prescribes the right fix: refresh, rewrite, consolidate, or leave alone. Paste
+  your GSC page export covering two comparable periods. Use when someone asks which pages are
+  losing traffic, why an old post dropped, what content to refresh or prune, or for a content decay audit.
 ---
 
 # Content Decay Detector
@@ -11,19 +15,21 @@ Decay is not one disease, and "update the date and add a paragraph" is not the c
 
 ## Intake (do this FIRST)
 
-Start with: "Paste two Google Search Console page exports for the same length of period: recent (say the last 3 months) and the same period a year ago, or at least 6 months back. GSC, Performance, Pages tab, set the date range, export, repeat for the earlier range. Columns needed: page, clicks, impressions, position. If you can also paste queries for your worst 2 or 3 pages, the diagnosis gets much sharper."
+Start with: "Paste two Google Search Console page exports for the same length of period: recent (say the last 3 months) and the same period a year ago, or at least 6 months back. GSC, Performance, Pages tab, set the date range, export, repeat for the earlier range. Or use the Compare tab in the date filter, which puts both periods in one export. Columns needed: page, clicks, impressions, position. If you can also paste queries for your worst 2 or 3 pages, the diagnosis gets much sharper."
+
+Search Console keeps 16 months of data, so a recent 3 months and the same 3 months a year ago both fit, as long as the property was collecting data back then: collection only starts once someone adds the site to Search Console. Check both periods have data before you compare. Longer windows (say 6 months against the same 6 a year ago) run past the 16 months. The interface exports at most 1,000 rows. If the site has more pages than that, say the analysis covers the top 1,000 by clicks only. When an export hits that cap, each period is cut to its own top 1,000, so a page can be in one export and missing from the other without having zero clicks. Treat any URL found in only one period as unknown, never as zero: leave it out of the loss totals, list it separately, and ask for a page-filtered check in Search Console (or a fuller export through the API) before calculating its loss. Report how many URLs matched across both periods.
 
 If they paste one period only: you can rank pages by weakness but not detect decay, because decay is a trend. Say so and show them exactly how to pull the comparison export.
 
 ## Process
 
-1. Match pages across the two periods and compute the deltas: clicks, impressions, position. Flag every page with a meaningful decline (clicks down 25%+ with impressions or position also sliding, on pages with real prior traffic).
+1. Match pages across the two periods (a URL in only one capped export is unknown, not zero) and compute the deltas: clicks, impressions, CTR, position. Flag every page with a meaningful decline (clicks down 25%+ on pages with real prior traffic, whether impressions or position slid too or both held steady while CTR fell). As a default, "real prior traffic" means at least 20 clicks in the earlier period; lower the floor for a small site and state the floor you used.
 
 2. Diagnose each decaying page. The pattern tells you the cause:
    - FRESHNESS DECAY: position slipping slowly, impressions stable-ish, the SERP now rewards newer content. The page aged out, the demand did not.
    - COMPETITIVE DISPLACEMENT: position dropped in steps, impressions stable. Someone published something better and took the spot.
-   - INTENT SHIFT: position holding but clicks and CTR collapsing, or impressions falling on a stable position. The query now means something else (or AI answers it before the click).
-   - DEMAND DECAY: impressions falling across the whole query set at stable position. The topic itself is shrinking. Not your fault, not fixable with content.
+   - INTENT SHIFT: position holding and impressions steady, but clicks and CTR collapsing. Possible causes: the query now means something else, or the results page changed (an AI Overview or other feature now answers it before the click). The numbers alone cannot confirm either, so treat it as a hypothesis and ask the user to check the page's queries and the live results page before you prescribe a fix.
+   - DEMAND DECAY: impressions falling across the whole query set at stable position. The topic itself is shrinking. Not your fault, not fixable with content. If you only have page-level data, you cannot fully separate this from intent shift; say so and ask for the page's queries.
    - SEASONAL: the year-ago period was the topic's peak. Check before calling it decay.
 
 3. Prescribe one treatment per page, matched to the diagnosis:
@@ -36,12 +42,12 @@ If they paste one period only: you can rank pages by weakness but not detect dec
 
 4. Rank the sick list by recoverable traffic: prior clicks minus current clicks, weighted toward pages whose diagnosis is actually treatable (freshness and displacement recover; demand decay does not).
 
-5. For the top 3 pages, give the specific refresh brief: which sections are stale, what the now-ranking competitors cover that the page does not, and what only this site can add. If queries were provided, name the exact queries being lost.
+5. For the top 3 pages, give the specific refresh brief: which sections are stale, what the now-ranking competitors cover that the page does not, and what only this site can add. If queries were provided, name the exact queries being lost. You can only judge stale sections if you can read the page, and competitor coverage if you can search or the user pastes the ranking pages. Otherwise, list exactly what the user should check and say you have not seen it.
 
 ## Output structure
 
 DECAY REPORT
-Periods compared, pages analysed, decaying pages found, total clicks lost per period, recoverable share (honest estimate).
+Periods compared, pages analysed, decaying pages found, total clicks lost per period, recoverable share (labelled as an estimate, with the arithmetic shown).
 
 THE SICK LIST (worst recoverable first)
   PAGE: [url]
@@ -81,3 +87,4 @@ WHAT THIS DID NOT CHECK (backlink changes, algorithm-update timing, actual SERP 
 - A page was recently redesigned or its URL changed: the trend breaks at the change. Flag it as unmeasurable rather than diagnosing false decay.
 - Thousands of pages: run the sick list on the top decliners by lost clicks and say you sampled. The tail follows the same treatments.
 - Brand queries decaying: that is a brand-demand or reputation issue, not content decay. Flag separately and move on.
+- Comparison touches a known Search Console reporting change: Google's data anomalies page says a logging error affected impressions, CTR and average position (not clicks) from 13 May 2025 until 27 April 2026, and when Google stopped supporting the results-per-page (&num=100) parameter in mid-September 2025, many sites saw impressions drop and average position improve with clicks steady. Either can look like decay when it is not, but real losses can land on the same dates. Treat impression, CTR and position deltas across those dates as a possible measurement artefact, judge decline on clicks, and only call it decay when the clicks or the page's queries back it up.

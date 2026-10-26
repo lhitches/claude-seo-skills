@@ -78,9 +78,9 @@ Claude Desktop does not auto-load skills the same way as Claude Code. Use a **Pr
 
 1. Open `SKILL.md` in any text editor.
 2. Copy the entire body of the file (everything after the `---` frontmatter block).
-3. In your new Project, click **Edit project instructions** (or **Custom instructions**).
+3. In your new Project, click **Set project instructions**.
 4. Paste the skill body in.
-5. Save.
+5. Click **Save instructions**.
 
 ### Step 3. Add the references as Project Knowledge
 
@@ -108,7 +108,7 @@ Claude will use the skill instructions and load the reference files from the Pro
 Claude will pause at five checkpoints. Answer each one and confirm before it proceeds.
 
 1. **Central entity confirmation.** Claude proposes the one thing your site is allowed to be known for. You confirm or refine.
-2. **Source context plus persona.** Claude asks five questions about your business (type, market, angle, customer language, Knowledge Panel test) and proposes a credible writer persona.
+2. **Source context plus persona.** Claude asks five questions about your business (type, market, angle, customer language, Knowledge Panel test) and asks who the real author or expert reviewer is, with credentials that can be checked. It never invents one.
 3. **Attribute list and client situations.** Claude does the deep research and presents the full list of attributes (every sub-topic, service, related entity) plus a client situation map. You add anything missing.
 4. **Merge and split decisions.** Claude tells you which attributes get their own page and which get merged into another page. You confirm or override.
 5. **Buyer journey gaps.** Claude tags every page TOFU, MOFU, or BOFU and flags gaps. You decide whether to add pages to fill them.
@@ -158,7 +158,7 @@ You can, but you should not. The checkpoints are where the strategy gets calibra
 
 ### "Can I run it on a niche I do not own?"
 
-Yes. The skill works on any seed keyword. You can run it on a competitor's niche, a niche you are considering entering, or a hypothetical business. Just answer the source context questions as if you were that business.
+Yes. The skill works on any seed keyword. You can run it on a competitor's niche, a niche you are considering entering, or a hypothetical business. Just answer the source context questions as if you were that business. Any persona in a practice run is an example: label it as one, and never publish it as a real person.
 
 ---
 

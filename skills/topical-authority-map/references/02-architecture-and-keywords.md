@@ -8,12 +8,12 @@ There is one checkpoint in this phase. Pause and confirm before proceeding.
 
 ## STEP 6: DEFINE FOLDER STRUCTURE
 
-Physical folder structure beats flat URL structure. It forces topical categorisation and is easier for search engines to understand.
+Folders keep the site organised; internal links do the heavy lifting. Google says it mostly works out a site's structure from the links between pages, not from its URLs, so treat folders as a way to keep content organised, and rely on crawlable navigation and internal links to show how pages relate.
 
-### Rules
+### Recommendations
 1. Each major topic gets its own folder.
 2. Folder name is the ROOT KEYWORD ONLY (just "divorce", not "divorce-lawyer-sydney").
-3. Use Semrush Keyword Magic (or equivalent): type the root word, check all variations, pick the right root.
+3. Use Semrush Keyword Magic (or equivalent): type the root word, check all variations, pick the right root. If neither you nor the user has a keyword tool, pick the root from the language competitors and the user's customers use, and say it is unchecked.
 4. Sub-topics live inside the parent folder.
 
 ### Example. Family Law.
@@ -37,11 +37,11 @@ Physical folder structure beats flat URL structure. It forces topical categorisa
     /part-vii-children/
 ```
 
-### Why folder structure matters
+### Why we use folders
 - Forces you to think about which category each page belongs to.
-- Strengthens topical signals (all `/divorce/` pages reinforce each other).
+- Keeps related pages together (all `/divorce/` pages sit side by side), which makes the internal linking easier to plan.
 - Easier to report on in analytics.
-- Easier for search engines to understand site topology.
+- Easier for people to follow. On larger sites (more than a few thousand URLs), folders can also help Google learn how often each section changes. Use internal links to show how pages relate.
 - In WordPress, use Pages (not Posts) with parent and child relationships to build this structure.
 
 ### Image URLs follow folder structure
@@ -122,20 +122,20 @@ For each expanded query:
 
 ### Cost of retrieval score
 
-For each page, score yourself out of 10. "How cheaply can Google understand and serve this page for its target queries?"
+For each page, give it an editorial score out of 10. This is our own heuristic, not a measure of anything Google calculates: "How clearly does this page answer its target queries?"
 
 A 10 of 10 page:
 - Every heading maps to an actual search query.
 - Every paragraph answers a potential question.
 - Every image could rank in image search for a related query.
 - The title, H1, URL, and meta description all reinforce the same keyword.
-- Google can extract a featured snippet from your content without effort.
+- A clear, short answer could be lifted straight out as a featured snippet.
 
 A 1 of 10 page:
 - Generic headings ("Our Services", "About").
 - No clear keyword targeting.
 - Content that does not answer any specific query.
-- Google has to work hard to understand what the page is about.
+- It is hard to tell what the page is about.
 
 **Format:**
 
@@ -174,20 +174,20 @@ You need a MIX of:
 
 **One or two high-competition, high-volume keywords per topic folder.**
 - These establish your authority on the broad topic.
-- You will rank lower initially but they prove to Google you are in this space.
-- Examples: "divorce" (4,000/mo), "child custody" (2,000/mo).
+- You will rank lower at first, but we think they help show Google you are in this space.
+- Examples: "divorce" (4,000/mo), "child custody" (2,000/mo). (Illustrative figures. Use real volumes from a keyword tool, never estimates.)
 
 **Several easy-to-rank, lower-volume keywords.**
 - These get you actual clicks and user data quickly (Avalanche Theory).
 - Look for keywords where competitors are ranking BY ACCIDENT (poor page, no SEO).
-- Examples: "divorce application QLD" (200/mo, weak competition).
+- Examples: "divorce application QLD" (200/mo, weak competition). (Illustrative.)
 
-**The Avalanche Theory. Publishing order.**
+**The Avalanche Theory. Publishing order.** (Our working theory, not a confirmed Google mechanism.)
 1. Publish easy-to-rank articles FIRST.
-2. Get clicks, accumulate user data in Google's system.
-3. Build trust slowly through satisfaction signals.
-4. THEN tackle competitive keywords once Google has evidence you satisfy users.
-5. The trust earned from easy wins accelerates ranking for hard keywords.
+2. Get clicks and start building a track record on the topic.
+3. We think that track record builds trust over time.
+4. THEN tackle competitive keywords.
+5. Our working theory: the trust earned from easy wins helps the hard keywords rank.
 
 ### Step 9D: SERP analysis per keyword
 
@@ -214,26 +214,27 @@ This is the cluster most websites get wrong, even when the rest of the map is so
                                           [Core Page 2]
 ```
 
-### Linking rules. Apply these exactly.
+The arrows show the main direction. Core pages link back to AOR pages wherever it helps the reader.
+
+### Linking rules. Use these as your default.
 
 | Link Direction | Rule | Reason |
 |---|---|---|
-| AOR to Core | MANDATORY. Every AOR page links to one or two relevant core pages in body content (not just nav or footer). | Primary authority transfer mechanism. |
+| AOR to Core | MANDATORY. Every AOR page links to one or two relevant core pages in body content (nav or footer alone does not count). | Takes readers who are ready to act to the page that serves them, and shows which money page the supporting content backs up. |
 | AOR to AOR | ENCOURAGED. Link freely between related AOR pages. | Builds topical cluster depth. |
-| Core to AOR | RARELY or NEVER. | Keeps authority concentrated on money pages. |
-| Homepage to Core | MANDATORY. Direct links to most important core pages. | onsiteProminence signal. |
+| Core to AOR | ENCOURAGED. Link from core pages to supporting pages wherever it helps the reader (for example a service page linking to its buying guide or FAQ). | Helps readers who need more before they buy, and keeps the cluster connected both ways. |
+| Homepage to Core | MANDATORY. Direct links to most important core pages. | Makes the most important pages easy to reach. Google treats pages with more internal links as more important. |
 | Homepage to AOR | OPTIONAL. | Less important than homepage to core. |
 
-### Anchor text rules
-- **First link** to a page (from any other page): exact-match keyword anchor.
-- **Second link** to the same page (from a different page): partial match anchor.
-- **Third link** to the same page: branded or natural language variation.
+### Anchor text guidance
+- **Descriptive anchors.** The anchor should tell the reader what the target page is about.
+- **A natural mix.** Across the links pointing at a page, a mix works well: some exact-match keyword anchors, some partial matches, some branded or natural-language variations. This is a default, not a fixed sequence, and the same exact-match anchor on every link reads as forced.
 - **Never** use "click here", "read more", or naked URLs.
 - **Place links** within contextual sentences where the surrounding text reinforces the target page's topic.
 
 ### Link placement
-- Body content links carry significantly more weight than nav, sidebar, or footer links.
-- Every internal link should be in a contextual paragraph, not a list of links at the bottom.
+- We think body content links carry more weight than nav, sidebar, or footer links.
+- Editorial links inside article copy should sit in a contextual paragraph, not a list of links dumped at the bottom. Keep useful crawlable navigation, breadcrumbs and category or related-page lists as well: Google uses links from menus to categories to products to find pages and understand the structure.
 - Surrounding text matters. The paragraph around the link should use language relevant to the TARGET page.
 
 ### Client-situation-based linking

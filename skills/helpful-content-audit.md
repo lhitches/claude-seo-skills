@@ -3,7 +3,9 @@ name: helpful-content-audit
 description: >
   Grades a single page against Google's own 32-question Creating helpful, reliable, people-first
   content self-assessment, and returns the failures that matter most with the fix for each. Paste
-  the page content.
+  the page content. Use when someone asks whether a page is helpful content, wants a page graded
+  against Google's helpful content or people-first questions, asks why a page lost rankings after a
+  core update, or wants an E-E-A-T style content quality check.
 ---
 
 # Helpful Content Audit
@@ -31,7 +33,9 @@ Never grade content you could not actually read. If you are given only a URL and
    - GROUP 3, People-first (5 questions): a real existing or intended audience; first-hand expertise and depth demonstrated; the site has a primary focus the content fits; the reader learns enough to achieve their goal; the reader leaves satisfied.
    - GROUP 4, Search-engine-first warning signs (11 questions, REVERSE-SCORED: the behaviour being ABSENT is a pass, PRESENT is a fail): made primarily for search engines; scattershot topics hoping something ranks; extensive automation to produce content across topics; mainly summarising others; chasing trends outside the site's audience; readers needing to search again; writing to an imagined preferred word count; entering a niche without expertise purely for traffic; promising an answer to a question with no answer; changing dates to fake freshness; adding or removing content mainly to seem fresh.
 
-3. Verdicts: PASS, PARTIAL (half credit), FAIL, or N/A. Every verdict carries a one-line justification grounded in the content: quote a phrase, name the missing element, or cite the passage. If there is no evidence either way for a positive question, the verdict is FAIL, because the content failed to demonstrate it. Use N/A only where a question genuinely cannot apply (for example, the adds-value-over-sources question on a page citing no sources); redistribute an N/A question's weight across its own group so the group keeps its share.
+3. Verdicts: PASS, PARTIAL (half credit), FAIL, N/A, or UNVERIFIED. Every verdict carries a one-line justification grounded in the content: quote a phrase, name the missing element, or cite the passage. If there is no evidence either way for a positive question, the verdict is FAIL, because the content failed to demonstrate it. Use N/A only where a question genuinely cannot apply (for example, the adds-value-over-sources question on a page citing no sources); redistribute an N/A question's weight across its own group so the group keeps its share.
+
+   Site-level questions are different. Whether the site is mass-produced or spread across a network (question 12), recognised as an authority (question 14), has a real audience (question 17) and a primary focus (question 19), publishes scattershot or automated content across many topics (questions 23 and 24), or changes dates to fake freshness (questions 31 and 32) usually cannot be judged from one pasted page. Use what the user told you about the site, or check the site itself if you have web access. If you still have no evidence, mark the question UNVERIFIED, score it like N/A, and list it under WHAT THIS DID NOT CHECK with the one fact the user could give you to settle it. Never pass or fail a site-level question on a guess.
 
 4. Run the Who, How, Why check from the same Google page (not scored, reported as a bonus layer): WHO, is the author self-evident, bylined, and linked to background; HOW, where automation or AI helped produce the content, is that disclosed where a reader would want it; WHY, does the page exist primarily to help people who arrive, or primarily to attract search visits. One finding per letter.
 
@@ -55,12 +59,12 @@ TOP FIXES (3 to 5, ordered by score impact under the chosen mode, each one concr
 
 THE VERDICT (one plain-English paragraph: what this page is, what is capping it, and the single most important next step)
 
-WHAT THIS DID NOT CHECK (technical SEO, page speed, links, and rankings sit outside these 32 questions; recommend the Technical SEO Audit for that layer, and note the grade reflects the content as pasted, not how it renders)
+WHAT THIS DID NOT CHECK (any UNVERIFIED site-level questions, each with the fact that would settle it; technical SEO, page speed, links, and rankings sit outside these 32 questions, so recommend the Technical SEO Audit for that layer; and note the grade reflects the content as pasted, not how it renders)
 
 ## Rules
 
 - Grade all 32 questions, never invent or drop any. Google's page is the authoritative source; when in doubt about a question's meaning, defer to Google's wording.
-- Every verdict needs evidence from the content. No evidence for a positive question means FAIL, not benefit of the doubt.
+- Every verdict needs evidence from the content. No evidence for a positive page-level question means FAIL, not benefit of the doubt. Site-level questions with no evidence are UNVERIFIED, not FAIL or PASS.
 - Group 4 is reverse-scored. A warning sign absent is a PASS; present is a FAIL. Never flip this.
 - Be honest about PARTIAL: it is half credit for genuinely mixed evidence, never a diplomatic dodge.
 - Never fabricate content, sources, author information, or facts. An absence on the page is itself gradeable evidence.

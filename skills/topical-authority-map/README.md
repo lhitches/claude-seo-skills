@@ -35,11 +35,11 @@ You hand the spreadsheet to your team and the strategy doc to your editor. By Mo
 Most SEO tools sell you a topical map. The map they sell you is a keyword cluster. That is one quarter of what you actually need. The other three layers are where the compounding actually happens.
 
 - **Core** is the destination, not the strategy. Sales pages alone do not rank.
-- **AOR** is the road. Supporting authority articles that route satisfaction signals into the core pages.
+- **AOR** is the road. Supporting authority articles that link into the core pages and, on our working theory, strengthen them.
 - **Linking** is what turns a pile of articles into a structure Google can read as a topical authority map.
 - **Buyer Journey** tags every page against where the customer is in their decision (TOFU researching, MOFU comparing, BOFU buying). Most websites have a giant MOFU gap. That is where conversions hide.
 
-Add Publishing Order and you have a 12-week plan, not just a content list.
+Add Publishing Order and you have a 12-week plan, rather than a content list.
 
 ---
 
@@ -93,15 +93,15 @@ Open the sample-output folder before running the skill. It shows you exactly wha
 5. Claude generates the spreadsheet and strategy document.
 6. Open the spreadsheet. Read in this order: Core, AOR, Linking, Buyer Journey, Publishing Order.
 7. Hand the first 30 content briefs to your writer. Start shipping the AOR wave.
-8. Do not publish a single core page edit until at least the first wave of AOR is live (weeks 1 to 6).
+8. Fix anything broken on your core pages straight away (wrong intent, thin content, pages not indexed). Save the big core page rewrites until at least the first wave of AOR is live (weeks 1 to 6).
 
-The compounding effect kicks in around week 6, accelerates through week 10, and lands fully on the Core pages by week 12.
+Timing varies by site. Some changes show within days, others take months, so treat the 12 weeks as a plan, not a ranking forecast.
 
 ---
 
 ## Watch the full walkthrough
 
-[Topical Authority with Claude (Build the 4-Cluster Map for Free)](https://www.youtube.com/@HarrySanders) on YouTube. Harry walks through each cluster, explains why most tools only build one of the four, and shows the exact publishing order that makes the compounding effect kick in within 60 days.
+[Topical Authority with Claude (Build the 4-Cluster Map for Free)](https://www.youtube.com/@HarrySanders) on YouTube. Harry walks through each cluster, explains why most tools only build one of the four, and shows the publishing order we use.
 
 ---
 

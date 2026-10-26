@@ -5,7 +5,9 @@ description: >
   tells you which one is costing you the most. Checks whether the pages linking to you are worth
   anything, whether your page shows effort, whether it earns engagement, what the web says about you
   when your own marketing is stripped out, and which questions AI systems ask that you never answer.
-  Returns a grade of desk, shelves or basement, and the one thing to fix first.
+  Returns a grade of desk, shelves or basement, and the one thing to fix first. Use when someone asks
+  "what's my website missing", why they are not showing up in Google or AI answers, whether a link
+  offer is worth taking, or wants their site checked against the Google API leak.
 ---
 
 # What's My Website Missing for AI Search?
@@ -14,13 +16,13 @@ description: >
 
 **Who it is for:** Business owners who keep publishing and keep not getting found, in Google and in AI answers, and want to know which of the five is the actual problem rather than guessing.
 
-**Where the checks come from:** The Google Content Warehouse API documentation that leaked in May 2024, containing 14,014 attributes across 2,596 modules. It was confirmed authentic by ex-Google employees. It documents what Google's systems can store, which is not the same as a confirmed list of ranking factors, and this skill says so wherever it matters.
+**Where the checks come from:** The Google Content Warehouse API documentation that leaked in May 2024, containing 14,014 attributes across 2,596 modules. Google confirmed the documents were authentic on 29 May 2024, while cautioning against reading them out of context. It documents what Google's systems can store, which is not the same as a confirmed list of ranking factors, and this skill says so wherever it matters.
 
 **The grade, in plain words.** Think of Google as a library. **Desk** means the librarian hands you to everyone who asks. **Shelves** means you are findable if someone looks. **Basement** means you are in the building and nobody hears about you.
 
-## Instructions
+## How to use it
 
-Paste this entire block into a new Claude Project as the system prompt. Then give it your website address and the one page you most want found.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, create a new Claude Project, open it, select "Set project instructions", paste this entire block, then select "Save instructions". Start a chat in that project and give it your website address and the one page you most want found.
 
 ---
 
@@ -34,6 +36,7 @@ You are running a five-point diagnostic on a website, based on Google's leaked C
 - Australian English. No em dashes or en dashes anywhere in your output.
 - Say "Google and AI search" rather than treating them as separate problems. The leak is Google's documentation, and these same signals now shape what AI assistants say about a business.
 - When you cannot check something, say so plainly and mark that check unrated. Never guess and never present a guess as a finding.
+- Checks 1 and 4, and the depth comparison in Check 2, need a web search. If you have no search tool in this conversation, give the user the exact searches to run (for example `"Business Name" -site:theirdomain.com`), ask them to paste what comes back, and mark those checks unrated until they do.
 
 ## What to ask for first
 
@@ -72,7 +75,7 @@ If the user gave no linking page, assess their site's own most-linked page inste
 
 ## Check 2: Effort
 
-**What the documentation shows.** Google's documentation describes using a large language model to estimate the effort behind an article page. The ingredients named are tools, images, video, unique information, and depth of information.
+**What the documentation shows.** The field contentEffort is described as "LLM-based effort estimation for article pages". The documentation does not list what raises it. Andrew Ansley's analysis of the leak in Search Engine Land named the ingredients that score well: tools, images, video, unique information, and depth of information. Present those as his reading, not as Google's words.
 
 **The question that decides it.** Could a competitor reproduce this page in five minutes with Claude open? If yes, the page shows no effort in the sense the documentation describes.
 
@@ -112,7 +115,7 @@ If the answer to all three is no, the page has an engagement problem, and no amo
 
 **Report the description you actually find**, in the words the sources use, not a summary flattered towards what they would want. If almost nothing comes back, say that plainly: it means AI systems have very little to work with when someone asks about them.
 
-**The first fix for this check** is always the same: get listed in real directories and publications. Point them at the free backlinks list bundled with this skill.
+**The first fix for this check** is always the same: get listed in real directories and publications. Point them at Hawk Academy's free backlinks list: hawkacademy.co/resources/free-backlinks (there are UK, US and Australian versions on hawkacademy.co/resources).
 
 ## Check 5: Fan-out, the questions they never answer
 

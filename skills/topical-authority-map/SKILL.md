@@ -3,7 +3,7 @@ name: topical-authority-map
 description: Builds a 4-cluster Topical Authority Map from a seed keyword. Outputs an .xlsx spreadsheet with five tabs (Core Pages, AOR Pages, Linking Map, Buyer Journey, Publishing Order) plus a markdown strategy document. Interactive, asks the user to confirm central entity, source context, persona, classification, and gaps at five checkpoints. Trigger when the user provides a seed keyword, niche, business type, or asks for a topical map, content plan, site architecture, topic cluster, or publishing roadmap.
 ---
 
-You are building a Topical Authority Map. This is a structured site architecture that mirrors how Google and AI search engines decide which sites are the specialist on a topic. It is NOT a keyword list. It is NOT a list of topics. It is the blueprint for an entire website's content strategy, built around a single central entity and routed through four connected clusters.
+You are building a Topical Authority Map. This is a structured site architecture built around how we think Google and AI search engines decide which sites are the specialist on a topic. It is NOT a keyword list. It is NOT a list of topics. It is the blueprint for an entire website's content strategy, built around a single central entity and routed through four connected clusters.
 
 The four clusters:
 
@@ -17,21 +17,25 @@ Plus a fifth output: a 12-week Publishing Order with content briefs that turns t
 **Output:** Two deliverables.
 
 1. `.xlsx` spreadsheet with five tabs: Core Pages, AOR Pages, Linking Map, Buyer Journey, Publishing Order.
-2. `.md` strategy document covering central entity, source context, persona, folder structure, linking rules, NLP alignment, and quality standards.
+2. `.md` strategy document covering central entity, source context, persona, folder structure, linking rules, an optional NLP category check, and quality standards.
 
-**Mode:** Interactive. Pause at the five checkpoints marked with the checkpoint emoji to confirm decisions with the user before proceeding. Do not skip checkpoints.
+**Mode:** Interactive. Pause at the five checkpoints (marked **Checkpoint 1** to **Checkpoint 5** in the reference files) to confirm decisions with the user before proceeding. Do not skip checkpoints.
+
+**Data honesty.** This skill leans on search volumes, SERPs, People Also Ask and autocomplete. Use them only when you can actually see them: through a web search tool, a keyword tool, or data the user pastes (Semrush, Ahrefs, Google Keyword Planner). Search Console impressions are not search volume: they count how often this one site appeared in results, not how many people searched. If the user gives you impressions, keep them in their own column headed "GSC impressions" with the date range, never in the Search Volume column, and never use them for the merge and split thresholds. When you cannot see real volumes, say so, ask the user to paste what they have, and write "no data" in the Search Volume column. Never estimate a search volume or invent a PAA question and present it as researched. Where volume is missing, make merge and split calls on competitor coverage and on whether it is a service the business sells, and say that is what you did.
+
+**No file tools?** If you cannot create files in this environment, output each spreadsheet tab as its own CSV code block and the strategy document as markdown, and tell the user to paste each CSV into a separate sheet.
 
 ---
 
-## Why topical maps work
+## Why we think topical maps work
 
-Topical maps work because of five mechanics, not because of E-E-A-T marketing:
+Here is how we think about why topical maps work. These five points are our working theory from running this method on client sites, not confirmed Google mechanisms, and none of them is E-E-A-T marketing:
 
-1. **Historical user data accumulation.** Every visitor adds data to Google's view of your site. A topical map concentrates that data on one topic so Google has more evidence you satisfy users on that topic. Spread the data across four unrelated topics and you lose on all four.
-2. **Knowledge Graph alignment.** Google has entities with attributes and relationships. Your map configures the site to MATCH what Google already knows about your entity. Match the structure and Google retrieves your pages cheaply.
-3. **Lower cost of retrieval.** Every title, heading, paragraph, and image should map to a real query. Cheap-to-retrieve pages outrank expensive-to-retrieve pages on every relevance signal.
-4. **Satisfaction signal transfer.** When an AOR page satisfies a user, that signal transfers to the core pages it links to. More AOR pages, more satisfaction signals, stronger core pages.
-5. **Index construction efficiency.** It is cheaper for Google to rank one site for a million related queries than to rank a million different sites for one query each. Deep architecture lets Google serve the whole topic from your domain.
+1. **Historical user data accumulation.** Our working theory: every visitor adds to Google's picture of your site, so a topical map concentrates that picture on one topic and gives Google more evidence that you satisfy users on it. Spread it across four unrelated topics and we think you lose on all four.
+2. **Knowledge Graph alignment.** Google has entities with attributes and relationships. We think a site built to MATCH what Google already knows about your entity is easier for Google to understand and match to searches.
+3. **Lower cost of retrieval.** Every title, heading, paragraph, and image should map to a real query. Our working theory: pages that answer a clear query in a clear structure are easier for Google to understand and rank.
+4. **Satisfaction signal transfer.** We think that when an AOR page satisfies a reader and links to a core page, it helps that core page too. More good AOR pages, stronger core pages.
+5. **Index construction efficiency.** Our reasoning: it is simpler for a search engine to serve one site for many related queries than many different sites for one query each, so deep, well-organised coverage gives Google a reason to serve more of the topic from your domain.
 
 **Critical warning:** A topical map filled with low-quality content hurts the whole site. Bad pages drag every other page down. Do not publish to fill the map. Every article must be quality work. If you cannot write a good article on a topic, leave it out.
 
@@ -43,7 +47,7 @@ Load reference files as you progress through each phase. Complete every checkpoi
 
 **Phase 1: Research and classification** (load `references/01-research-and-classify.md`)
 - Step 1: Define the central entity (Checkpoint 1)
-- Step 2: Source context plus persona (Checkpoint 2)
+- Step 2: Source context plus persona, the real author or reviewer (Checkpoint 2)
 - Step 3: Deep research on Knowledge Graph, competitors, client situations, attributes (Checkpoint 3)
 - Step 4: Classify each attribute as Core or AOR
 - Step 5: Merge and split decisions plus depth calibration (Checkpoint 4)
@@ -57,7 +61,7 @@ Load reference files as you progress through each phase. Complete every checkpoi
 
 **Phase 3: Execution and output** (load `references/03-execution-and-output.md`)
 - Step 11: Central entity sitewide presence
-- Step 12: NLP category alignment check
+- Step 12: NLP category check (optional diagnostic)
 - Step 13: Content briefs for the first 30 articles
 - Step 14: Publishing order across 12 weeks
 - Generate the .xlsx with five tabs

@@ -2,7 +2,7 @@
 
 This phase produces the foundation. You define the central entity, set source context and persona, do deep research on the topic and the Knowledge Graph, then classify every attribute as Core or AOR with depth calibration.
 
-There are three checkpoints in this phase. Pause at each one and confirm with the user before proceeding.
+There are four checkpoints in this phase (Checkpoints 1 to 4). Pause at each one and confirm with the user before proceeding.
 
 ---
 
@@ -64,16 +64,17 @@ Ask the user these five questions:
 - Same niche, completely different maps.
 - Source context determines which attributes matter most and how content is framed.
 
-### 2B: Create a Persona
+### 2B: The Persona: a Real Author or Reviewer
 
-Google expects expert writers on topics. Your topical map must reflect a credible persona.
+Google's guidance asks whether it is clear who wrote your content, with bylines that lead to more about the author. So the persona is always a real person: the person who will write or expertly review the content, with credentials that can be checked. Never invent one.
 
 **Research process.**
 1. Look at competitor About pages. What qualifications, job titles, and credentials do they list?
-2. Create a persona with: name, job title, qualifications, professional memberships, career summary.
-3. This persona determines what topics you can credibly cover.
+2. Ask the user who will write or review the content. Record that real person's name, job title, qualifications, professional memberships, and career summary, and ask how each credential can be checked (a public register, a membership directory, a licence number, a professional profile). Leave out anything that cannot be checked.
+3. If nobody on the team has the expertise for a topic, say so and recommend a real, qualified reviewer. Never make up a person, a name, or a credential, and never suggest publishing under an invented byline.
+4. This persona determines what topics you can credibly cover.
 
-**Example. Family Law.**
+**Example. Family Law.** (An illustrative example, not an author to publish. In a real run, use the actual author's or reviewer's details, and never publish an example persona as a real author.)
 - Name: John Bale
 - Title: Senior Associate, Family Law
 - Qualifications: Law Society accredited specialist, qualified mediator
@@ -81,7 +82,7 @@ Google expects expert writers on topics. Your topical map must reflect a credibl
 
 **Why this matters.** If your topical map calls for an article on "battery chemistry" but your site sells electric scooters, you do not need 100 articles on chemistry. You need one or two to show Google you have knowledge of that adjacent topic. The persona keeps you grounded in what is credible.
 
-**Checkpoint 2.** Confirm source context and persona with the user before proceeding.
+**Checkpoint 2.** Confirm source context and the persona (the real author or reviewer, with checkable credentials) with the user before proceeding.
 
 ---
 
@@ -105,13 +106,13 @@ Google thinks about topics like GPS coordinates. Topics close together can be co
 - Car accidents and car maintenance are CLOSE (a sentence connecting them makes sense: "poor car maintenance has led to the car accident").
 - Car accidents and racing helmets are TOO FAR (even though "car" appears in both).
 - Drinking water and luxury water are CLOSE.
-- Drinking water and fecal coliform are FAR (probably do not need a whole page on it for a water brand).
+- Drinking water and faecal coliform are FAR (probably do not need a whole page on it for a water brand).
 
 **Your job.** Decide which connected topics are close enough to your central entity to warrant coverage, and how much coverage (own page vs paragraph vs skip entirely).
 
 **Node importance. How to judge what deserves more coverage.**
 - **Degree.** How many connections does this topic have? More connections, more important, more coverage.
-- **Eigenvalue.** Is it connected to OTHER important nodes? (Scottie Pippen matters more than Jordan's dad because Pippen is independently significant.)
+- **Eigenvector centrality.** Is it connected to OTHER important nodes? (Scottie Pippen matters more than Jordan's dad because Pippen is independently significant.)
 - **Betweenness.** Must you pass through this topic to reach other topics? (To talk about water and human health, you must go through drinking water.)
 - **Closeness.** How close is it to other important topics in your niche?
 
@@ -147,6 +148,8 @@ Each situation drives content creation AND internal linking decisions.
 ### 3D: Find Every Attribute of the Entity
 
 Research ALL attributes using these sources. Do them all. No shortcuts.
+
+If your tools do not show you live results, People Also Ask boxes or autocomplete suggestions, say which sources you could not reach and ask the user to paste them. Never fill a source with questions or suggestions you made up.
 
 #### Source 1: Top 5 Google Results
 - Web search: `[central entity]`
@@ -225,17 +228,20 @@ For each attribute, decide if it gets its own page or merges into another page. 
 
 ### The exact thresholds
 
+Volumes must come from a keyword tool or keyword data the user supplies. Search Console impressions do not count: they measure this site's appearances, not searches. If there is none, mark the volume "no data" and decide on the competitor check and the two overrides alone.
+
 | Search Volume (monthly) | Decision | Condition |
 |---|---|---|
 | 100+ | **Own page** | Enough demand to justify a dedicated page |
-| 10 to 99 | **Check competitors** | If 2+ competitors have dedicated pages, own page. If none do, merge |
+| 10 to 99 | **Check competitors** | If 2+ competitors have dedicated pages, own page. If only one or none do, merge |
 | Under 10 | **Merge** | Add as a section or paragraph on a related page |
 | Any volume | **Own page (override)** | If it is a core service you actively sell, own page regardless |
+| Any volume | **Own page (adjacent depth exception)** | An adjacent topic of Medium or High Knowledge Graph importance that the persona expects a specialist to cover. Cap it at 1-2 articles and say why in the Depth column |
 
 ### How to check competitor pages
 - Web search: `[attribute] + [location or modifier]`
 - Check if the top 5 results have DEDICATED pages for this attribute.
-- A dedicated page means the URL slug contains the attribute AND the page is 500+ words specifically about it.
+- A dedicated page means the URL slug contains the attribute AND the page is mainly about it and covers it properly in its own right. Word count is only a cue to look closer, not a test.
 - A mention on a broader page does NOT count as a dedicated page.
 
 ### Depth calibration. How much coverage?
@@ -271,7 +277,7 @@ If you cover it as a SENTENCE, it is tangentially relevant.
 |---|---|---|---|---|---|---|
 | Child custody | 320/mo | 4 of 5 | High | OWN PAGE | n/a | Full depth |
 | Relocation disputes | 10/mo | 0 of 5 | Low | MERGE | Child custody page | H2 section |
-| Battery chemistry | 20/mo | 0 of 5 | Medium | OWN PAGE | n/a | 1-2 articles only |
+| Battery chemistry | 20/mo | 0 of 5 | Medium | OWN PAGE (adjacent depth exception) | n/a | 1-2 articles only, to prove knowledge of an adjacent topic |
 
 **Checkpoint 4.** Present merge and split decisions to the user. Ask: "Do these split and merge decisions look right? Any pages you definitely want separate regardless of volume?"
 

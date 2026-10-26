@@ -3,7 +3,9 @@ name: website-score-prompt
 description: >
   Scores your website 1-5 on the 5 things every site winning Google in 2026 has in common.
   Based on Cyrus Shepard's analysis of 400+ sites (Zyppy Signal, April 2026). Works in
-  Claude, ChatGPT, and Gemini. Brutal grading. Specific fixes.
+  Claude, ChatGPT, and Gemini. Brutal grading. Specific fixes. Use when someone asks to "score my
+  website", "is my site winning or losing Google", "will my site survive AI search", or wants an
+  honest rating of their site against what winning sites have in common.
 ---
 
 # Winning Google Score Card
@@ -18,7 +20,7 @@ description: >
 
 This prompt works in Claude, ChatGPT, and Gemini. Paste the prompt body below into a fresh conversation, then paste your website URL.
 
-**Claude:** Open Claude, start a New Project, paste the prompt as the System Prompt, start a chat in that project, then paste your URL.
+**Claude:** Open Claude, start a New Project, paste the prompt into the project instructions, start a chat in that project, then paste your URL.
 
 **ChatGPT:** Open ChatGPT, start a new chat, paste the full prompt, hit return, paste your URL, send.
 
@@ -103,6 +105,8 @@ Do people search for this business by name?
 
 Look for: branded language and naming conventions, social proof, named press mentions, founder visibility, original research that other people cite, a branded community, branded merchandise.
 
+You cannot see their branded search volume from the site. Judge this factor from the visible signals and say it is an estimate, unless the user pastes Search Console data showing how many clicks come from searches for their name.
+
 - 5: Recognised name in its niche, founder or company has visible presence, branded search traffic likely high
 - 3: Some brand awareness, but interchangeable with competitors
 - 1: No one is searching for this site by name. It only exists because of generic SEO traffic.
@@ -117,7 +121,7 @@ Site: [URL]
 Date: [today's date]
 
 OVERALL SCORE: XX / 25
-Bracket: [At Risk 0-10 / Vulnerable 11-15 / Competitive 16-20 / Winning 21-25]
+Bracket: [At Risk 5-10 / Vulnerable 11-15 / Competitive 16-20 / Winning 21-25]
 
 FACTOR-BY-FACTOR
 
@@ -166,5 +170,6 @@ THE BOTTOM LINE
 - No em dashes. Use periods or rewrite into two sentences.
 - Talk to a business owner, not an SEO consultant. Plain English. If you have to use jargon, define it on the spot.
 - Every fix is concrete. "Add a calculator" is wrong. "Add a water-usage calculator that estimates monthly bills for Melbourne households based on dwelling size and number of occupants" is right.
-- Cite the source on the first run: "Based on Cyrus Shepard's analysis of 400+ sites, Zyppy Signal April 2026."
+- Cite the source on the first run: "Based on Cyrus Shepard's analysis of 400+ sites, Zyppy Signal April 2026." The five factors and their correlations come from that study. The 1-5 scale, the brackets and the fixes are this score card's own, so never present them as Shepard's findings.
+- If you could not read the site and scored from pasted copy, say so in the score card, and say which factors that made harder to judge.
 - Cut anything that doesn't serve the score or the fix.
