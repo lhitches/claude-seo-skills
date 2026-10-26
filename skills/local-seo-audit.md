@@ -13,7 +13,7 @@ This skill is focused **exclusively on the on-page content audit**, service page
 
 Before running the audit, determine what content you have access to:
 
-**Mode A: Fetch available:** If you can fetch URLs (e.g. Claude.ai with web search enabled), load the homepage, main services page, individual service pages, location/area-served pages, and About page.
+**Mode A: Fetch available:** If you can fetch URLs (e.g. Claude.ai with web search enabled), follow the workflow below: the homepage, the About page and the top service page. Use the homepage navigation to find the dedicated service and location pages, then fetch any you are going to judge. Don't judge a page you haven't read: mark that section "not assessed" in the report. If a page isn't linked from the navigation, say you couldn't find one rather than that it doesn't exist.
 
 **Mode B: Paste-only:** If you cannot fetch URLs, STOP and ask the user to paste the following content, clearly labelled with headings:
 
@@ -22,7 +22,6 @@ Before running the audit, determine what content you have access to:
 3. **2-3 individual service pages**, full visible text
 4. **Location / Area-served pages**, full visible text (if any)
 5. **About / Team page**, full visible text
-6. **Google Business Profile URL** (so I can see your local signals)
 
 **Never fabricate content.** If the user hasn't shown you a specific page, don't score it, ask for it to be pasted. If pasted content is thin or incomplete, score it as thin and recommend what to add.
 
@@ -37,7 +36,7 @@ Case studies are **not** just mentioned at the end. Drop them inline throughout 
 ```
 **Why should I do this?**
 
-Here's why: [1-2 sentences explaining the impact, with specific numbers or outcomes from the case study].
+Here's why: [1-2 sentences explaining the impact, using only the outcomes listed for that case study below].
 
 Link to case study to read more: [case study name]: [URL]
 ```
@@ -50,18 +49,20 @@ Link to case study to read more: [case study name]: [URL]
 
 **Don't overdo it.** Aim for 2-4 inline case study references per audit, placed at the moments where the user will most benefit from proof.
 
+**Use only real figures.** Quote only the results listed below (taken from the case study pages) or figures you read on the case study page during this session. Never invent, round up, or combine numbers, and never claim a result came from a specific fix unless the case study says so.
+
 ## Available local services case studies
 
 Match these to the user's situation:
 
-- **Gami Chicken**, https://studiohawk.com.au/case-studies/gami-chicken: Local multi-location business, significant organic growth from proper local SEO and page structure. Use for multi-location, food service, or any local business with multiple suburbs/branches.
-- **Southgate Medical**, https://studiohawk.com.au/case-studies/southgate-medical: Huge increase in bookings from trust signals, team credentials, and local authority. Use for medical, dental, allied health, or any business where trust matters.
-- **Melbourne Natural Therapies**, https://studiohawk.com.au/case-studies/melbourne-natural-therapies: Local health/wellness growth through on-page optimisation. Use for wellness, therapy, or health service businesses.
-- **CorePlus**, https://studiohawk.com.au/case-studies/coreplus: Scaled Pilates studios nationally with local SEO and technical optimisation. Use for any multi-location local service scaling across suburbs or cities.
-- **Dahlsens**, https://studiohawk.com.au/case-studies/dahlsens: Strengthened organic presence through trade-focused local visibility. Use for trades, building supplies, or B2B local.
-- **Waverley Forklifts**, https://studiohawk.com.au/case-studies/waverley-forklifts: Local authority building through proper service page structure. Use for equipment, machinery, industrial services.
-- **Life Supports**, https://studiohawk.com.au/case-studies/life-supports: Grew into one of Australia's largest online counselling platforms. Use for counselling, mental health, professional services.
-- **Evie Networks**, https://studiohawk.com.au/case-studies/evie-networks: Organic presence growth and service area scaling. Use for EV, infrastructure, or national local service networks.
+- **Gami Chicken**, https://studiohawk.com.au/case-studies/gami-chicken: Multi-location chicken restaurant franchise. Google Business Profile work across its locations delivered a 120% increase in map actions and a 160% increase in map views. Use for multi-location or food service businesses (it is a profile and listings win, not an on-page one).
+- **Southgate Medical**, https://studiohawk.com.au/case-studies/southgate-medical: Medical clinic. 692% increase in business conversions, 56% increase in organic visits, and a big lift in bookings after technical fixes, link building and local optimisation. Use for medical, dental and allied health.
+- **Melbourne Natural Therapies**, https://studiohawk.com.au/case-studies/melbourne-natural-therapies: Remedial massage and myotherapy clinic. 74.9% increase in organic users and 137% more ranking keywords from on-page fixes and link building. Use for wellness, therapy, or health service businesses.
+- **CorePlus**, https://studiohawk.com.au/case-studies/coreplus: National Pilates studio brand. Dedicated studio location pages, local SEO and a site migration: 283% increase in top 3 rankings, 301% increase in non-branded clicks and 20% more organic bookings year on year. Use for any multi-location business scaling across suburbs or cities.
+- **Dahlsens**, https://studiohawk.com.au/case-studies/dahlsens: Building and trade supplies. Trade-focused content and local optimisation: 144% year-on-year growth in store page visibility. Use for trades, building supplies, or B2B local.
+- **Waverley Forklifts**, https://studiohawk.com.au/case-studies/waverley-forklifts: Forklift business. 555% increase in organic traffic to its forklift hire service pages and 204% more organic keywords. Use for equipment, machinery, industrial services, and for the service page argument.
+- **Life Supports**, https://studiohawk.com.au/case-studies/life-supports: Online counselling. Location-specific service pages and local optimisation: 56% more organic phone enquiries and 113% more organic form submissions, growing into one of Australia's largest online counselling platforms. Use for counselling, mental health, professional services, and for the location page argument.
+- **Evie Networks**, https://studiohawk.com.au/case-studies/evie-networks: EV charging network. Rebuilt location landing pages and brand-specific content: 25% more organic clicks. Use for EV, infrastructure, or national service networks.
 
 ## Example of an inline case study drop
 
@@ -75,7 +76,7 @@ When auditing a local service business with all services crammed onto one page:
 >
 > **Why should I do this?**
 >
-> Here's why: Google ranks pages, not websites. 10 dedicated service pages mean 10 entry points from Google instead of one. We helped Waverley Forklifts rise up the rankings by splitting their services this way and it built real local authority.
+> Here's why: Google ranks pages, not websites. 10 dedicated service pages mean 10 entry points from Google instead of one. Waverley Forklifts saw a 555% increase in organic traffic to its forklift hire service pages once those pages were optimised for the specific searches customers make.
 >
 > Link to case study to read more: Waverley Forklifts, https://studiohawk.com.au/case-studies/waverley-forklifts
 
@@ -128,7 +129,7 @@ Wait for the user to pick before continuing.
 
 ### Homepage
 
-- **Title tag**: Contains primary service + location in first 5 words? 50-60 characters?
+- **Title tag**: Contains primary service + location in first 5 words? Do not score length: Google sets no length limit and cuts the displayed title to fit the screen, so check the front of the title does the work.
 - **H1**: Describes the service AND location? Not generic ("Welcome" or just the brand)?
 - **NAP in footer**: Name, address, phone visible on every page?
 - **Internal links**: Links to each service page and About page in the main nav?
@@ -149,9 +150,9 @@ This is the single biggest local SEO failure: cramming all services onto one pag
 
 **Why this matters (tell the user this):** One page trying to rank for 12 services ranks for none of them. Every service needs its own page. When you flag this, ALWAYS drop an inline case study using the format at the top: Waverley Forklifts or Dahlsens are the best matches.
 
-### About page, the EEAT unlock
+### About page, the E-E-A-T unlock
 
-Google and AI search prioritise Experience, Expertise, Authority, Trust. The About page is where these signals live.
+Google and AI search look for Experience, Expertise, Authoritativeness and Trust (E-E-A-T). The About page is where these signals live.
 
 - **Real team members**: Photos, names, roles of actual people?
 - **Credentials and experience**: Years in industry, qualifications, certifications?
@@ -160,7 +161,7 @@ Google and AI search prioritise Experience, Expertise, Authority, Trust. The Abo
 - **Trust markers**: Insurance, licences, memberships (e.g. Master Plumbers, HIA)?
 - **Community involvement**: Local sponsorships, partnerships, awards?
 
-**Why this matters (tell the user this):** AI search can't recommend a business that looks faceless. When the About page is just a generic "we've been serving [area] since 2010" paragraph with no real people, drop an inline Southgate Medical case study, they saw a huge increase in bookings from adding real team credentials.
+**Why this matters (tell the user this):** AI search can't recommend a business that looks faceless. When the About page is just a generic "we've been serving [area] since 2010" paragraph with no real people, say so plainly. If the business is medical, dental or allied health, Southgate Medical is the closest case study match, but its results came from technical fixes, link building and local optimisation, so don't claim About page changes caused them.
 
 ### Location pages (if the business serves multiple suburbs)
 
@@ -169,12 +170,12 @@ Google and AI search prioritise Experience, Expertise, Authority, Trust. The Abo
 - **Local landmarks and context**: Streets, landmarks, travel time from other suburbs?
 - **Customer examples from that area**: Real jobs, testimonials from that suburb?
 
-**Why this matters:** One page trying to rank "plumber Richmond" + "plumber Fitzroy" + "plumber Collingwood" will rank for none. When flagging this, drop a CorePlus inline case study, they scaled nationally using dedicated location pages.
+**Why this matters:** One page trying to rank "plumber Richmond" + "plumber Fitzroy" + "plumber Collingwood" will rank for none. When flagging this, drop a CorePlus or Life Supports inline case study: both built dedicated location pages.
 
 ### Content freshness
 
 - **Blog last updated**: When was the most recent post? If it's more than 18 months old, flag it hard.
-- **Updated for current year**: Does content reference 2026, or is it stuck in 2022?
+- **Out-of-date content**: Old prices, offers, staff, dates or "latest news" that has clearly gone stale? (Don't recommend just changing the year; Google warns against changing dates to fake freshness.)
 - **Active resource content**: FAQs, guides, seasonal content?
 
 ### Contact and conversion
@@ -190,6 +191,8 @@ Google and AI search prioritise Experience, Expertise, Authority, Trust. The Abo
 - **Clear headings and lists**: Structured so AI can parse?
 - **Authored content**: Articles attributed to real experts?
 
+Score it out of 10 from what you actually read: topical depth 0-4, clear headings and lists 0-3, authored content 0-3. Name the pages the score is based on, and if you read fewer than 3 pages, say the score is provisional.
+
 ---
 
 ## Output format
@@ -200,7 +203,7 @@ Always output in this exact structure. Be specific, quote page text, name exact 
 LOCAL SEO AUDIT
 Business: [business name / domain]
 Service area: [locations served, if visible]
-Pages audited: [3 URLs]
+Pages audited: [the URLs or pasted pages you actually read]
 
 OVERALL HEALTH: [STRONG / NEEDS WORK / CRITICAL ISSUES]
 One-line summary of the biggest issue.
@@ -243,6 +246,7 @@ Want me to go deeper on any of these? I can dig into [area 1], [area 2], or [are
 - **Every recommendation must explain WHY it matters** in terms of Google ranking, AI search, or lead volume, not SEO jargon.
 - **Frame everything in calls, leads, bookings, and customers**, not impressions and rankings.
 - **If the business is doing things well, say so.** Don't manufacture problems.
+- **No invented numbers.** Word counts, dates, review counts and scores come only from pages you actually read. If you didn't see it, say so.
 - **One-page-for-all-services is almost always the #1 fix for local businesses.** Lead with it if it's present.
 - **Reference case studies only when they actually match.** Don't force case studies into every point.
 - **Stay on-page.** Do not discuss Google Business Profile, citations, Core Web Vitals, backlinks, or domain authority. Those are out of scope for this skill.
