@@ -1,11 +1,11 @@
 # Claude SEO Skills
 
-> 60 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
+> 61 free Claude Skills for SEO and AI search. Built by [Hawk Academy](https://hawkacademy.co) and the [StudioHawk](https://studiohawk.com.au) senior team. Drop into Claude Desktop and run.
 >
 > **Official site: [claudeseoskills.com.au](https://claudeseoskills.com.au)**, install commands, real sample output from every flagship skill, and the full directory.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-60-orange.svg)](#the-60-skills)
+[![Skills](https://img.shields.io/badge/skills-61-orange.svg)](#the-61-skills)
 [![Hawk Academy](https://img.shields.io/badge/free-Hawk%20Academy-7C3AED.svg)](https://hawkacademy.co/claude-seo-skills)
 
 These are the [Claude](https://www.anthropic.com/claude) Skills [StudioHawk](https://studiohawk.com.au) uses across 500+ live client SEO campaigns. We open-sourced them through [Hawk Academy](https://hawkacademy.co) so any SEO, founder, or in-house marketer can run agency-grade audits and briefs straight inside Claude Desktop, free.
@@ -24,7 +24,7 @@ A short walkthrough of how StudioHawk actually uses these Claude Skills on live 
 
 Most SEO tools are either expensive SaaS subscriptions or one-off paid prompts. Neither is how StudioHawk's own SEO specialists actually work day to day. We run Claude Skills, drop in our own crawl data, and let Claude do the audit, the brief, or the report.
 
-These 60 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
+These 61 skills are the exact set our team uses on live client work. Now they live in your Claude Desktop too.
 
 **Free, MIT-licensed, no upsell.** You will not find a paywall, an email gate, or a "premium tier" in this repo. [Hawk Academy](https://hawkacademy.co) is funded by StudioHawk's agency business. The skills are the giveaway.
 
@@ -109,7 +109,7 @@ If you only want one or two skills, every landing page on [hawkacademy.co/claude
 
 ---
 
-## The 60 skills
+## The 61 skills
 
 Grouped by job. Every link goes to the Hawk Academy landing page with worked examples, sample output, and the install snippet.
 
@@ -162,7 +162,8 @@ Grouped by job. Every link goes to the Hawk Academy landing page with worked exa
 | Skill | What it does |
 |---|---|
 | [Content Brief Draft](https://hawkacademy.co/claude-seo-skills/content-brief-draft) | Generates a content brief any writer can ship from. Audience, angle, structure, internal linking, distribution. |
-| [Information Gain](https://hawkacademy.co/claude-seo-skills/information-gain) | Finds the unique angle competitors are missing on a query. Use before you write. |
+| [Information Gain Finder](https://hawkacademy.co/claude-seo-skills/information-gain-claude-seo-plugin) | Runs one test (could a competitor rebuild this page with AI in an afternoon?), grades a draft on six steps, then walks you through adding what only you have. Also ships as a Claude plugin. |
+| [Information Gain Analyser](https://hawkacademy.co/claude-seo-skills/information-gain) | Finds the unique angle competitors are missing on a query. Use before you write. |
 | [Title Tag Optimizer](https://hawkacademy.co/claude-seo-skills/title-tag-optimizer) | The title-tag rewrite skill. Tested against Google's CTR signals StudioHawk monitors. |
 | [Topical Authority Map](https://hawkacademy.co/claude-seo-skills/topical-authority-map) | Builds the cluster architecture for an entire topic from a single seed keyword. |
 | [Keyword Clustering](https://github.com/lhitches/claude-seo-skills/blob/main/skills/keyword-clustering.md) | Groups a raw keyword list into page-level clusters by search intent, with target pages and cannibalisation flags. |
