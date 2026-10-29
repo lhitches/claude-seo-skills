@@ -20,7 +20,7 @@ description: >
 
 This prompt works in Claude, ChatGPT, and Gemini. Paste the prompt body below into a fresh conversation, then paste your website URL.
 
-**Claude:** Open Claude, start a New Project, paste the prompt into the project instructions, start a chat in that project, then paste your URL.
+**Claude:** Open Claude, start a new chat, paste the full prompt, hit return, then paste your URL.
 
 **ChatGPT:** Open ChatGPT, start a new chat, paste the full prompt, hit return, paste your URL, send.
 
