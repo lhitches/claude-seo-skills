@@ -60,7 +60,7 @@ Build a topical authority map for [your seed keyword]
 
 Claude will load the skill automatically and walk you through the workflow.
 
-For Claude Desktop (web or app), see [INSTALL.md](INSTALL.md) for the Project setup path.
+For the Claude app (claude.ai or desktop), upload `topical-authority-map.zip` under Customize > Skills. [INSTALL.md](INSTALL.md) has the full steps.
 
 ---
 
@@ -70,7 +70,7 @@ For Claude Desktop (web or app), see [INSTALL.md](INSTALL.md) for the Project se
 topical-authority-map/
 ├── SKILL.md                            The skill entry point. Loaded automatically by Claude.
 ├── README.md                           This file.
-├── INSTALL.md                          Install paths for Claude Code and Claude Desktop.
+├── INSTALL.md                          Install paths for Claude Code and the Claude app.
 ├── references/
 │   ├── 01-research-and-classify.md     Phase 1. Central entity, persona, attribute research, classification.
 │   ├── 02-architecture-and-keywords.md Phase 2. Folder structure, buyer journey, query expansion, linking.
@@ -87,7 +87,7 @@ Open the sample-output folder before running the skill. It shows you exactly wha
 ## Quick start
 
 1. Install (see INSTALL.md).
-2. Open Claude Code or Claude Desktop.
+2. Open Claude Code or the Claude app.
 3. Type: `Build a topical authority map for premium Australian furniture` (or your own seed keyword).
 4. Answer Claude's questions at each of the five checkpoints (central entity, source context plus persona, attribute list, merge and split decisions, buyer journey gaps).
 5. Claude generates the spreadsheet and strategy document.

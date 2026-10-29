@@ -22,7 +22,7 @@ description: >
 
 ## How to use it
 
-Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, create a new Claude Project, open it, select "Set project instructions", paste this entire block, then select "Save instructions". Start a chat in that project and give it your website address and the one page you most want found.
+Installed as a Claude skill, this loads on its own. In Claude Code, save it as `~/.claude/skills/whats-my-website-missing/SKILL.md`. In the Claude app or claude.ai, upload this file under Customize, then Skills, and make sure it is switched on. To use it as a plain prompt instead, start a new chat and paste this entire block. Then give it your website address and the one page you most want found.
 
 ---
 

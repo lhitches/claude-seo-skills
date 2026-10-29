@@ -1,6 +1,6 @@
 # Install the Topical Authority Map skill
 
-This skill works in **Claude Code** (the CLI) and **Claude Desktop** (the app and web). The Claude Code path takes 30 seconds. The Claude Desktop path takes 2 minutes (Projects setup).
+This skill works in **Claude Code** (the CLI) and the **Claude app** (claude.ai and the desktop app). Each path takes about a minute.
 
 ---
 
@@ -62,44 +62,34 @@ Claude detects the trigger, loads the skill, and walks you through the five chec
 
 ---
 
-## Option 2: Claude Desktop (web or app)
+## Option 2: The Claude app (claude.ai or desktop)
 
-Claude Desktop does not auto-load skills the same way as Claude Code. Use a **Project** instead. The skill content becomes the Project's instructions. The reference files become Project Knowledge.
+The Claude app installs a skill from a zip. `topical-authority-map.zip` is already in the right shape, with the references and the sample output inside it. Skills work on every plan, including Free.
 
-### Step 1. Create a new Project
-
-1. Open [claude.ai](https://claude.ai) or the Claude Desktop app.
-2. Click **Projects** in the sidebar.
-3. Click **+ Create project**.
-4. Name it: `Topical Authority Map`.
-5. Description: `Builds a 4-cluster topical authority map from a seed keyword.`
-
-### Step 2. Paste the skill into the Project's instructions
-
-1. Open `SKILL.md` in any text editor.
-2. Copy the entire body of the file (everything after the `---` frontmatter block).
-3. In your new Project, click **Set project instructions**.
-4. Paste the skill body in.
-5. Click **Save instructions**.
-
-### Step 3. Add the references as Project Knowledge
-
-1. In the same Project, click **Add knowledge** (or **+ Files**).
-2. Upload these three files:
-   - `references/01-research-and-classify.md`
-   - `references/02-architecture-and-keywords.md`
-   - `references/03-execution-and-output.md`
-3. Optionally upload `sample-output/premium-australian-furniture.xlsx` and `sample-output/premium-australian-furniture-strategy.md` so Claude can reference the example output during the run.
-
-### Step 4. First run
-
-Start a new chat in the Project. Type:
+1. Turn on code execution, which skills need to run. On a Free, Pro or Max plan, go to **Settings > Capabilities** and switch on **Code execution and file creation**. On a Team plan skills are on by default. If they are off on a Team or Enterprise plan, an owner turns them on in **Organization settings > Plugins & skills**, on the Policy tab.
+2. Go to **Customize > Skills**. Click the **+** button, then **Create skill**, then **Upload a skill**.
+3. Choose `topical-authority-map.zip`. Upload it as it is. Do not unzip it first.
+4. Check the skill is switched on in your skills list.
+5. Start a new chat and type:
 
 ```
 Build a topical authority map for [your seed keyword]
 ```
 
-Claude will use the skill instructions and load the reference files from the Project Knowledge as the workflow progresses.
+The skill triggers from your request and loads the reference files as the workflow progresses.
+
+---
+
+## Option 3: The Projects fallback (no Skills feature needed)
+
+Use this only if you cannot use the Skills feature, for example because your organisation has switched it off. It uses a Project instead, and Projects are available on every plan.
+
+1. In the Claude app, create a new **Project** named `Topical Authority Map`.
+2. Open `SKILL.md` in a text editor. Copy everything **below** the frontmatter, that is everything after the second `---` line near the top. Paste it into the Project's instructions.
+3. Add the three files in `references/` to the Project's knowledge.
+4. Start a chat inside that Project and type the prompt above.
+
+The Skills feature in Options 1 and 2 is tidier because the skill triggers automatically. The Projects method does the same job.
 
 ---
 
@@ -140,7 +130,7 @@ Check the folder structure. `~/.claude/skills/topical-authority-map/SKILL.md` mu
 
 In Claude Code, restart the CLI (close and re-run `claude`) so it re-scans the skills directory.
 
-In Claude Desktop, make sure you are in the Project (not a fresh chat). The Project instructions are not loaded into general chats.
+In the Claude app, check the skill is switched on under **Customize > Skills**, then start a new chat. A chat that was already open before the upload does not pick the skill up. If you used the Projects fallback, start the chat inside the Project, because Project instructions do not load into general chats.
 
 ### "The output stops after a few rows."
 
