@@ -1,6 +1,6 @@
 ---
-name: claude-code-seo
-description: Drop-in Claude Code skill that audits a website codebase directly from the CLI. Reads every HTML file in the repo, checks for canonical tags, OG tags, schema, internal linking patterns, and on-page SEO basics, then writes a full report to SEO_REPORT.md and proposes fixes for you to approve and commit yourself. Trigger when the user runs Claude Code in a website repo and asks for an SEO audit, mentions Claude Code SEO, asks to audit a static site, or wants CLI-driven SEO automation. Built for developers, devops-leaning SEOs, and agencies maintaining their own static-site codebases (Astro, Next.js, Jekyll, Hugo, hand-built HTML).
+name: codebase-seo-audit
+description: Claude Code skill that audits a website codebase from the CLI. Reads every HTML file in the repo, checks canonical tags, OG tags, schema, internal linking and on-page basics, writes the report to SEO_REPORT.md and proposes fixes for you to approve and commit. Use when someone runs Claude Code in a website repo and asks for an SEO audit, an audit of a static site, or CLI SEO automation. Built for Astro, Next.js, Jekyll, Hugo and hand-built HTML sites.
 ---
 
 # Claude Code SEO Skill

@@ -1,6 +1,6 @@
 ---
 name: competitor-backlink-scanner
-description: Reads a competitor backlink export from Ahrefs, Semrush, Moz or Majestic, strips out the links you can never win, and shortlists the pages actually worth approaching. Qualifies every prospect on whether the linking page ranks and gets traffic rather than on domain authority, groups the survivors by the reason someone would link, and drafts the outreach. Trigger when the user pastes a backlink export, asks who links to a competitor, asks which competitor links are worth chasing, wants link prospects, or asks for outreach targets.
+description: Reads a competitor backlink export from Ahrefs, Semrush, Moz or Majestic, strips out the links you can never win, and shortlists the pages worth approaching. Qualifies every prospect on whether the linking page ranks and gets traffic, groups the survivors by the reason someone would link, and drafts the outreach. Use when someone pastes a backlink export, asks who links to a competitor or which competitor links are worth chasing, or wants link prospects or outreach targets.
 ---
 
 # Competitor Backlink Scanner

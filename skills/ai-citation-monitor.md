@@ -1,12 +1,11 @@
 ---
 name: ai-citation-monitor
 description: >
-  Tracks whether your brand is cited by ChatGPT, Claude, Perplexity, and Gemini for your target
-  queries. Generates the prompt batch you paste into each LLM, then analyses what you paste back:
-  who got cited, who got recommended over you, what shifted vs last run, and the per-query action
-  that would move you from "not cited" to "cited". Use when the user wants to monitor AI search
-  citations, track brand mentions in AI search, set up generative engine optimisation (GEO)
-  tracking, or compare citation share across ChatGPT, Claude, Perplexity and Gemini.
+  Tracks whether your brand is cited by ChatGPT, Claude, Perplexity and Gemini for your target
+  queries. Generates the prompt batch you paste into each one, then analyses what you paste back:
+  who got cited, who was recommended over you, what shifted since the last run, and the per-query
+  action that gets you cited. Use to monitor AI search citations, track brand mentions in AI search,
+  set up GEO tracking, or compare citation share across AI assistants.
 ---
 
 # AI Citation Monitor

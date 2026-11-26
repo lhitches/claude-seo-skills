@@ -1,6 +1,11 @@
 ---
 name: topical-authority-map
-description: Builds a 4-cluster Topical Authority Map from a seed keyword. Outputs an .xlsx spreadsheet with five tabs (Core Pages, AOR Pages, Linking Map, Buyer Journey, Publishing Order) plus a markdown strategy document. Interactive, asks the user to confirm central entity, source context, persona, classification, and gaps at five checkpoints. Trigger when the user provides a seed keyword, niche, business type, or asks for a topical map, content plan, site architecture, topic cluster, or publishing roadmap.
+description: >
+  Builds a 4-cluster Topical Authority Map from a seed keyword. Outputs an .xlsx with five tabs
+  (Core Pages, AOR Pages, Linking Map, Buyer Journey, Publishing Order) plus a markdown strategy
+  document. Interactive: confirms central entity, source context, persona, classification and gaps
+  at five checkpoints. Use when someone gives a seed keyword, niche or business type, or asks for a
+  topical map, content plan, site architecture, topic cluster or publishing roadmap.
 ---
 
 You are building a Topical Authority Map. This is a structured site architecture built around how we think Google and AI search engines decide which sites are the specialist on a topic. It is NOT a keyword list. It is NOT a list of topics. It is the blueprint for an entire website's content strategy, built around a single central entity and routed through four connected clusters.

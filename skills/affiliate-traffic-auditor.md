@@ -1,13 +1,11 @@
 ---
 name: affiliate-traffic-auditor
 description: >
-  Audits your GA4 referral traffic and affiliate payouts to find commissions being claimed by
-  sources that did not earn them, the "cookie stuffing" / last-click hijacking pattern behind the
-  Honey and Phia stories. Flags suspicious coupon, cashback, and shopping-extension referrers for
-  review and tells you exactly what to confirm in your affiliate network. Never accuses, never
-  invents numbers. Use when someone asks to audit affiliate traffic or commissions, check for
-  cookie stuffing or coupon-extension hijacking, or asks whether Honey, Phia or a cashback site is
-  taking credit for their sales.
+  Audits your GA4 referral traffic and affiliate payouts to find commissions claimed by sources that
+  did not earn them, the cookie stuffing and last-click hijacking pattern behind the Honey and Phia
+  stories. Flags suspicious coupon, cashback and shopping-extension referrers and tells you what to
+  confirm in your affiliate network. Use to audit affiliate commissions, check for cookie stuffing,
+  or ask whether Honey, Phia or a cashback site is taking credit for sales.
 ---
 
 # Affiliate Traffic Auditor

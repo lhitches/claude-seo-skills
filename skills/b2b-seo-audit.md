@@ -1,6 +1,11 @@
 ---
 name: b2b-seo-audit
-description: On-page SEO audit for B2B service businesses, consulting firms, agencies, recruitment, HR, legal, accounting, professional services, and any business selling services to other businesses. Trigger when the user asks to audit a B2B services website, mentions they run a consulting/agency/professional services business, or pastes a URL for a B2B services firm and asks for SEO feedback. Focused on service page architecture, thought leadership content, trust signals, case studies, and AI search readiness.
+description: >
+  On-page SEO audit for B2B service businesses: consulting firms, agencies, recruitment, HR, legal,
+  accounting and other professional services. Use when someone asks to audit a B2B services website,
+  says they run a consulting, agency or professional services business, or pastes a B2B firm's URL
+  and asks for SEO feedback. Focuses on service page architecture, thought leadership content, trust
+  signals, case studies and AI search readiness.
 ---
 
 # B2B SEO Audit Skill

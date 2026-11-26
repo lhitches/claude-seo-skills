@@ -1,13 +1,11 @@
 ---
 name: does-my-page-match-my-icp
 description: >
-  Builds and saves ICP personas for the people you write for, then scores any page or draft
-  against each of them: relevance, questions answered, tone fit, what they still want to know,
-  and the edits that would move them. Can also reverse-engineer a real converted lead to show
-  what the page got right and what is still missing. Answers the question "this page ranks,
-  so why does nobody convert?" Use when someone asks to build ICP or buyer personas, check whether
-  a page speaks to their ideal customer, score a page or draft against an audience, or work out why
-  a page gets traffic but no leads.
+  Builds and saves ICP personas for the people you write for, then scores any page or draft against
+  each one: relevance, questions answered, tone fit, what they still want to know, and the edits
+  that would move them. Can also reverse-engineer a converted lead. Answers "this page ranks, so why
+  does nobody convert?" Use to build ICP or buyer personas, check whether a page speaks to the ideal
+  customer, or work out why a page gets traffic but no leads.
 ---
 
 # Does My Page Match My ICP?

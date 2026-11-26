@@ -1,6 +1,6 @@
 ---
 name: ai-visibility-dashboard
-description: Runs the book's chapter 11 measurement loop in three modes. Builds a 10 to 20 prompt library for your category by interviewing you, runs a scoring round of those prompts in AI assistants (brand named, recommended, your site linked, an external page about you linked) and compares it with your last round, then turns the latest round plus your GA4 and Search Console exports into the four-gauge board slide (Eligible, Chosen, Arriving, Paying off) with AI-referred revenue. Use this when someone says "build my prompt library", "build my AI visibility dashboard", "how often does ChatGPT cite us", "track my AI citations", "what is my citation share", "run this month's AI visibility round", "score these ChatGPT answers", "how much revenue does AI traffic drive", "is the AI Assistant channel in GA4 converting", "build the board slide for AI search", or "report our AI search results to the board". Works for any business and locale, defaults to Australia.
+description: Runs the book's chapter 11 measurement loop in three modes. Builds a 10 to 20 prompt library for your category, scores a round of those prompts in AI assistants against your last round, and turns the latest round plus your GA4 and Search Console exports into the four-gauge board slide (Eligible, Chosen, Arriving, Paying off). Use for "build my AI visibility dashboard", "track my AI citations", AI-referred revenue, or reporting AI search to the board.
 ---
 
 # AI Visibility Dashboard

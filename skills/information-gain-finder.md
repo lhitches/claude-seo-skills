@@ -1,13 +1,11 @@
 ---
 name: information-gain-finder
 description: >
-  Grades a draft, a finished page or a rough idea for information gain, then walks the writer
-  through the six steps that add it: a number only they have, real experience, an original
-  visual, primary sources, a defensible position, and something built for the reader. Starts
-  with one test: could a competitor rebuild this page with an AI tool in a free afternoon? Use
-  when someone wants content Google and AI answers cannot ignore, asks whether a page is original
-  enough, wants their draft graded before publishing, or has an idea and wants it turned into a
-  page with information gain built in.
+  Grades a draft, a finished page or a rough idea for information gain, then walks you through the
+  six steps that add it: a number only they have, real experience, an original visual, primary
+  sources, a defensible position, and something built for the reader. Starts with one test: could a
+  competitor rebuild this page with AI in a free afternoon? Use to check whether a page is original
+  enough, wants a draft graded before publishing, or wants an idea turned into a page.
 ---
 
 # Information Gain Finder

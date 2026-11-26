@@ -1,13 +1,11 @@
 ---
 name: whats-my-website-missing
 description: >
-  Walks your website through the five things Google's own leaked documentation says it measures, and
-  tells you which one is costing you the most. Checks whether the pages linking to you are worth
-  anything, whether your page shows effort, whether it earns engagement, what the web says about you
-  when your own marketing is stripped out, and which questions AI systems ask that you never answer.
-  Returns a grade of desk, shelves or basement, and the one thing to fix first. Use when someone asks
-  "what's my website missing", why they are not showing up in Google or AI answers, whether a link
-  offer is worth taking, or wants their site checked against the Google API leak.
+  Walks your website through the five things Google's leaked documentation says it measures, and
+  tells you which one is costing you most: links worth anything, page effort, engagement, what the
+  web says about you, and the questions AI systems ask that you never answer. Returns a grade of
+  desk, shelves or basement and the one thing to fix first. Use for "what's my website missing", why
+  a site is not showing up in Google or AI answers, or a check against the Google API leak.
 ---
 
 # What's My Website Missing for AI Search?

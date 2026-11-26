@@ -1,6 +1,11 @@
 ---
 name: internal-linking
-description: Plans the internal links that grow the pages you care about. Takes a Search Console page export (and a crawl export if there is one), finds the pages that already get clicks, matches them to related pages worth growing, and writes every link: the page it goes on, the sentence, the anchor text and why. Also flags orphan pages, buried pages, links to redirects or 404s and money pages with too few links, then sets up a dated before and after check. Use when someone asks about internal links or internal linking, which pages to link to, anchor text, orphan pages, site structure, or how to lift a page without new content or backlinks.
+description: >
+  Plans the internal links that grow your key pages. Takes a Search Console page export (plus a
+  crawl, if you have one), matches pages that get clicks to related pages worth growing, and writes
+  every link: the page, the sentence, the anchor text and why. Flags orphan pages, links to
+  redirects or 404s and under-linked money pages, then sets a dated before and after check. Use for
+  internal links, anchor text, orphan pages, site structure, or lifting a page without new content.
 ---
 
 # Internal Linking

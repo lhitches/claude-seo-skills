@@ -1,6 +1,6 @@
 ---
 name: review-engine
-description: Turns the reviews you already have into a search asset. Inventories what exists across Google, brand mentions and empty directory profiles, ranks who to ask and why, writes the outreach for each kind of ask, walks you through building the /reviews/ page that should rank for your own brand, and tells you honestly what feeds an AI answer. Trigger when the user asks about getting more reviews, review schema, testimonials, case studies, a reviews page, or why a competitor's comparison page outranks them for their own brand name.
+description: Turns the reviews you already have into a search asset. Inventories what exists across Google, brand mentions and empty directory profiles, ranks who to ask, writes the outreach for each kind of ask, walks you through building the /reviews/ page that should rank for your brand, and says honestly what feeds an AI answer. Use for getting more reviews, review schema, testimonials, case studies, a reviews page, or a competitor's comparison page outranking your brand name.
 ---
 
 # Review Engine

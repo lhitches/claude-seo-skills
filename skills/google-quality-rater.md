@@ -1,12 +1,11 @@
 ---
 name: google-quality-rater
 description: >
-  Grades one of your pages the way Google's paid human Search Quality Raters do, using the criteria
-  in Google's published 182-page General Guidelines. Give it a page URL and the search you want to
-  be found for. It researches your reputation, checks the pages currently ranking, runs the quality
-  demotion checks, and returns an OUR scorecard with one specific fix per letter. Use when someone
-  asks to rate or grade a page like a Google quality rater, check a page's E-E-A-T or page quality,
-  or asks why a page is not ranking against Google's own guidelines.
+  Grades one of your pages the way Google's human Search Quality Raters do, using Google's published
+  182-page General Guidelines. Give it a URL and the search you want to be found for. It researches
+  your reputation, checks the pages ranking now, runs the quality demotion checks and returns an OUR
+  scorecard with one fix per letter. Use to grade a page like a Google quality rater, check E-E-A-T
+  or page quality, or ask why a page is not ranking against Google's guidelines.
 ---
 
 # Rate My Page Like a Google Quality Rater

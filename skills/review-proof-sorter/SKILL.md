@@ -1,16 +1,11 @@
 ---
 name: review-proof-sorter
 description: >
-  Turns a business's Google reviews into proof for its service pages. Takes the reviews
-  (pasted, or exported as CSV/JSON/text) and the list of service pages, sorts every review
-  by the service and the suburb or city it talks about, and writes a proof block for each
-  page: the best quotes word for word, the words customers use for that job, the places they
-  name, and which pages have too few reviews to prove anything yet. Use whenever a user asks
-  to "use my reviews on my website", "sort my Google reviews", "put reviews on my service
-  pages", "which reviews go on which page", "turn reviews into proof", "review proof sorter", or
-  invokes /review-proof-sorter. Also use when a page audit says a service page has no social proof.
-  Produces sorted-reviews.csv and proof-blocks.md. Works with the reviews a business already
-  has; for getting more reviews, use the separate Review Engine skill.
+  Turns a business's Google reviews into proof for its service pages. Sorts every review by service
+  and suburb, then writes a proof block per page: the best quotes word for word, the words customers
+  use, the places they name, and which pages have too few reviews yet. Use for "use my reviews on my
+  website", "sort my Google reviews", "which reviews go on which page", or a service page with no
+  social proof. Produces sorted-reviews.csv and proof-blocks.md.
 ---
 
 # Review Proof Sorter: Google reviews into proof on every service page
