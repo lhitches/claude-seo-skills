@@ -107,7 +107,7 @@ Timing varies by site. Some changes show within days, others take months, so tre
 
 ## Built by
 
-[Hawk Academy](https://hawkacademy.co), the free SEO education platform from StudioHawk, a 120-person specialist SEO agency with 1,000+ clients and 50,000+ hours of real SEO work.
+[Hawk Academy](https://hawkacademy.co), the free SEO education platform from StudioHawk, a specialist SEO agency of 120+ people with 500+ clients and 50,000+ hours of real SEO work.
 
 The framework comes from the workflow we use internally on every vertical from plumbing to enterprise SaaS.
 

@@ -20,6 +20,6 @@ Test-Path "$env:USERPROFILE\.claude\skills\review-proof-sorter\SKILL.md"
 
 ## Run it
 
-Start a new Claude Code session and say: **"Sort my Google reviews onto my service pages"**, then paste your reviews.
+In Claude Code, say: **"Sort my Google reviews onto my service pages"**, then paste your reviews.
 
 Claude asks for your service pages (and the suburbs you serve, if you like), writes the words customers use for each service, runs the script and then reads the results itself to fix the sort. You get one proof block per page.
