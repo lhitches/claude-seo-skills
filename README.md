@@ -215,7 +215,7 @@ These skills are built and maintained by the StudioHawk senior team, distributed
 - **[Harry Sanders](https://hawkacademy.co/about/harry-sanders)** is the founder of [StudioHawk](https://studiohawk.com.au), Australia's largest dedicated SEO agency, and Hawk Academy. Forbes 30 Under 30. 1,000-plus SEO campaigns delivered with zero algorithmic penalisations. AWIA Board Member.
 - **[Lawrence Hitches](https://hawkacademy.co/about/lawrence-hitches)** is Chief of Staff at StudioHawk and an AI SEO consultant based in Melbourne. Young Search Professional of the Year (Semrush 2021). Speaker at SEO conferences across Asia-Pacific.
 
-The skills reflect how a 120-person SEO agency actually runs audits, briefs, and reports. They are not generic prompts.
+The skills reflect how an SEO agency of 120+ people actually runs audits, briefs, and reports. They are not generic prompts.
 
 ### StudioHawk has been recognised by
 
@@ -231,7 +231,7 @@ Nike · New Balance · Fujifilm · Officeworks · Kao · Weber · Bondi Sands ·
 
 - **Junior SEO standardisation.** Drop the audit skills onto a junior's machine, get StudioHawk-grade output on day one
 - **Agency QA.** Run every client audit through the same Claude skill so reports are consistent across consultants
-- **Freelancer leverage.** A solo SEO consultant can punch above their weight using the same workflow we run at 120-person scale
+- **Freelancer leverage.** A solo SEO consultant can punch above their weight using the same workflow we run at the scale of an agency of 120+ people
 - **Founder DIY.** Founder-led SEO that does not require hiring an in-house SEO until the business is much bigger
 - **In-house team scale-up.** A two-person in-house SEO team can match the output of a much larger team
 
