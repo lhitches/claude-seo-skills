@@ -60,7 +60,7 @@ Build a topical authority map for [your seed keyword]
 
 Claude will load the skill automatically and walk you through the workflow.
 
-For the Claude app (claude.ai or desktop), upload `topical-authority-map.zip` under Customize > Skills. [INSTALL.md](INSTALL.md) has the full steps.
+For the Claude app (claude.ai or desktop), upload `topical-authority-map.zip` under Plugins (Add, then Upload plugin). [INSTALL.md](INSTALL.md) has the full steps.
 
 ---
 

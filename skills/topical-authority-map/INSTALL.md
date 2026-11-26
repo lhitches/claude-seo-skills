@@ -67,7 +67,7 @@ Claude detects the trigger, loads the skill, and walks you through the five chec
 The Claude app installs a skill from a zip. `topical-authority-map.zip` is already in the right shape, with the references and the sample output inside it. Skills work on every plan, including Free.
 
 1. Turn on code execution, which skills need to run. On a Free, Pro or Max plan, go to **Settings > Capabilities** and switch on **Code execution and file creation**. On a Team plan skills are on by default. If they are off on a Team or Enterprise plan, an owner turns them on in **Organization settings > Plugins & skills**, on the Policy tab.
-2. Go to **Customize > Skills**. Click the **+** button, then **Create skill**, then **Upload a skill**.
+2. Go to **Plugins** in the sidebar. Click **Add**, then **Upload plugin**.
 3. Choose `topical-authority-map.zip`. Upload it as it is. Do not unzip it first.
 4. Check the skill is switched on in your skills list.
 5. Start a new chat and type:
@@ -128,9 +128,9 @@ You can ask Claude to save them anywhere you like, or to email them, or to push 
 
 Check the folder structure. `~/.claude/skills/topical-authority-map/SKILL.md` must exist exactly at that path. If you moved the folder by hand, make sure the folder name is `topical-authority-map` (with hyphens, no spaces, all lowercase).
 
-In Claude Code, restart the CLI (close and re-run `claude`) so it re-scans the skills directory.
+In Claude Code, the skill loads without a restart. Run `/skills` to check it is listed, or `/reload-skills` to make Claude Code scan the folder again.
 
-In the Claude app, check the skill is switched on under **Customize > Skills**, then start a new chat. A chat that was already open before the upload does not pick the skill up. If you used the Projects fallback, start the chat inside the Project, because Project instructions do not load into general chats.
+In the Claude app, check the skill is switched on under **Plugins**, on the Skills tab, then start a new chat. A chat that was already open before the upload does not pick the skill up. If you used the Projects fallback, start the chat inside the Project, because Project instructions do not load into general chats.
 
 ### "The output stops after a few rows."
 
