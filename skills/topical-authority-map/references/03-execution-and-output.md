@@ -171,7 +171,7 @@ Generate using the xlsx skill. If you cannot create files in this environment, o
 
 | Page Title | URL Slug | Folder | Target Keyword | Search Volume | Buyer Stage | Links To (Core) | H1 | Title Tag | Meta Description | Competition Level |
 
-60 to 80 rows. These are the supporting authority articles.
+Up to 60 to 80 rows. These are the supporting authority articles. The count is a ceiling, not a target: list only articles you can justify with evidence and that the team can write well, and say how many you left out and why.
 
 ### Tab 3: Linking Map
 
@@ -189,7 +189,7 @@ Every page tagged TOFU, MOFU, or BOFU (plus Retention if used). Use cell colour 
 
 | Week | # | Page Title | Cluster | Target Keyword | Buyer Stage | Brief Link | Notes |
 
-90 rows. Sequenced AOR Wave (weeks 1 to 6), MOFU Wave (weeks 7 to 10), Core Optimisation (weeks 11 to 12). List any urgent core-page fixes (wrong intent, thin content, not indexed) above them as week 0. Briefs for rows 1 to 30 should be linked or expanded inline. Rows 31 to 90 use the lighter brief format.
+Up to 90 rows, one per page the map actually justifies. Sequenced AOR Wave (weeks 1 to 6), MOFU Wave (weeks 7 to 10), Core Optimisation (weeks 11 to 12). List any urgent core-page fixes (wrong intent, thin content, not indexed) above them as week 0. Briefs for rows 1 to 30 should be linked or expanded inline. Rows 31 to 90 use the lighter brief format.
 
 ## Deliverable 2: strategy document (.md)
 

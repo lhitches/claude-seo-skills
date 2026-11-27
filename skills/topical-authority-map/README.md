@@ -12,10 +12,10 @@ When you run this skill on a seed keyword (for example "premium Australian furni
 
 1. **A spreadsheet (.xlsx) with five tabs:**
    - **Core Pages.** 12 to 20 commercial pages, the money pages users buy from.
-   - **AOR Pages.** 60 to 80 supporting authority articles, organised by sub-topic.
+   - **AOR Pages.** Up to 60 to 80 supporting authority articles, only the ones the evidence justifies, organised by sub-topic.
    - **Linking Map.** Which page links to which page, with what anchor text, in what direction.
    - **Buyer Journey.** Every page tagged TOFU, MOFU, or BOFU.
-   - **Publishing Order.** 90 articles sequenced across 12 weeks, with content briefs for the first 30.
+   - **Publishing Order.** Up to 90 articles sequenced across 12 weeks, with content briefs for the first 30.
 
 2. **A strategy document (.md):**
    - Central entity definition (the one thing your site is allowed to be known for).

@@ -22,6 +22,7 @@ Put a short, plain version of both limits at the end of every output.
 You need:
 
 - **The raw data.** A CSV or XLSX of transactions, survey responses, or internal metrics. Read the file the user provides. If they can only describe their data, work from the description, but see step 2: no numbers without data.
+- **Or an already-published study.** If the study is already live, or the data exists only as pooled figures (shares, medians, sample sizes, intervals), take the URL or the figures and treat the published numbers as the data. Do not ask for raw rows. Recompute only what the published counts allow (for example a share from two counts), quote everything else as published with its source, and say which is which. Then put most of the work into steps 3, 5 and 6.
 - **Industry and business type.** What they sell and who to.
 - **Target audience.** Who their customers are.
 - **Geographic market.** Local, state, national.
@@ -49,6 +50,8 @@ For every finding, judge its strength honestly:
 - **Moderate**: a real pattern, but the effect is modest or it only holds with caveats. Worth a mention, not a headline.
 - **Needs more data**: claims more than the data shows: a trend or change drawn from a single period, a gap between small groups that could be chance, or a figure a few more records would swing. Present it as a question to test, not a fact, and say exactly what extra data would settle it. A descriptive finding from one period or one group can still be stated as fact when you give its date range and sample size ("[X]% of [N] orders, [date range]").
 
+- **No detectable difference** (a null result): when the data shows no clear gap, write "no detectable difference" and give the estimate with its interval ("[estimate], 95% interval [low] to [high]"), never "no effect" or "makes no difference". The interval shows the range of differences the data is compatible with. Rate it Strong only when that range is narrow enough to rule out any difference a reader would care about. If it is wide, rate it Moderate and word it as "no large difference".
+
 Never inflate a weak finding into a strong one. A journalist who gets burned once never opens your email again.
 
 ## Step 3. Frame findings as headlines and campaign angles
@@ -69,7 +72,7 @@ Take the single best finding and build it into a study concept:
 - Why it matters to a publication's readers, not to the user's customers
 - A one-line methodology note: what data, how many records, over what period, and whose customers they are
 - What extra data or context would make the study even stronger
-- Where the study lives: publish it as its own page on the user's site before any pitch goes out, and name that page's URL and the two or three topic words its links should carry, so the coverage links to the study and not just the homepage
+- Where the study lives: if the study is already live, name its URL and check that every figure on it shows its sample size and what it is out of. Otherwise publish it as its own page on the user's site before any pitch goes out, and name that page's URL and the two or three topic words its links should carry, so the coverage links to the study and not just the homepage
 
 ## Step 5. Write personalised journalist outreach emails
 
@@ -94,7 +97,7 @@ Never invent journalist names, email addresses, or articles a journalist has wri
 
 A short, shareable summary of the study the user can attach to an email or post on their site: the headline finding, three or four supporting stats, the methodology note, and a quotable summary line.
 
-Use aggregated, de-identified figures only. Remind the user to check they are allowed to publish the data (their privacy policy and any customer or platform terms) and that no individual customer can be identified from it, especially in small groups such as a single town or a state with only a few orders.
+Use aggregated, de-identified figures only. Remind the user to check they are allowed to publish the data (their privacy policy, any customer or platform terms, and any agreement under which they hold the data, such as a data-access agreement with the businesses or partners it came from) and that no individual customer, or individual business in pooled data, can be identified from it, especially in small groups such as a single town or a state with only a few orders.
 
 ## Output format
 

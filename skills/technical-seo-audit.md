@@ -65,7 +65,7 @@ Check for (only flag issues you can verify from the data you have):
 - Duplicate title tags
 - Duplicate H1s across pages
 - Missing title tags / H1s
-- Titles likely to truncate or too short (<30 chars). Google cuts titles by pixel width (about 600px on desktop), so use a pixel-width column if the export has one and treat >60 characters only as a rough proxy
+- Title length (low severity, display only): titles likely to be cut short in results, or very short (<30 chars). Google sets no length limit for titles and cuts the displayed title to fit the device width, so length changes how a title looks in results. Use a pixel-width column if the export has one and treat >60 characters only as a rough proxy. Report it once, as a count with the five longest titles as examples, under LOW-SEVERITY NOTES. Never list every page and never rate it above low
 - Missing or duplicate meta descriptions
 
 ### Structure
@@ -100,13 +100,19 @@ Pages analysed: [count]
 CRITICAL ISSUES (fix this week):
 1. [Issue, where, how to fix]
 2. [Issue, where, how to fix]
+[or: None found. [One line on what was checked]]
 
 HIGH-PRIORITY ISSUES (fix this month):
 1. [Issue, where, how to fix]
 2. [Issue, where, how to fix]
+[or: None found. [One line on what was checked]]
 
 MEDIUM-PRIORITY ISSUES (on the roadmap):
 1. [Issue, where, how to fix]
+[or: None found. [One line on what was checked]]
+
+LOW-SEVERITY NOTES:
+[Counts with a few examples, for example title length. Or: None found]
 
 TOP 5 QUICK WINS:
 1. [Specific fix, specific page(s), expected impact: High / Medium / Low]
@@ -127,6 +133,7 @@ BOTTOM LINE:
 - Cite specific URLs, status codes, page titles, not generic advice.
 - If crawl data is incomplete (e.g. only 50 URLs of a 500-page site), say so and note which issues can't be assessed.
 - Never flag an issue as "critical" unless there's clear evidence. "Severity" must match observed impact.
+- A clean site is a valid result. If nothing qualifies for a section, write "None found" and say what you checked. Never move a lower-severity issue up to fill a band, and list fewer than five quick wins if fewer exist.
 - For each issue, explain WHY it matters (e.g. "redirect chain = lost crawl budget + slower page load") in one sentence.
 
 ## Voice

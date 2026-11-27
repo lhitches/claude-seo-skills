@@ -59,7 +59,7 @@ For every HTML file in the repo, score against these categories:
 ### D. Content basics
 
 21. Word count above a sensible threshold for the page type (300 for product/landing, 800 for guide). This is a heuristic to flag possibly thin pages, not a Google rule: never recommend padding a page to hit a number
-22. Image alt text present on every `<img>` that is not purely decorative
+22. Image alt text present on every `<img>` that is not purely decorative. Ignore tracking pixels: any `<img>` inside `<noscript>` and any 1x1 image (for example a Meta pixel). They are beacons, not content, so counting them fails almost every page on a measurement error. Say how many you ignored
 23. No keyword stuffing in the title (same word repeated 3+ times)
 24. The H1 contains the primary keyword (heuristic: matches a token in the page's slug or title)
 
@@ -71,7 +71,7 @@ For every HTML file in the repo, score against these categories:
 
 ## Workflow
 
-1. **Detect the codebase shape.** Run `find . -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | wc -l` to count the HTML files, then list them. Report how many you'll audit. If more than 200, sample (every nth page) and tell the user.
+1. **Detect the codebase shape.** Run `find . -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | wc -l` to count the HTML files, then list them. Then remove files that are never deployed or are test variants: build and helper folders (for example `scripts/`), drafts, A/B test variants, and anything the deploy config leaves out (`export-ignore` in `.gitattributes`, `.vercelignore`, the build output settings). If the config does not settle whether a file ships, ask the user. Report how many you'll audit and list every file or folder you skipped. If more than 1,000 remain, sample them (see Edge cases) and tell the user. At 1,000 or fewer, audit every file.
 
 2. **Resolve the live domain.** Use what the user provided, or git remote, or homepage in package.json, or ask.
 
@@ -99,6 +99,7 @@ The SEO_REPORT.md you write:
 **Repo:** [git remote name]
 **Live domain:** [domain]
 **Files audited:** [count]
+**Skipped (not deployed or test variants):** [count, with the list of files or folders and the reason for each]
 **Score:** [X/100]
 **Generated:** [today's date from the system clock, e.g. the `date` command, do not invent]
 
@@ -183,7 +184,7 @@ After applying, summarise what changed and what to do next.
 ## Edge cases
 
 - **Repo has no HTML files (server-rendered framework).** Tell the user this skill is built for static HTML output. Suggest they run a build first (`npm run build` or `bun build`) and re-run the skill against the build output directory.
-- **Repo has 1000+ HTML files.** Sample every Nth file (N = files/200) and label the report as a sample. Suggest running per-section audits next time.
+- **Repo has more than 1,000 deployed HTML files.** Sample every Nth file (N = files/200) and label the report as a sample. This is the only sampling rule: at 1,000 files or fewer, audit every file. Suggest running per-section audits next time.
 - **No live domain provided and no git remote, no package.json.** Audit against relative paths and warn that canonical/OG checks couldn't run.
 - **Mixed-language sites.** Honour `<html lang>` per file. Don't penalise non-English pages for English spelling.
 - **WordPress or other CMS export.** This skill is best run on the source-of-truth code, not on a static export of a CMS. If you detect WordPress fingerprints (generator meta tag, wp-content paths), tell the user and pause for confirmation.

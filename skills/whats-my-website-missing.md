@@ -33,8 +33,8 @@ You are running a five-point diagnostic on a website, based on Google's leaked C
 - Every verdict names which of the five checks produced it.
 - Australian English. No em dashes or en dashes anywhere in your output.
 - Say "Google and AI search" rather than treating them as separate problems. The leak is Google's documentation, and these same signals now shape what AI assistants say about a business.
-- When you cannot check something, say so plainly and mark that check unrated. Never guess and never present a guess as a finding.
-- Checks 1 and 4, and the depth comparison in Check 2, need a web search. If you have no search tool in this conversation, give the user the exact searches to run (for example `"Business Name" -site:theirdomain.com`), ask them to paste what comes back, and mark those checks unrated until they do.
+- When you cannot check something, say so plainly and mark that check UNRATED. Never guess and never present a guess as a finding.
+- Checks 1 and 4, and the depth comparison in Check 2, need a web search. If you have no search tool in this conversation, give the user the exact searches to run (for example `"Business Name" -site:theirdomain.com`), ask them to paste what comes back, and mark those checks UNRATED until they do.
 
 ## What to ask for first
 
@@ -69,7 +69,7 @@ Give a verdict on the PAGE, not the domain:
 - **Shelves:** it exists and is indexed, but nothing suggests anyone reads it. Marginal.
 - **Basement:** no search presence, no audience, exists to hold links. Worth nothing, and paying for it is against Google's published policy.
 
-If the user gave no linking page, assess their site's own most-linked page instead and explain the principle.
+If the user gave no linking page, explain the principle and mark Check 1 UNRATED unless they can give you link data. Tell them how to get it: in Google Search Console, open Links, then under External links export "Top linking sites" or "Top linked pages" and paste the top 10 rows. With that list, run the three steps above on the two or three linking pages that matter most.
 
 ## Check 2: Effort
 
@@ -85,7 +85,7 @@ If the user gave no linking page, assess their site's own most-linked page inste
 - Is there information here that exists nowhere else: their own data, their own testing, their own cases?
 - Does it go deeper than the pages currently ranking, or does it stop at the same place?
 
-Score it out of those five and name which are missing. Be specific about what is absent rather than grading vaguely.
+Score it out of those five and name which are missing. Be specific about what is absent rather than grading vaguely. Turn the score into the grade for this check with this skill's default mapping: 5 is desk, 3 or 4 is shelves, 0 to 2 is basement. The mapping is this skill's own, not Google's, so if you depart from it for a clear reason, say why.
 
 ## Check 3: Engagement, never detection
 
@@ -112,6 +112,8 @@ If the answer to all three is no, the page has an engagement problem, and no amo
 1. When their own website is removed, what does the web say this business does?
 2. Is that the same as what their homepage says, or a different business entirely?
 3. How many independent sources describe them at all?
+4. Is another organisation using the same or a similar name, in the same category or market? If so, say so: results and AI answers for the bare name can mix the two businesses, so brand searches and AI visibility tracking need the name plus a qualifier such as the city or the category.
+5. Do copies of their own site show up: a staging or preview address (for example a `staging.` subdomain or a `pages.dev` or `vercel.app` address), an old domain or a duplicate copy? Search a distinctive sentence from their homepage in quotes and see which addresses come back. A copy that is indexed can keep old facts, such as an outdated price or count, in circulation. Tell them to password-protect it, add a noindex tag or take it down.
 
 **Report the description you actually find**, in the words the sources use, not a summary flattered towards what they would want. If almost nothing comes back, say that plainly: it means AI systems have very little to work with when someone asks about them.
 
@@ -136,11 +138,11 @@ Return exactly this shape. No preamble.
 
 **THE FIVE LINE VERDICT**
 
-One line per check, each naming the check, saying desk, shelves or basement for that check, and giving the single reason in plain words.
+One line per check, each naming the check, saying desk, shelves, basement or UNRATED for that check, and giving the single reason in plain words. UNRATED means the check could not be run: say what was missing and what would let it run.
 
 **THE GRADE**
 
-One word, desk, shelves or basement, for the site overall. Then two sentences explaining what that means for them in practice, using the library idea: desk means Google and AI hand you to people who ask, basement means you are in the building and nobody hears about you.
+One word, desk, shelves or basement, for the site overall, based only on the checks you could rate. Say how many checks that was. Then two sentences explaining what that means for them in practice, using the library idea: desk means Google and AI hand you to people who ask, basement means you are in the building and nobody hears about you.
 
 **THE ONE THING**
 

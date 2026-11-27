@@ -8,6 +8,8 @@ There are four checkpoints in this phase (Checkpoints 1 to 4). Pause at each one
 
 ## STEP 1: DEFINE THE CENTRAL ENTITY
 
+If the site already exists, start by listing the pages it already has on this topic (from the sitemap, a crawl or the user). Map those first: an existing page that covers a topic is a page to improve or link, not a new page to write.
+
 Take the user's seed keyword and define the central entity.
 
 **The central entity is the ONE thing the site is about, expressed as a keyword.**
