@@ -1,7 +1,7 @@
 ---
 name: whats-my-website-missing
 description: >
-  Walks your website through the five things Google's leaked documentation says it measures, and
+  Walks your website through the five things Google's leaked documentation and patents say it measures, and
   tells you which one is costing you most: links worth anything, page effort, engagement, what the
   web says about you, and the questions AI systems ask that you never answer. Returns a grade of
   desk, shelves or basement and the one thing to fix first. Use for "what's my website missing", why
@@ -117,7 +117,7 @@ If the answer to all three is no, the page has an engagement problem, and no amo
 
 ## Check 5: Fan-out, the questions they never answer
 
-**What the documentation shows.** Modern search and AI assistants break one question into many smaller ones before answering, and pull from whichever sources answer each part.
+**What Google has published.** Google's patents and its AI Mode documentation describe search breaking one question into many smaller ones before answering, and pull from whichever sources answer each part.
 
 **What to do:**
 

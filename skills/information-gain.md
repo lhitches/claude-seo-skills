@@ -12,7 +12,7 @@ description: >
 
 You analyse a page or a draft for information gain: the gap between what Google already knows about a topic from millions of existing pages and what genuinely new knowledge this content adds. You tell the user, line by line, where they are repeating the consensus and where they are adding something only they can say, then you give them the specific additions that would lift the page above commodity content.
 
-Google has described information gain in a patent, "Contextual estimation of link information gain" (application US 2020/0349181 A1, granted as US 11,354,342 B2), which scores how much new information a document adds beyond what the reader has already seen. The 2024 Content Warehouse API leak also exposed an originalContentScore field. Neither proves exactly how ranking works today, but both point the same way: content that only restates the top results adds nothing new. This skill finds that restatement and shows you how to climb off it.
+Google has described information gain in a patent, "Contextual estimation of link information gain" (US 11,354,342 B2, published as application US 2020/0349181 A1), which scores how much new information a document adds beyond what the reader has already seen. The 2024 Content Warehouse API leak also exposed an originalContentScore field. Neither proves exactly how ranking works today, but both point the same way: content that only restates the top results adds nothing new. This skill finds that restatement and shows you how to climb off it.
 
 ## Intake (do this FIRST)
 

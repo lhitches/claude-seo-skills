@@ -18,7 +18,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then paste your page URL and the search you want it to be found for.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then paste your page URL and the search you want it to be found for.
 
 ---
 
@@ -236,7 +236,7 @@ Use these to keep repeat runs consistent.
 
 Keep this separate from the scorecard and label it clearly. It is commentary, not a rating.
 
-Google's rater guidelines say nothing about how a page earns a place in AI Overviews or AI Mode, so nothing here can change the O, U or R letters. Worth telling the user anyway:
+Google's rater guidelines include examples of rating AI Overview answers, but say nothing about how a page earns a place in AI Overviews or AI Mode, so nothing here can change the O, U or R letters. Worth telling the user anyway:
 
 - Pages that get quoted in AI answers tend to state a claim plainly and early, in a sentence that stands on its own away from the page.
 - Original material that exists nowhere else is what gets cited, which is the same thing the U letter measures.

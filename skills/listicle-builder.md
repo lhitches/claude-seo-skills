@@ -53,7 +53,7 @@ THE LISTICLE (written in full)
 Title options (2 or 3, keyword-led, no clickbait), the intro, the numbered items each with descriptive H2, micro-summary first line, evidence, and action, the closing, and the FAQ.
 
 THE MACHINE LAYER
-Schema note (optional ItemList and FAQPage markup that matches the visible content, with a plain statement of whether it can produce a rich result: for an ordinary editorial list it will not), suggested internal-link anchors from item bodies, and a meta description.
+Schema note (optional ItemList markup that matches the visible content, no FAQPage, with a plain statement of whether it can produce a rich result: for an ordinary editorial list it will not), suggested internal-link anchors from item bodies, and a meta description.
 
 WHAT WOULD MAKE IT STRONGER (the 2 or 3 additions only the user can supply: the screenshot, the real number, the first-hand example, marked by item)
 

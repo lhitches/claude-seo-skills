@@ -5,7 +5,7 @@ description: >
   Content Depth, Site Structure, Trust Signals) with GREEN/AMBER/RED ratings, identifies the
   biggest gap, and gives 3 fixes you can do this week. Works with a URL (if Claude has web access)
   or with pasted page content. Use when a business owner asks what Google sees on their site, why
-  they aren't getting customers from Google, whether their site looks trustworthy, or for a quick
+  they aren't getting customers from Google, whether their site looks trustworthy, or for a
   plain-English website check.
 ---
 
@@ -19,7 +19,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then paste your website URL in the chat.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then paste your website URL in the chat.
 
 ---
 

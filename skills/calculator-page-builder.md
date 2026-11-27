@@ -18,7 +18,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then tell Claude your niche or industry.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then tell Claude your niche or industry.
 
 ---
 

@@ -22,7 +22,7 @@ If they paste the page content, read the facts out of it rather than asking agai
 
 1. **Choose the types.** Map the description to the schema types that fit and that earn results. A product page usually wants Product plus Offer, and BreadcrumbList. A local page wants LocalBusiness (or the specific subtype like Restaurant or Dentist) plus BreadcrumbList. An article wants Article plus Person (author) plus Organization (publisher) plus BreadcrumbList. Add FAQPage only if there is a real FAQ.
 
-   Be straight about what earns a Google rich result today. Google stopped showing FAQ rich results on 7 May 2026, including for the government and health sites that still had them, and HowTo rich results were removed in 2023. FAQPage and HowTo are still valid schema.org types you can add when the content is really on the page, but say plainly that they will not produce a Google rich result.
+   Be straight about what earns a Google rich result today. Google stopped showing FAQ rich results on 7 May 2026, including for the government and health sites that still had them, and HowTo rich results were removed in 2023. In 2025 Google also phased out Book Actions, Course Info, Claim Review, Estimated Salary, Learning Video, Special Announcement and Vehicle Listing. These are still valid schema.org types, but say plainly that they will not produce a Google rich result, and do not add FAQPage for an FAQ: plain questions and answers on the page do the job. If you have web access, check Google's search gallery first, because this list changes.
 
 2. **Fill required properties first**, from the facts given. Then add the recommended ones you have values for. Bracket anything required that you were not given, and note it.
 

@@ -18,7 +18,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then tell Claude your URL, your competitor's URL, and the search they beat you on.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then tell Claude your URL, your competitor's URL, and the search they beat you on.
 
 ---
 

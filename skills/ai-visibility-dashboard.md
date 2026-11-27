@@ -174,7 +174,7 @@ this section entirely.
 2. Ask these judgment questions, one at a time, in plain language, and wait for real answers.
    Do not answer them yourself and do not skip them:
    - The two number baseline, written and dated before anything else: citation share and AI referred sessions per month.
-   - Prompt library curation: of the drafted prompts, which would a real buyer never type? Cross those out together; keep ten to fifteen.
+   - Prompt library curation: of the drafted prompts, which would a real buyer never type? Cross those out together; keep 10 to 20.
    - The triage in one line: my symptom is X, so my order is A then B then C.
 3. Append the answers to the END of this skill's saved output file, under a heading
    `## Your calls`, dated today, in the user's own words. The saved file is the record the

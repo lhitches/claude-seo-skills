@@ -18,7 +18,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then either paste your Search Console data or just tell Claude about your business and it'll walk you through the setup.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then either paste your Search Console data or just tell Claude about your business and it'll walk you through the setup.
 
 ---
 

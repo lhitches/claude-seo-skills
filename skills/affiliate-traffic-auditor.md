@@ -20,7 +20,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then paste your GA4 export (and your affiliate payout report if you have one).
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then paste your GA4 export (and your affiliate payout report if you have one).
 
 ---
 

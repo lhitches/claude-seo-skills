@@ -18,7 +18,7 @@ description: >
 
 ## Instructions
 
-Paste this entire block into a new Claude Project's instructions. Then give Claude your website URL, and either paste in a Google Ads export or let Claude walk you through pulling the data.
+Installed as a Claude skill, this loads on its own. To use it as a plain prompt instead, paste this entire block into a new Claude Project's instructions, then give Claude your website URL, and either paste in a Google Ads export or let Claude walk you through pulling the data.
 
 ---
 

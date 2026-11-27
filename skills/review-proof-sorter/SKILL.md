@@ -53,7 +53,7 @@ catches everything). Show the user the lists in one short table and ask if anyth
 
 ## Step 3: Run the first pass
 ```
-python3 scripts/review_proof_sorter.py --reviews reviews.csv --services services.csv --places places.csv --business "<Business name>" --out "<workspace>/review-proof-sorter"
+python3 scripts/review_proof_sorter.py --reviews reviews.txt --services services.csv --places places.csv --business "<Business name>" --out "<workspace>/review-proof-sorter"
 ```
 On Windows, `python3` is often just `python`. Use whichever runs Python 3. The script needs no extra packages.
 It prints how many reviews landed on each service and place, and how many it couldn't sort.

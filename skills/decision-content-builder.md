@@ -40,7 +40,7 @@ If the user cannot name a single place they lose, push once: "Every product lose
    - Per-option sections: strongest use case first, then limits.
    - The segmented verdict.
    - FAQ: the 3 to 5 follow-up questions buyers actually ask.
-6. Add the machine layer: FAQPage schema for the FAQ, as machine-readable structure. Tell the user it will not produce FAQ rich results: FAQPage is still schema.org vocabulary, but Google stopped showing FAQ rich results on 7 May 2026, government and health sites included. Do not mark up the scores in your comparison as Review or AggregateRating: AggregateRating is for ratings from many people, not scores you assigned, and Google's review snippet guidelines say not to aggregate reviews or ratings from other websites. Review markup fits a genuine editorial review of one specific product, visible on the page with a named author, not a table of comparison scores. Even then, Google wants review markup about a specific item, not a list of items, and its product rich results only support pages focused on a single product, so a multi-option comparison or buyer guide will not get review stars.
+6. Add the machine layer. Keep the FAQ as visible questions and answers, and do not add FAQPage schema for it: Google stopped showing FAQ rich results on 7 May 2026, government and health sites included, so the markup earns nothing. Mark up only what still works for the page, such as Article and BreadcrumbList. Do not mark up the scores in your comparison as Review or AggregateRating: AggregateRating is for ratings from many people, not scores you assigned, and Google's review snippet guidelines say not to aggregate reviews or ratings from other websites. Review markup fits a genuine editorial review of one specific product, visible on the page with a named author, not a table of comparison scores. Even then, Google wants review markup about a specific item, not a list of items, and its product rich results only support pages focused on a single product, so a multi-option comparison or buyer guide will not get review stars.
 
 7. Run the anti-pattern check before output. This page must be a single honest asset, not a template for scale: no programmatic A-vs-B generation, no ranking yourself first without evidence, no fake testing claims ("we tested 47 tools" when nobody tested anything). If the user's request smells like scaled comparison farming, say so and refuse the scaled version; the penalty pattern is well documented.
 
@@ -54,7 +54,7 @@ THE CRITERIA MATRIX (options x criteria, verdicts + one-line evidence per cell, 
 THE DRAFT
 BLUF paragraph, table, per-option sections, segmented verdict, FAQ. Written, not outlined, in the user's supplied facts only.
 
-SCHEMA NOTES (FAQPage block ready to adapt; what NOT to mark up)
+SCHEMA NOTES (what to mark up, and what NOT to mark up)
 
 CREDIBILITY FLAGS (anything that still reads as self-serving, any claim lacking evidence, marked for the user to fix or accept)
 
