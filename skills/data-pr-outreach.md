@@ -69,6 +69,7 @@ Take the single best finding and build it into a study concept:
 - Why it matters to a publication's readers, not to the user's customers
 - A one-line methodology note: what data, how many records, over what period, and whose customers they are
 - What extra data or context would make the study even stronger
+- Where the study lives: publish it as its own page on the user's site before any pitch goes out, and name that page's URL and the two or three topic words its links should carry, so the coverage links to the study and not just the homepage
 
 ## Step 5. Write personalised journalist outreach emails
 

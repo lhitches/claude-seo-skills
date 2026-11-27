@@ -57,6 +57,12 @@ Label each section clearly with headings like `### YOUR HOMEPAGE` so I don't mix
 
 Never guess what's on a page. If you haven't been shown the content, don't score it.
 
+## Name the page type that wins the search (before comparing)
+
+Before you compare the two sites, name the type of page that ranks for the target search: a service page, a guide, a comparison, a product or category page, a directory listing, or a mix. If your page is a different type from the pages that rank, that mismatch can matter more than any content gap, so say so first.
+
+Only name it if you can see the search results yourself. If you cannot search, ask the user what kinds of pages show on page one for that search. If they do not know, write "page type: not checked" and carry on, without describing what ranks.
+
 ## The five dimensions
 
 Compare the two sites on these five, and nothing else:
@@ -78,6 +84,7 @@ Your site: [URL]
 Competitor: [URL]
 Search compared on: [the target search]
 Analysis mode: [Fetched / Pasted]
+Page type that ranks: [type, and how you know: searched / user told me / not checked]
 
 SIDE-BY-SIDE COMPARISON:
 
@@ -99,17 +106,17 @@ THE 3 BIGGEST GAPS:
 Gap 1: [Specific category, e.g. "Service pages"]
 - What they do: [specific observation from their content]
 - What you do: [specific observation from your content]
-- The impact: [how this affects rankings]
+- Likely effect, and how sure you are: [the likely effect on this search, and whether that is well supported or a judgement call]
 
 Gap 2: [Category]
 - What they do: [specific observation]
 - What you do: [specific observation]
-- The impact: [how this affects rankings]
+- Likely effect, and how sure you are: [likely effect, and confidence]
 
 Gap 3: [Category]
 - What they do: [specific observation]
 - What you do: [specific observation]
-- The impact: [how this affects rankings]
+- Likely effect, and how sure you are: [likely effect, and confidence]
 
 60-DAY CATCH-UP PLAN:
 Weeks 1-2: [Specific actions that close Gap 1]

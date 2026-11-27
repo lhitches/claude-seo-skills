@@ -230,6 +230,8 @@ For each attribute, decide if it gets its own page or merges into another page. 
 
 Volumes must come from a keyword tool or keyword data the user supplies. Search Console impressions do not count: they measure this site's appearances, not searches. If there is none, mark the volume "no data" and decide on the competitor check and the two overrides alone.
 
+These cut-offs are this skill's defaults, not a Google rule. Volumes differ between keyword tools, so name the tool you used and keep to one tool for the whole map. A person makes the final call for each query: it deserves a page, a heading or a section.
+
 | Search Volume (monthly) | Decision | Condition |
 |---|---|---|
 | 100+ | **Own page** | Enough demand to justify a dedicated page |

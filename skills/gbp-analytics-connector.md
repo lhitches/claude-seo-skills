@@ -77,7 +77,7 @@ FLAGS
 Anything from step 4, each with the likely cause and the check to run
 
 DO THIS MONTH
-Top 3 actions, most specific first. Examples: re-add the booking link, refresh photos (profiles with fresh photos get more direction requests), reply to recent reviews, post the offer
+Top 3 actions, most specific first. Examples: re-add the booking link, refresh photos, reply to recent reviews, post the offer
 
 RECORD THIS
 Remind them: GA only keeps 6 months of GBP data. Log this month's table somewhere permanent.

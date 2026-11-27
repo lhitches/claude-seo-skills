@@ -88,7 +88,7 @@ first (the one with the most traffic or enquiries, if the user knows it).
 
 ## Rules
 - **Never invent, edit or merge reviews.** Word for word or not at all.
-- **Only use 4 and 5 star reviews as proof**, but never hide or delete the others anywhere.
+- **Only use 4 and 5 star reviews as proof**, but never hide or delete the others anywhere. When a review has no star rating (common for pasted reviews), the script marks its quote "stars not given": confirm the rating on the Google profile before that quote goes on a page.
 - **Health practitioners in Australia:** Ahpra's rules ban testimonials about clinical care in
   advertising (Health Practitioner Regulation National Law, s133). For a registered health
   business, only use reviews about non-clinical things (booking, parking, front desk, wait time)

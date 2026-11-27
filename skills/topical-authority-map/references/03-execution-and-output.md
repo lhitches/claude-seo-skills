@@ -147,6 +147,8 @@ In our experience this is the wave most websites skip, and the one that produces
 
 Five to ten articles per week suits most teams, but set the pace by what you can publish at a consistently high standard, and adjust it as results come in. Do not rush out a batch of weak articles to hit a number.
 
+If the map opens a new section of the site (a new folder with no history), go slower. Publish a small first wave, let that section age for about three months before you scale, vary how many you publish each week rather than releasing a fixed batch, and expect the full map to take seven to eight months. Never publish a large batch into a brand new section at once.
+
 ### The order, in one sentence
 
 Fix anything broken on the core pages now. Then AOR first, linking woven in throughout, MOFU buyer guides next, and the big core-page rewrites last. How fast results follow varies by site: Google says some changes show within days and others take several months.

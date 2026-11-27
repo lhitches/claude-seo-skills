@@ -26,7 +26,7 @@ If you cannot browse or search at all, say so up front. Audit only what the user
 
 1. Establish the entity. Fix the exact name, the type (Organization, LocalBusiness, Person, or Product), and the topic it wants to own. Every later check is relative to this. "Acme" the accounting firm and "Acme" the band are different entities, and the whole audit is about whether machines can tell which one this is.
 
-2. Find the entity home. There must be ONE canonical page that defines the entity, usually the homepage for a brand or an author or About page for a person. Check it carries the defining facts in one place: what the entity is, what it does, when it was founded, who is behind it, and where. An entity with its facts scattered across ten pages and consolidated on none is an entity Google cannot pin down. Mark whether a clear entity home exists.
+2. Find the entity home. There must be ONE canonical page that defines the entity, usually the homepage for a brand or an author or About page for a person. Check it carries the defining facts in one place: what the entity is, what it does, when it was founded, who is behind it, and where. An entity with its facts scattered across ten pages and consolidated on none is an entity Google cannot pin down. Then check the entity home links out to each profile listed in sameAs, as visible links on the page and not only inside the schema, and that those profiles link back. That round trip is how machines find the corroborating sources, so holding back outbound links here defeats the purpose. Mark whether a clear entity home exists.
 
 3. Audit the schema layer. Check for Organization, LocalBusiness, or Person schema on the entity home. Many fetch tools return page text only and strip the JSON-LD, so if you cannot see the raw source, ask the user to paste the schema (or run the page through Google's Rich Results Test or the Schema Markup Validator) rather than calling it missing:
    - The correct @type for what the entity actually is.
@@ -37,11 +37,12 @@ If you cannot browse or search at all, say so up front. Audit only what the user
    Score the schema on correctness and completeness, not presence alone. Empty or wrong schema scores low.
 
 4. Check knowledge-graph presence. Search the entity name and judge, honestly, whether the entity already exists as a recognised thing:
-   - Is there a Knowledge Panel for the name? That is Google treating the entity as known.
+   - Is there a Knowledge Graph entry? Query Google's Knowledge Graph Search API for the name (it needs a free Google Cloud API key, so give the user the query to run if you cannot) and look for a result that matches this entity and carries a Knowledge Graph ID (KGMID, shown as kg:/m/... or kg:/g/...). A matching KGMID means Google has understood the entity and is confident about it.
+   - Is there a Knowledge Panel for the name? Check this separately. A panel not showing does not mean there is no entity: Google decides whether to display a panel, and can withhold it when the entry is thin or it is unsure the search means this entity. An entity can be in the graph with no panel on screen, so "it does not show for me" is not a diagnosis.
    - Is there a Wikidata item? Wikidata is the machine-readable spine of the Knowledge Graph and the single highest-leverage off-site entity asset most brands are missing.
    - Is there a Wikipedia article, or the notability to earn one later?
    - Do authoritative directories and profiles (LinkedIn company page, Crunchbase, industry bodies) exist and agree?
-   Score presence from "unknown to the graph" up to "established panel". Most brands sit low here and have never worked it deliberately.
+   Give the graph and the panel their own score out of 10 (graph: from no KGMID found up to a KGMID that matches the right entity; panel: from none showing up to an established panel), and use the graph score as the layer score, because the graph is stable and panels come and go. Most brands sit low here and have never worked it deliberately.
 
 5. Test cross-web consistency (the precondition). Compare the name, description, category, and core facts across the site, the schema, the Google Business Profile, and the major listings and profiles. Do they agree? A brand called one thing on the site, another in the schema, and a third on its listings is an entity AI distrusts, because contradiction reads as low confidence. Mark this PASS or FAIL. A FAIL caps every other layer, so call it out first.
 
@@ -54,7 +55,7 @@ If you cannot browse or search at all, say so up front. Audit only what the user
 ## Output structure
 
 ENTITY SCORECARD
-Entity name, type, target topic, knowledge-graph status (unknown / emerging / panel), the consistency precondition (PASS or FAIL with the one-line reason), and the six layer scores out of 10 in one readable block: Entity Home, Schema, Knowledge-Graph Presence, Consistency, Disambiguation, Corroboration.
+Entity name, type, target topic, knowledge-graph status (graph score with the KGMID or "none found", and panel score, reported separately), the consistency precondition (PASS or FAIL with the one-line reason), and the six layer scores out of 10 in one readable block: Entity Home, Schema, Knowledge-Graph Presence, Consistency, Disambiguation, Corroboration.
 
 THE VERDICT
 One line on what is actually capping this entity: no entity home, thin schema, absent from Wikidata, or contradictory facts across the web. Name the bottleneck.
@@ -74,7 +75,7 @@ The layers you could only estimate, and the one input that would sharpen the aud
 
 ## Rules
 
-- Never claim a Knowledge Panel or Wikidata item exists unless you have checked. If you cannot verify, say the presence score is an estimate and tell them how to check it themselves.
+- Never claim a Knowledge Panel, KGMID or Wikidata item exists unless you have checked, and never call an entity absent from the graph just because no panel shows. If you cannot verify, say the presence score is an estimate and tell them how to check it themselves.
 - The entity home is one page, not a section. If the defining facts are spread across the site, the fix is to consolidate them onto one canonical page, not to add more pages.
 - sameAs must point only to profiles that genuinely are the entity, and the link should be reciprocal where possible. Do not pad sameAs with unrelated or unowned URLs, it weakens the signal.
 - Consistency is a precondition, not a tradeable score. A FAIL is the headline, fix the contradictions before anything else.

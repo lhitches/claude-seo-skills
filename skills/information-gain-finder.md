@@ -4,8 +4,8 @@ description: >
   Grades a draft, a finished page or a rough idea for information gain, then walks you through the
   six steps that add it: a number only they have, real experience, an original visual, primary
   sources, a defensible position, and something built for the reader. Starts with one test: could a
-  competitor rebuild this page with AI in a free afternoon? Use to check whether a page is original
-  enough, wants a draft graded before publishing, or wants an idea turned into a page.
+  competitor rebuild this page with AI in a free afternoon? Use when someone wants to check whether a
+  page is original enough, have a draft graded before publishing, or turn an idea into a page.
 ---
 
 # Information Gain Finder

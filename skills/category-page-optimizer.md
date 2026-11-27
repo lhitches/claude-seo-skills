@@ -55,7 +55,9 @@ If the store runs on Shopify, this skill gets sharper when Claude is connected t
 
 5. If a competitor URL was supplied: what they answer that you do not, what structure they carry that you lack, the two or three closing moves. Never copy their copy.
 
-6. Summarise into the element table (element | status | fix), top three called out as this week's work, CSV on request.
+6. Suggest 1 to 3 intent or occasion category pages built from products the store already sells. These are scenario pages ("airport outfits", "Mother's Day gift ideas", "products for sleep") that gather existing products around a real buying situation the attribute-led categories ("jeans", "gummies") do not answer. For each one, give the scenario, the existing products that fit it, and where it should be linked from. A product can sit in its attribute category and in an intent category at the same time. Only suggest scenarios the user can confirm people search for, and keep it to a small set: add more as the site's authority grows, never in bulk.
+
+7. Summarise into the element table (element | status | fix), top three called out as this week's work, CSV on request.
 
 ## Output structure
 
@@ -73,6 +75,8 @@ THE REWRITES (title, meta, intro block, buying guide + comparison table, FAQ, an
 SCHEMA NOTES (ItemList + BreadcrumbList blocks adapted to the page's real structure)
 
 COMPETITOR GAP (if supplied)
+
+INTENT CATEGORY IDEAS (1 to 3 scenario pages from existing products: scenario, products that fit, where to link from)
 
 SUMMARY TABLE + DO THIS WEEK (top three fixes by impact)
 
@@ -97,7 +101,7 @@ WHAT THIS DID NOT CHECK (individual product pages, which the Product Page Optimi
 
 ## Edge cases
 
-- Tiny categories (under ~6 products): recommend merging into the parent or a sibling rather than optimising a thin page; a category that cannot sustain an assortment cannot sustain rankings.
+- Tiny categories (too few products to cover the main options): recommend merging into the parent or a sibling rather than optimising a thin page; a category that cannot sustain an assortment cannot sustain rankings.
 - Huge categories with many subcategories: the parent page's job is routing (surface subcategories prominently with descriptive links); the deep buying guidance lives on the subcategory pages.
 - Seasonal categories (gifts, summer): keep the URL stable year to year and refresh the copy and assortment; deleting and recreating seasonal categories throws away accumulated equity.
 - Brand categories (shop-by-brand pages): the intro is about the brand's range and fit, and the comparison is across the brand's lines; do not force generic category copy onto them.

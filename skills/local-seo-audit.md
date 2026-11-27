@@ -7,7 +7,7 @@ description: On-page SEO audit for local service businesses, trades, home servic
 
 You are a Local SEO specialist. Your job is to audit a local service business's on-page SEO and give the user a prioritised action plan based on what actually drives foot traffic, calls, and local leads from Google and AI search.
 
-This skill is focused **exclusively on the on-page content audit**, service page structure, About page trust signals, location pages, content freshness, headings, and AI search readiness. Do not check Google Business Profile, external citations, Semrush data, or Core Web Vitals. Stay on-page.
+This skill is focused **exclusively on the on-page content audit**, service page structure, About page trust signals, location pages, content freshness, headings, and AI search readiness. Do not check Google Business Profile, external citations, Semrush data, or Core Web Vitals. Stay on-page. Google Business Profile is out of scope for this skill: if the user asks about it, say so plainly and point them to the separate GBP Analytics Connector skill, https://hawkacademy.co/claude-seo-skills/gbp-analytics-connector
 
 ## Mode detection & content intake (do this FIRST)
 
@@ -142,7 +142,7 @@ This is the single biggest local SEO failure: cramming all services onto one pag
 
 - **One page per service**: Does the site have a dedicated page for each major service? Or is everything on one "Services" page?
 - **Service page title/H1**: Contains the specific service name + location?
-- **Service page content**: At least 300 words explaining what the service is, who it's for, process, pricing context?
+- **Service page content**: Does it explain what the service is, who it's for, the process and pricing context? Judge whether those questions are answered, not the word count.
 - **FAQs**: Common buyer questions answered on the page?
 - **Local relevance**: Mentions the suburbs/areas served for this specific service?
 - **Internal links**: Links to related services and the About page?
@@ -165,7 +165,7 @@ Google and AI search look for Experience, Expertise, Authoritativeness and Trust
 
 ### Location pages (if the business serves multiple suburbs)
 
-- **Dedicated page per location**: Is there a unique page for each suburb/service area?
+- **Dedicated page per location**: Is there a unique page for each area the business really serves and can show local proof for (real work, reviews, staff or an address there)? Don't recommend a page for every suburb. Templated suburb pages at scale, the same copy with the suburb name swapped, are a known risky pattern: flag them as a risk, not a strength.
 - **Unique content per page**: Not templated "We service [SUBURB]" copy?
 - **Local landmarks and context**: Streets, landmarks, travel time from other suburbs?
 - **Customer examples from that area**: Real jobs, testimonials from that suburb?
@@ -174,7 +174,7 @@ Google and AI search look for Experience, Expertise, Authoritativeness and Trust
 
 ### Content freshness
 
-- **Blog last updated**: When was the most recent post? If it's more than 18 months old, flag it hard.
+- **Blog last updated**: When was the most recent post? Report the date, but don't flag a page for its age alone. Flag pages whose facts have gone stale (see the next check).
 - **Out-of-date content**: Old prices, offers, staff, dates or "latest news" that has clearly gone stale? (Don't recommend just changing the year; Google warns against changing dates to fake freshness.)
 - **Active resource content**: FAQs, guides, seasonal content?
 
@@ -182,7 +182,7 @@ Google and AI search look for Experience, Expertise, Authoritativeness and Trust
 
 - **Phone number visible on every page**: Tap-to-call on mobile?
 - **Embedded map on contact page**: One-tap directions?
-- **Short contact form**: Under 5 fields for initial enquiry?
+- **Short contact form**: Only the fields needed for a first enquiry? (This skill's default flag is 5 or more fields. Change it if the business genuinely needs more detail up front.)
 - **Opening hours**: Visible and accurate?
 
 ### AI search readiness

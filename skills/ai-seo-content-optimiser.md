@@ -7,11 +7,13 @@ description: Optimises an existing web page so AI search tools (ChatGPT, Google 
 
 Built by Hawk Academy from published AI search studies and StudioHawk's own testing. Give it a URL or paste the page, plus the question the page should answer.
 
+**If you cannot run a step yourself, say so.** Some steps need things you may not have in this chat: live answers from other AI tools, or a fetch that sends an AI crawler's user agent. Do not guess the result. Write NOT CHECKED for that step, tell the user how to check it, and carry on with the rest.
+
 ## Step 0. Is this the right page? (do not skip)
 
 1. **Name the question.** Write the one question the page should win, plus 5 to 10 related questions people ask around it. AI tools expand a question into several sub-searches ("fan-out"), and that set changes from run to run, so work on the questions that keep coming up, not one exact list.
-2. **Check who AI cites today.** Ask ChatGPT, Google AI Mode and Perplexity the main question. Note which pages they cite. In Google, the cited link often ends in `#:~:text=...`, which shows the exact sentence it used. If AI already cites a different page on the same site, optimise that page or merge the two. AI answers usually show one page per website, so one strong page beats several thin ones.
-3. **Check AI can read the page.** Fetch the URL with the user agents of the AI crawlers (GPTBot, ClaudeBot, PerplexityBot), not just a browser. Some sites redirect browsers and Google but send AI crawlers a 404. A page the crawler cannot fetch cannot be cited.
+2. **Check who AI cites today.** Ask ChatGPT, Google AI Mode and Perplexity the main question. Note which pages they cite. If you cannot ask those tools yourself, ask the user to run the question in each one and paste the answers with their cited links; until they do, mark this check NOT CHECKED. In Google, the cited link often ends in `#:~:text=...`, which shows the exact sentence it used. If AI already cites a different page on the same site, optimise that page or merge the two, rather than splitting one question across several thin pages.
+3. **Check AI can read the page.** Fetch the URL with the user agents of the AI crawlers (GPTBot, ClaudeBot, PerplexityBot), not just a browser. Some sites redirect browsers and Google but send AI crawlers a 404. A page the crawler cannot fetch cannot be cited. If you cannot send those user agents yourself, mark this check NOT CHECKED. Point the user to the free checker at https://hawkacademy.co/seo-tools/ai-crawler-access-checker/ to see whether their robots.txt lets those crawlers in. That checker reads robots.txt only, so a 404 sent to crawlers by the server still needs a request that sends the crawler's user agent (for example with `curl -A`), run by the user or their developer.
 4. **Set expectations.** Page content is only part of AI visibility. Brand recognition and mentions on other websites do much of the rest: most brand mentions in AI answers come from third-party sites. Being cited as a source is also different from being recommended. Say this in the report so nobody expects one page edit to do everything.
 
 ## Step 1. Score the page, passage by passage
@@ -28,7 +30,7 @@ Score each rule PASS / PART / FAIL and quote the line that proves it.
 | 6 | **Definitive language** | Facts are stated plainly. No "will", "should", "might", "could" or "may" inside a factual claim. |
 | 7 | **Entities named** | People, brands, products, places and standards are named, using the same words people search with. |
 | 8 | **Tables for comparisons** | Anything compared across 3 or more items on 2 or more points becomes a table. |
-| 9 | **Real FAQs** | Questions people actually ask, each answered in 20 to 25 words straight after the question. |
+| 9 | **Real FAQs** | Questions people actually ask, each answered straight after the question in a short, direct answer (20 to 25 words is this skill's starting length, not a measured rule). |
 | 10 | **Plain words** | Any term a beginner would not know is explained in the sentence where it first appears. |
 | 11 | **Proof on the page** | Claims about the business (awards, years trading, results) link to a third-party page that confirms them. |
 | 12 | **One page per question** | No other page on the site chases the same question. |

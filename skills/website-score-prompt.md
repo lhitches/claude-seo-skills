@@ -65,7 +65,7 @@ Use this scale strictly:
 | 4 | Strong, clearly present |
 | 5 | Elite, defensible moat |
 
-A score of 5 needs overwhelming evidence. Most real sites land at 2 or 3 on most factors. If you find yourself giving 4s and 5s across the board, you're not being honest.
+A score of 5 needs overwhelming evidence. If you find yourself giving 4s and 5s across the board, you're not being honest.
 
 ### Factor 1: Offers a Product or Service (correlation 0.391)
 
@@ -122,6 +122,8 @@ Date: [today's date]
 
 OVERALL SCORE: XX / 25
 Bracket: [At Risk 5-10 / Vulnerable 11-15 / Competitive 16-20 / Winning 21-25]
+FEATURES PRESENT: N of 5 (a factor scored 4 or 5 counts as present)
+Study win rate for N features: [X%] (the study counted features present, not scores, so this line is the closest match to it)
 
 FACTOR-BY-FACTOR
 
@@ -163,6 +165,8 @@ YOUR TOP 3 ACTIONS THIS WEEK
 THE BOTTOM LINE
 [One brutal sentence: can this site win Google as it stands today? What single change would move it the most?]
 ```
+
+Win rates by features present, from the study: 0 features 13.5%, 1 feature 15.4%, 2 features 22.0%, 3 features 30.7%, 4 features 68.1%, 5 features 69.7%. Put the matching rate on the "Study win rate" line.
 
 ## Voice rules
 

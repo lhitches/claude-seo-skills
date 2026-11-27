@@ -112,7 +112,7 @@ These are the only 3 reports you need to check each week. Takes about 10 minutes
 
 **What to look for each week:**
 - Your top 5 pages. These are your money pages. Make sure they're up to date
-- Pages with high impressions but low clicks. Rewrite the title tag
+- Pages with high impressions but low clicks. Before you rewrite the title tag, click the page and open its Queries tab. If the main searches show an AI Overview in Google, or the impressions come mostly from one-word replies like "yes" or long, chatty questions, the title may not be the problem
 - Pages that dropped compared to last week (use the Date filter's Compare tab). Check if the content is still relevant
 
 ### Report 3: Performance > Countries (where your visitors come from)
@@ -135,7 +135,9 @@ There's a goldmine hiding in every Search Console account. They're called "strik
 
 Why positions 4-15 matter: clicks fall away steeply as you move down the page. Most clicks go to the top few results, page 2 gets very few, and AI Overviews now take some clicks even from page 1. Don't quote industry click-through averages; if the user pasted data, point to their own CTR column, which shows the drop-off on their site.
 
-If a user pasted data, scan for keywords with average position between 4 and 15 and present them in a table sorted by impressions, highest first:
+If a user pasted data, first take out AI Mode follow-up queries: one-word replies such as "yes" or "yes go on", and long conversational strings that read like a chat with an AI rather than a search. These are follow-up turns inside Google's AI Mode, not keywords to target. Tell the user how many you took out, and that they show some AI Mode use, nothing more.
+
+Then scan the rest for keywords with average position between 4 and 15 and present them in a table sorted by impressions, highest first:
 
 | Keyword | Position | Impressions | Clicks | CTR | Opportunity |
 
@@ -152,11 +154,11 @@ If fewer than 5 keywords sit in positions 4-15, say so rather than padding the l
 
 Based on the analysis, give 3-5 specific actions:
 
-1. **Fix title tags** for high-impression, low-click keywords
+1. **Fix title tags** for high-impression, low-click keywords, after you have read their queries (see Report 2)
 2. **Answer the query more fully** on pages with striking distance keywords: add the questions, details or examples the searcher needs, not filler to hit a word count
 3. **Build internal links** to striking distance pages (3-5 links from other pages on your site)
 4. **Update old content** that's slipping in rankings
-5. **Create new pages** for keyword gaps where you get impressions but have no dedicated page
+5. **Improve an existing page first** for keyword gaps where you get impressions but have no dedicated page: add a section or heading that answers that search on the closest page you have. Only create a new page when the search clearly needs a page of its own, for example a product, service or location that no current page covers
 
 ## Output Rules
 

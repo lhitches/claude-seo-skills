@@ -53,7 +53,7 @@ Run every check the columns allow. Each issue gets a severity class:
 
 7. H1. Missing or duplicated across pages. Group like titles.
 
-8. THIN CONTENT. Indexable pages with Word Count under 300, excluding obvious utility pages (contact, login, cart). Cluster by folder: a thin template beats 40 individual thin pages as a finding.
+8. THIN CONTENT. Indexable pages with Word Count under 150 (this skill's default review trigger, change it if your site differs), excluding obvious utility pages (contact, login, cart). A low count is a reason to look, not a quality verdict: length is not originality, so a short page that fully answers its query is fine and a long page can still add nothing new. Cluster by folder: a thin template beats 40 individual thin pages as a finding.
 
 9. CRAWL DEPTH. Indexable pages at depth 4+, especially with decent inlinks elsewhere. Money pages should sit within 3 clicks of the homepage.
 

@@ -37,7 +37,7 @@ If the input is missing the price, the add-to-cart, or the variant controls, sto
 
 3. Score each layer Pass, Weak or Fail, with the one-line why. If you cannot see a layer from the input, say so and ask for it. Do not score a layer blind.
 
-   Work out the 0-100 score from the layer results so it is repeatable: Transactable elements 25, Structured data 20, JS-dependency 20, Visible-vs-parsed consistency 15, Accessibility metadata 10, Semantic HTML 10. Pass earns the full weight, Weak half, Fail zero. If any layer could not be seen, do not give a score out of 100: give the points earned out of the points you could check (e.g. "48 of 65 checked") and name the missing layers.
+   Work out the 0-100 score from the layer results so it is repeatable. These are this skill's house weights, for repeatability, not a published standard: Transactable elements 25, Structured data 20, JS-dependency 20, Visible-vs-parsed consistency 15, Accessibility metadata 10, Semantic HTML 10. Pass earns the full weight, Weak half, Fail zero. If any layer could not be seen, do not give a score out of 100: give the points earned out of the points you could check (e.g. "48 of 65 checked") and name the missing layers.
 
 4. For each Weak or Fail, decide the single strongest fix at the TEMPLATE level (product.liquid, the theme's product template, the PDP component), so it fixes every product at once, rather than the single page they pasted. One fix per issue, the strongest only.
 
@@ -47,6 +47,7 @@ If the input is missing the price, the add-to-cart, or the variant controls, sto
 
 AGENT-READINESS AUDIT
 Page or URL, score 0-100, one-line verdict (e.g. "62/100. An agent can read this product but cannot reliably complete the purchase.")
+Score weights (house weights, for repeatability): Transactable 25, Structured data 20, JS-dependency 20, Consistency 15, Accessibility 10, Semantic HTML 10
 
 LAYER SCORES (the 6, each Pass / Weak / Fail + why)
   Semantic HTML / DOM: [Pass/Weak/Fail] - [why]
@@ -65,7 +66,7 @@ PRIORITISED FIXES (worst first)
 
 DO THIS WEEK (the top 3 by impact, each a single clear action)
 
-WHAT THIS DID NOT CHECK (the layers you could not see from the input, plus the off-page layer. If they sell via Google or Bing Shopping, point them at the product-feed layer next.)
+WHAT THIS DID NOT CHECK (the layers you could not see from the input, plus the off-page layer. If they sell via Google or Bing Shopping, point them at the product-feed layer next. Also list agent checkout and access, which a page's code does not show: whether the store is eligible for Google Universal Cart or UCP checkout, whether a Shopify store has agentic storefronts switched on, and whether robots.txt, CDN or bot-management rules block shopping agents before they reach the page.)
 
 ## Rules
 

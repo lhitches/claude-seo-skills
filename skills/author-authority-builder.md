@@ -36,6 +36,8 @@ If the author has thin credentials, say so early and honestly: the fix for thin 
 4. Fix the byline layer. Every article by the author: byline links to the author page (not a tag archive), the article's schema names the same Person @id, and the bio blurb under articles matches the author page's positioning. One consistent identity everywhere; five different job titles across five surfaces is how machines lose confidence.
 
 5. Corroborate across the web. The author's LinkedIn headline, X bio, and directory listings should tell the same story as the author page: same role, same specialty, same claims. List the specific edits per profile. Where the author has none of the profiles machines read, name the two or three worth creating for their field.
+   - ONE HEADSHOT: the same photo on the author page and every profile, so machines and readers can tell it is the same person. Flag every surface that uses a different one.
+   - EARNED-MENTION TARGETS: a short list (three to five) of places where the author could be mentioned or featured by someone else: podcasts, guest posts, conference or panel spots, industry publications in their field. Each one is a third-party mention that corroborates the author page, and each one carries the same bio. Suggest the type of target and why it fits; only name a specific show or publication if the user confirms it exists and is credible.
 
 6. Write the bio copy. Three lengths from the same facts: the author-page bio (150 to 250 words, first person or third, user's call), the under-article blurb (40 to 60 words), and the one-liner for bylines and social. All three assert the same identity.
 
@@ -50,7 +52,7 @@ PERSON SCHEMA (the JSON-LD block, ready to adapt: stable @id, worksFor, knowsAbo
 
 BYLINE FIXES (the article-level changes: byline link target, article schema author reference, blurb text)
 
-CROSS-WEB CONSISTENCY LIST (per profile: the specific headline or bio edit so every surface agrees)
+CROSS-WEB CONSISTENCY LIST (per profile: the specific headline or bio edit so every surface agrees, the headshot check, and the earned-mention targets)
 
 THE THREE BIOS (author page / under-article / one-liner)
 

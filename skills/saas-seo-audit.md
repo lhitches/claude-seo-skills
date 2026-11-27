@@ -56,7 +56,7 @@ Link to case study to read more: [case study name]: [URL]
 Match these to the user's situation:
 
 - **JobAdder**, https://studiohawk.com.au/case-studies/jobadder: Recruitment SaaS (ATS and CRM). Technical SEO, keyword-led landing pages and content hubs targeting the ATS and CRM terms recruiters search for, regional pages for ANZ and the UK and Ireland, plus digital PR: 361% increase in AU organic traffic and 58 media placements. Use for any SaaS building out keyword-led product and use-case content or scaling internationally.
-- **QuickBooks**, https://studiohawk.com.au/case-studies/quickbooks: Accounting SaaS. Localisation across APAC (450+ pages translated into nine languages), hreflang and technical fixes, resource centres, glossary pages, calculators and programmatic comparison pages: 92% increase in organic clicks across its /global/ directory and 116% year-on-year growth in non-branded traffic in the Philippines. Use for any SaaS with multiple geographic markets, resource or help-style content, or comparison pages.
+- **QuickBooks**, https://studiohawk.com.au/case-studies/quickbooks: Accounting SaaS. Localisation across APAC (450+ pages translated into nine languages), hreflang and technical fixes, resource centres, glossary pages, calculators and programmatic comparison pages: 92% increase in organic clicks across its /global/ directory and 116% year-on-year growth in non-branded traffic in the Philippines. Use for any SaaS with multiple geographic markets, resource or help-style content, or comparison pages. When you cite it, do not recommend comparison pages at scale: a "vs" page for every possible matchup is a known risky template that sites have lost traffic on. Recommend comparison pages only for the competitors buyers actually weigh the product against, each with real evidence.
 
 ## Example of an inline case study drop
 
@@ -168,7 +168,7 @@ For SaaS with partner ecosystems:
 - **Social proof**: Testimonials or logos on the pricing page?
 - **Trial CTA**: Clear path to start?
 
-**Why this matters:** Hiding pricing is a top-3 conversion killer. "[Tool] pricing" is one of the highest-purchase-intent SaaS searches.
+**Why this matters:** If pricing is hidden, a buyer who searches "[Tool] pricing" finds no answer on your site, and that is one of the highest-purchase-intent SaaS searches.
 
 ### Trial / conversion flow
 
@@ -258,10 +258,10 @@ Want me to go deeper on any of these? I can dig into [area 1], [area 2], or [are
 
 ## Rules for the audit
 
-- **Lead with use-case pages.** The biggest SaaS SEO gap is pages targeting personas + problems, not features.
-- **Hidden pricing is a top-3 issue.** Flag it hard if present.
-- **Trial friction (long forms, credit card required) is a top-3 issue.** Flag it hard if present.
-- **Be specific.** "Build more content" is useless. "Build a free Email Subject Line Tester tool that captures emails, then add dedicated pages targeting 'project management software for [industry]' for your top 5 verticals" is useful.
+- **Lead with the biggest gap you actually found.** Missing use-case pages (persona + problem, not features) are a common SaaS gap, so check for them, but don't lead with them by default.
+- **Flag hidden pricing if present.** Rank it against the other gaps you found.
+- **Flag trial friction (long forms, credit card required) if present.** Rank it against the other gaps you found.
+- **Be specific.** "Build more content" is useless. "Build a free project timeline template generator that captures emails, then add dedicated pages targeting 'project management software for [industry]' for your top 5 verticals" is useful.
 - **Quote exact text from the page.**
 - **Every recommendation must tie to trials, signups, MRR, or pipeline**, not SEO metrics.
 - **If the company is doing things well, say so.**

@@ -130,9 +130,9 @@ End with:
 - **Address and phone in footer**: Visible on every page?
 - **Restaurant structured data**: Restaurant (LocalBusiness) markup with address, phone, opening hours, servesCuisine, menu URL and acceptsReservations, matching what the page shows? (If you can't see the page source, say this wasn't checked.)
 
-### Visit / contact / location page, the map embed is non-negotiable
+### Visit / contact / location page, check the map embed
 
-This is the single most impactful hospitality SEO and CRO fix.
+A missing map embed is a common gap on venue sites. Rank it against the other issues you actually found, not ahead of them by default.
 
 - **Embedded Google Map**: Is there a functional map embed? (A screenshot of a map does not count.)
 - **One-tap directions**: Does the embed allow one-click "Get Directions"?
@@ -151,7 +151,7 @@ This is the single most impactful hospitality SEO and CRO fix.
 - **Pricing visible**: Or hidden behind a "book to see menu" wall?
 - **Signature dishes highlighted**: Are hero dishes given more content than line items?
 
-**Why this matters:** Google can index text in a PDF and can often pull text out of an image, so don't say those formats are unreadable. The case for HTML is that it's easier to read on a phone, works with screen readers, and gives Google and AI tools clean text about each dish that they can reliably read and quote. An HTML menu with dish names is the biggest content opportunity restaurants miss. When flagging this, reference the pattern directly, no specific case study needed unless one matches the cuisine.
+**Why this matters:** Google can index text in a PDF and can often pull text out of an image, so don't say those formats are unreadable. The case for HTML is that it's easier to read on a phone, works with screen readers, and gives Google and AI tools clean text about each dish that they can reliably read and quote. An HTML menu with dish names is a content gap many restaurant sites have. When flagging this, reference the pattern directly, no specific case study needed unless one matches the cuisine.
 
 ### Photography
 
@@ -245,8 +245,8 @@ Want me to go deeper on any of these? I can dig into [area 1], [area 2], or [are
 
 ## Rules for the audit
 
-- **Map embed check is non-negotiable.** If it's missing, lead with it.
-- **PDF-only menu is a critical issue every time.** Flag it hard with the HTML menu fix.
+- **Rank by what you found on this site.** Lead with the issue that costs this venue the most bookings or visits on the pages you read. A missing map embed or a PDF-only menu often ranks high, but neither leads by default.
+- **Always check the map embed and the menu format.** If the menu is PDF-only or image-only, flag it with the HTML menu fix.
 - **Photos matter more here than any other vertical.** If photography is weak, say so, a venue with bad photos can't be SEO-fixed, it needs a photo shoot first.
 - **Be specific.** "Improve your booking flow" is useless. "Add a sticky booking button to the mobile header that links directly to your OpenTable widget" is useful.
 - **Quote exact text from the page.**

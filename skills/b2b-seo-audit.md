@@ -18,7 +18,7 @@ This skill is focused **exclusively on the on-page content audit**, service page
 
 Before running the audit, determine what content you have access to:
 
-**Mode A: Fetch available:** If you can fetch URLs (e.g. Claude.ai with web search enabled), load the homepage, services overview, individual service pages, about/team, and 1-2 case studies.
+**Mode A: Fetch available:** If you can fetch URLs (e.g. Claude.ai with web search enabled), follow the workflow below: the homepage, the services page and one case study or the About page. Use the homepage navigation to find the individual service pages, the resource, insights or blog index and any industry pages, then fetch any you are going to judge. Don't judge a page you haven't read: mark that section "not assessed" in the report. If a page isn't linked from the navigation, say you couldn't find one rather than that it doesn't exist.
 
 **Mode B: Paste-only:** If you cannot fetch URLs, STOP and ask the user to paste the following content, clearly labelled with headings. The minimum for the 3-page audit is the homepage, one service page, and one case study or the About page; the rest make it sharper:
 
@@ -110,6 +110,8 @@ From the homepage navigation, identify:
 Announce which pages you're auditing:
 > "I'll audit these 3 pages: the homepage, [services page URL], and [case study/About URL]. Fetching them now."
 
+These 3 pages do not show the buyer journey content. Before you score BUYER JOURNEY COVERAGE, fetch the resource, insights or blog index from the navigation. If you can't find or fetch it, mark that section "not assessed" rather than judging the site's content from 3 pages.
+
 ### Step 4: Run the audit
 
 For each page, check the B2B framework below. Quote exact text from the page.
@@ -152,7 +154,7 @@ This is the single biggest B2B SEO failure: consolidating 15 services onto a sin
 
 ### Buyer journey content
 
-B2B buyers consume 3+ pieces of content before contacting a vendor. Check whether content exists for:
+Check whether content exists for each stage of the buyer journey. Judge this from the resource or blog index you actually read:
 
 - **Unaware stage**: Thought leadership about industry problems, market shifts
 - **Consideration stage**: Comparison content, "how to choose" guides, pros/cons analysis
@@ -218,7 +220,7 @@ SERVICE PAGE ARCHITECTURE: [SCORE X/10]
 (0-3: all services on one page. 4-6: separate pages, but thin or missing most of the service page checklist. 7-10: a dedicated page per service with most checklist items in place.)
 [Specific issues, especially one-page-for-all-services trap]
 
-BUYER JOURNEY COVERAGE
+BUYER JOURNEY COVERAGE (based on: [index URL you read], or "not assessed")
 Unaware: [coverage assessment]
 Consideration: [coverage assessment]
 Decision: [coverage assessment]
@@ -258,7 +260,7 @@ Want me to go deeper on any of these? I can dig into [area 1], [area 2], or [are
 
 ## Rules for the audit
 
-- **Lead with service page architecture.** The one-page-for-all-services trap is the biggest issue every time.
+- **Lead with the one-page-for-all-services trap when it is present.** If the services already have their own pages, lead with the biggest gap you actually found.
 - **Flag trust signal gaps hard.** B2B buyers don't enquire without them.
 - **Hidden pricing is a conversion killer.** If pricing is fully hidden, call it out.
 - **Be specific.** "Improve your case studies" is useless. "Rewrite the [client name] case study to include their starting position, the specific change, and the 3 metrics that moved, use numbers, not adjectives" is useful.

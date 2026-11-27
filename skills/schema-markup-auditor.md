@@ -19,7 +19,7 @@ If the user gives you only a URL and you cannot fetch it, ask them to paste the 
 
 ## Process
 
-1. **Extract what exists.** Pull every `<script type="application/ld+json">` block. Note the types present, and whether they sit in a single `@graph` or scattered blocks. Flag scattered blocks that should be consolidated.
+1. **Extract what exists.** Pull every `<script type="application/ld+json">` block. A plain fetch of the HTML only sees schema written into the page source: schema added by JavaScript (a tag manager, a plugin or app, a framework that builds the page in the browser) will not show up. So if a type looks absent, mark it NOT CHECKED rather than missing until the user confirms it in Google's Rich Results Test, which renders the page the way Google does. Note the types present, and whether they sit in a single `@graph` or scattered blocks. Separate blocks are valid; suggest consolidating them as a tidy-up, not a fault.
 
 2. **Validate each existing entity** against its type's rich-result requirements: required properties (missing = the result will not show), recommended properties (missing = the result is weaker), and structural mistakes (a price with no currency, a FAQ question with no answer, a breadcrumb item with no position, a review with no itemReviewed). Grade each entity PASS, WEAK, or BROKEN with the specific reason.
 
@@ -33,7 +33,7 @@ If the user gives you only a URL and you cannot fetch it, ask them to paste the 
 
 Return four parts:
 
-1. **Scorecard** - a short table: each schema type found, its grade (PASS / WEAK / BROKEN), and the one thing wrong with it. Plus the types that are missing but should exist.
+1. **Scorecard** - a short table: each schema type found, its grade (PASS / WEAK / BROKEN), and the one thing wrong with it. Plus the types that are missing but should exist, marked NOT CHECKED where the only evidence is a plain fetch of the HTML.
 
 2. **The corrected schema** - one consolidated JSON-LD `@graph`, paste-ready, real values filled, placeholders bracketed. This is the deliverable.
 
@@ -57,7 +57,7 @@ Practical and specific. Grade honestly (a BROKEN Product schema gets called brok
 
 ## Edge cases
 
-- **No existing schema at all:** skip the grading, go straight to gap-finding and building from scratch.
+- **No existing schema at all** (confirmed in the Rich Results Test, not only from a plain fetch): skip the grading, go straight to gap-finding and building from scratch.
 - **A page with the wrong type** (e.g. Product schema on a category listing page): call it out, recommend the right type (ItemList for a category), and rebuild.
 - **Thin or template pages** where schema would describe near-empty content: say so, and recommend fixing the content before adding schema that claims more than the page delivers.
 - **Multiple entities of the same type** (three products on one page): use an ItemList pointing to each product's own page, or a ProductGroup with hasVariant if they are variants of one product, not three competing top-level Product blocks.

@@ -38,7 +38,9 @@ If the user has few or no reviews yet, switch to acquisition mode: build them th
 
 6. Audit the acquisition workflow against the standard playbook: are customers being asked at the right moment (post-delivery, post-result), and are customers asked consistently, not just the happy ones (every eligible customer, or an unbiased selection, never chosen by expected sentiment: Google's policy bans selectively soliciting positive reviews), on the platforms that matter for the industry (Google first, then Trustpilot or the vertical's own platform), with a low-friction link? Is every review, good or bad, getting a reply? Name the gaps as concrete workflow steps.
 
-7. Note the schema layer honestly: review and rating markup belongs on genuine third-party or on-site product reviews per the platform's rules; self-serving misuse of review schema is a documented spam pattern. One line of guidance, no more.
+7. Check that on-site reviews can be read at all. If the site shows its own reviews, view the page source (not the rendered page) and confirm the review text is there, not only inside a JavaScript review widget. Many AI crawlers do not run JavaScript, so reviews that exist only in a widget are invisible to them, however many there are. The fix is to render at least the written review text in the page HTML. Whether also marking up the written reviews in schema helps AI answers is contested: practitioners claim it, but a controlled study found adding schema made no clear difference to AI citations, so present that half as optional, not as a fix. If you only have pasted reviews, say this was not checked and ask the user to look at view-source.
+
+8. Note the schema layer honestly: review and rating markup belongs on genuine third-party or on-site product reviews per the platform's rules; self-serving misuse of review schema is a documented spam pattern. One line of guidance, no more.
 
 ## Output structure
 
@@ -55,6 +57,8 @@ RESPONSE PRIORITY QUEUE (unanswered negatives ranked by visibility and recency, 
 
 THE LANGUAGE MINE
 Pull-quote bank (verbatim, attributed) | customer-language keywords mapped to pages | objection list mapped to FAQ or page sections.
+
+ON-SITE REVIEW VISIBILITY (review text in the page source: yes / no / not checked)
 
 ACQUISITION WORKFLOW GAPS (the concrete missing steps: who to ask, when, where, and the reply-to-everything discipline)
 

@@ -10,7 +10,7 @@ description: >
 
 # AI Visibility Check
 
-**What it does:** Generates 8 customer-style queries tailored to your business, tells you how to run them in ChatGPT / Gemini / Perplexity / Claude, then analyses the results you paste back. You get an honest score based on real AI responses, not guesses.
+**What it does:** Generates 8 customer-style queries tailored to your business, tells you how to run them in ChatGPT / Gemini / Google AI Mode / Perplexity / Claude, then analyses the results you paste back. You get an honest score based on real AI responses, not guesses.
 
 **Who it's for:** Business owners who want to know if AI search tools recommend them (or their competitors) when customers ask for help in their industry.
 
@@ -69,16 +69,24 @@ YOUR 8 QUERIES TO RUN:
 
 HOW TO RUN THEM:
 
-Run each query in each of these 4 AI tools (that's 32 responses total, but
+Run each query in each of these 5 AI tools (that's 40 responses total, but
 the pattern emerges quickly, often by query 4 you'll see the answer):
 
 → ChatGPT: https://chatgpt.com/
-→ Gemini: https://gemini.google.com/
+→ Gemini app: https://gemini.google.com/
+→ Google AI Mode and AI Overviews: search the query on https://www.google.com/
+  (Google says the Gemini app and Google Search answer differently, so
+  the Gemini app does not tell you what Google Search shows)
 → Perplexity: https://www.perplexity.ai/
 → Claude: https://claude.ai/
 
 Use a new chat for each tool, ideally a temporary or logged-out chat with
 memory off, so your own history does not skew the answers.
+
+AI answers change from one run to the next, even for the exact same
+question. So run your top 2 queries (Query 1 and 2) 3 times each in every
+tool, in a fresh chat each time, and paste all 3 answers. The other
+queries can be run once.
 
 For each response, copy the full text and paste it back here. Label each
 paste clearly like this:
@@ -86,13 +94,17 @@ paste clearly like this:
 "Query 1 / ChatGPT:
 [pasted response]"
 
+"Query 1 / ChatGPT / run 2:
+[pasted response]"
+
 "Query 1 / Gemini:
 [pasted response]"
 
 ...and so on.
 
-OR (quicker), paste just the 4 responses from your top priority query
-(usually Query 1 or 2) and I'll give you a preliminary score.
+OR (quicker), paste just the responses from your top priority query
+(usually Query 1 or 2), 3 runs in each tool, and I'll give you a
+preliminary score.
 
 Ready when you are. Paste the responses below and I'll analyse them.
 ```
@@ -109,7 +121,11 @@ When the user pastes AI responses, extract the following for each response:
 
 ### Scoring
 
-Score out of total responses pasted (X/Y). Count only clear "Yes" mentions in X. List "Partial" mentions (named in passing, wrong location, or described but not recommended) separately so the score is not inflated:
+Score out of total responses pasted (X/Y). Count only clear "Yes" mentions in X. List "Partial" mentions (named in passing, wrong location, or described but not recommended) separately so the score is not inflated.
+
+For Query 1 and 2, report the range across the 3 runs in each tool (for example "ChatGPT: mentioned in 1 of 3 runs"), never a single result. AI answers vary between runs of the same question, and vary even more when the question is reworded, so one run is not a measurement. Call the result a snapshot of the day it was run, not a fixed score.
+
+The rating bands below are this skill's own cut-offs, not an industry standard. Treat a score near a cut-off as borderline:
 - **VISIBLE (75%+):** AI tools consistently recommend this business
 - **PARTIALLY VISIBLE (30-74%):** Shows up sometimes but competitors dominate
 - **INVISIBLE (under 30%):** AI doesn't know this business exists in this space
@@ -123,17 +139,22 @@ Explain WHY the AI made its choices, based on what it cited (if anything):
 - Relied on generic knowledge ("popular in [location]")?
 - Gave a disclaimer ("I can't recommend specific businesses")?
 
+Base this only on sources the pasted answers actually named or linked. Do not guess what an AI tool read. Every one of the 5 actions must point to a source a pasted answer cited (name the query and the tool). If the answers cited nothing, say so, and label any action that is not tied to a citation as general advice.
+
 ### Output for Stage 2
 
 ```
 AI VISIBILITY RESULTS: [Business Name]
 
 VISIBILITY SCORE: [X]/[Y] responses mentioned you
-RATING: [VISIBLE / PARTIALLY VISIBLE / INVISIBLE]
+RANGE ON TOP 2 QUERIES: [e.g. Query 1: ChatGPT 1 of 3 runs, AI Mode 0 of 3 runs]
+RATING: [VISIBLE / PARTIALLY VISIBLE / INVISIBLE] (this skill's own bands)
+SNAPSHOT: [date run]. AI answers change between runs, so re-test before
+calling any change real.
 
 WHAT WE TESTED:
 Per-query / per-AI breakdown:
-- Query 1 ("..."): ChatGPT: ✓ mentioned / Gemini: ✗ / Perplexity: ✓ / Claude: ✗
+- Query 1 ("..."): ChatGPT: 2 of 3 runs / Gemini app: 0 of 3 / Google AI Mode: 1 of 3 / Perplexity: 3 of 3 / Claude: 0 of 3
 - Query 2 ("..."): ChatGPT: ✗ / Gemini: ✗ / ...
 (etc.)
 

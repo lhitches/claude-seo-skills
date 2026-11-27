@@ -24,8 +24,9 @@ If they give keywords with no URLs, run the classification and cluster map, and 
 
 1. Classify each query's intent from its language, not from guesswork. Read the modifiers:
    - INFORMATIONAL: what, how, why, guide, examples, meaning, early-research phrasing. Wants a guide or explainer.
-   - COMMERCIAL INVESTIGATION: best, top, review, vs, alternative, comparison, for [use case], pricing. Wants a comparison, buyer guide, or honest review.
-   - TRANSACTIONAL: buy, price, cost, near me, hire, book, quote, discount, [product name] alone with buying context. Wants a product, service, or category page.
+   - COMMERCIAL INVESTIGATION: best, top, review, vs, alternative, comparison, for [use case]. Wants a comparison, buyer guide, or honest review.
+   - TRANSACTIONAL: buy, near me, hire, book, quote, discount, [product name] alone with buying context. Wants a product, service, or category page.
+   - PRICE AND COST (price, cost, pricing, how much): a straddler between commercial and transactional, never a fixed label. These queries often reward a hybrid page: the typical price answered straight away, then options, comparisons and a quote or buy path. Check the live SERP and follow the page type that ranks. If you cannot check, name both intents and mark the call "unverified against the SERP".
    - NAVIGATIONAL: brand names, login, contact. Wants the exact page. Rarely worth new content.
    Where a query is ambiguous, say which two intents it straddles and which one the SERP currently rewards.
 
@@ -80,7 +81,7 @@ WHAT THIS DID NOT CHECK (actual SERP layouts per query, search volumes, difficul
 
 ## Edge cases
 
-- Single keyword given: classify it, read the implied SERP, and give the content-type call plus two or three sibling queries that belong on the same page.
+- Single keyword given: classify it, check the live SERP for it if you can search (if you cannot, mark the call "unverified against the SERP" and do not describe what ranks), and give the content-type call plus two or three sibling queries that belong on the same page.
 - Huge export (2,000+ queries): cluster the top queries by impressions first and say you sampled; the long tail follows the head clusters.
 - All queries are branded: the map is about defending, not building. Check the brand SERP is owned (site, profiles, reviews) and say the unbranded opportunity needs a different keyword set.
 - Local business: near-me and suburb queries are transactional even without buy words. Weight the map toward location and service pages.

@@ -32,15 +32,17 @@ If the user pastes data without per-bot numbers, ask for the numbers before issu
    - BLOCKED: evidence of a block, either requests that mostly come back 403 or challenged (the CDN, firewall or server), or a Disallow line for that bot in robots.txt.
    - THROTTLED: a high share of 429 (Too Many Requests) responses. That is rate limiting at the CDN or server, not a block.
    - SERVER ERROR: a high share of 5xx responses. The server is failing, which is not a deliberate block: fix the server, not the access rules.
+   - BROKEN PATHS: the bot gets in, but a high share of the addresses it asks for return 404, or redirect somewhere wrong (a loop, a chain, the homepage or a login page). Use the redirected count and the top paths; if Clarity shows only a redirected count, ask for the paths or the server logs to see where the redirects land. Check the same addresses as a browser or Googlebot too: some platforms send AI crawlers a 404 where Google gets a redirect, for example when the trailing slash is the other way round.
    If Clarity shows unsuccessful requests without status codes, ask for the CDN or server logs before choosing between BLOCKED, THROTTLED and SERVER ERROR.
    - OVER-SCRAPING: very high request volume with no sign of return (no AI referral visits from that operator, where the user gave you referral data). May be eating bandwidth without value. If you have no referral data, say the value side is unknown.
    - VIOLATION: breaking the user's robots.txt rules. Either tighten the rules or whitelist on purpose. Ask before recommending which.
 
-3. For each non-HEALTHY bot, decide the single strongest fix (one only). Only recommend loosening access rules (robots.txt, Cloudflare, CDN) when the evidence shows a block the user does not want. Tightening is different: for OVER-SCRAPING, disallowing paths or rate limiting is fine when the request volume shows a real load and it fits the crawler policy the user wants. For NOT OBSERVED, the fix is to check first: robots.txt, the AI Crawler Access Checker and the Cloudflare or CDN settings. For SERVER ERROR, it is REVIEW server config.
-   - UNBLOCK robots.txt: remove the Disallow rule stopping this bot. Quote the exact line to remove.
+3. For each non-HEALTHY bot, decide the single strongest fix (one only). Only recommend loosening access rules (robots.txt, Cloudflare, CDN) when the evidence shows a block the user does not want. Tightening is different: for OVER-SCRAPING, disallowing paths or rate limiting is fine when the request volume shows a real load and it fits the crawler policy the user wants. For NOT OBSERVED, the fix is to check first: robots.txt, the AI Crawler Access Checker and the Cloudflare or CDN settings. For SERVER ERROR, it is REVIEW server config. For BROKEN PATHS, it is FIX paths.
+   - UNBLOCK robots.txt: remove the Disallow rule stopping this bot. Quote the exact line to remove. For a training crawler (GPTBot, ClaudeBot, CCBot), do not issue this as a fix: whether to block training is a contested business choice, so set out the trade-off and ask the owner which they want.
    - ALLOW Cloudflare: check the zone's actual settings before changing anything. Cloudflare now sets AI bot policy by what the bot does (Search, Agent, Training), each set to Allow, Block, or Block on pages with ads, under Security Settings, then Configure AI bot policies, and AI Crawl Control can allow or block individual crawlers. Set the matching policy or crawler to Allow, then check no WAF custom rule, Bot Fight Mode or the older "Block AI bots" setting is still challenging it. Defaults depend on when the zone was added: new domains from 15 September 2026 allow Search but block Training and Agent traffic on pages that display ads, so a chat fetch bot can be blocked on those pages while search crawlers get through.
    - ALLOW CDN: same logic at the CDN layer (Fastly, Akamai, BunnyCDN). Name the CDN-specific setting.
    - REVIEW server config: rate limiting in nginx or Apache, fail2ban rules, or AbuseIPDB triggers may be catching bots.
+   - FIX paths: for BROKEN PATHS, add explicit redirects for the addresses the bots keep requesting, point internal links and sitemap entries at the final address, and re-test those addresses while sending the bot's own user agent.
    - TIGHTEN: for OVER-SCRAPING, disallow the specific heavy paths in robots.txt for that bot, or rate-limit it at the CDN. Do not rely on Crawl-delay: many crawlers ignore it, Googlebot included.
 
 4. Pick the keeper actions for the week. Rank by combined impact on AI visibility. One unblock that lets OAI-SearchBot or PerplexityBot reach the whole site beats a fix that adds 100 requests a month from a minor bot.
@@ -52,13 +54,13 @@ Date range, total AI bot requests, total unique pages requested, bots present, b
 
 HEALTH PER BOT (one block per bot, grouped by operator, worst first by combined impact)
   BOT: [name / operator]
-  VERDICT: [HEALTHY / NOT OBSERVED / BLOCKED / THROTTLED / SERVER ERROR / OVER-SCRAPING / VIOLATION]
+  VERDICT: [HEALTHY / NOT OBSERVED / BLOCKED / THROTTLED / SERVER ERROR / BROKEN PATHS / OVER-SCRAPING / VIOLATION]
   REQUESTS LAST 30 DAYS: [N]
   PAGES CRAWLED: [N or %, or "not provided"]
   SHARE OF AI BOT TRAFFIC: [X%]
   REQUEST STATUS: [successful / redirected / unsuccessful, or "not provided"]
   AI REFERRAL VISITS: [N, or "not provided"]
-  WHAT TO DO: [one specific action with the location, e.g. "Unblock GPTBot in robots.txt by removing line 14: Disallow: /"]
+  WHAT TO DO: [one specific action with the location, e.g. "Unblock OAI-SearchBot in robots.txt by removing line 14: Disallow: /"]
 
 DO THIS WEEK (3 actions, ranked by AI-visibility impact)
   1. [action] : [why] : [where: robots.txt / Cloudflare / CDN / nginx]
@@ -70,7 +72,7 @@ This skill does not check citation rate (use Bing Webmaster Tools Citation Share
 
 ## Rules
 
-- Never say "consider unblocking". Be decisive: "Unblock GPTBot in robots.txt by removing this line: [exact line]".
+- Never say "consider unblocking" for a search crawler or user fetcher. Be decisive: "Unblock OAI-SearchBot in robots.txt by removing this line: [exact line]". Training crawlers are the exception: unblocking one is the owner's choice, so ask.
 - One fix per bot per audit. The point is to stop the user feeling overwhelmed and give the strongest single move.
 - Weight by recent volume, not historic. Surface what is happening now.
 - If data is thin (only 7 days, not 30), say so and ask whether they want a soft read or a hard verdict.
@@ -83,7 +85,7 @@ This skill does not check citation rate (use Bing Webmaster Tools Citation Share
 
 - Talk like an SEO running an audit. Decisive, blunt, no fluff.
 - Lead with the fix, not the theory.
-- "Unblock GPTBot now" beats "you should consider unblocking GPTBot".
+- "Unblock OAI-SearchBot now" beats "you should consider unblocking OAI-SearchBot".
 - Quantify everything: "GPTBot is doing 4,000 requests a month, ClaudeBot is doing 12. Check the CDN logs and Cloudflare's AI bot rules for ClaudeBot before changing anything."
 
 ## Edge cases

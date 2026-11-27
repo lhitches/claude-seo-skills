@@ -23,7 +23,7 @@ Wait for the data. Push back if the columns are missing.
 
 ## Process
 
-1. **Parse.** Detect format. Pull query, page, impressions, clicks, position, CTR (optional; GSC writes it as a percentage such as 3.2%, so convert it). If there is no CTR column, calculate it for each row as clicks divided by impressions. Reject rows with position > 100 or impressions < 5 (noise).
+1. **Parse.** Detect format. Pull query, page, impressions, clicks, position, CTR (optional; GSC writes it as a percentage such as 3.2%, so convert it). If there is no CTR column, calculate it for each row as clicks divided by impressions. Reject rows with position > 100 or impressions < 5 (noise). Then set aside AI Mode follow-up queries: one-word replies such as "yes" or "yes go on", and long conversational strings that read like a turn in a chat rather than a search. Google logs a follow-up question in AI Mode as a query of its own, so these are not keywords to target. Leave them out of every step below, including target_ctr, and keep a count for the report.
 
 2. **Filter to striking distance.** First, work out target_ctr (step 3) from the full export, because this filter removes the positions 1-3 rows it is based on. Then keep only rows where position is between 4 and 15 inclusive.
 
@@ -67,7 +67,7 @@ Wait for the data. Push back if the columns are missing.
    [Proposed meta description, with the primary query and the reason to click in the opening words]
 
    ACTION 3 - ON-PAGE ADDITION:
-   [Specific section, H2 to add, paragraph to insert. Concrete. "Add an H2 'Step-by-step process' with a 200-word how-to using the exact phrase '[query]' twice." Not "improve content".]
+   [Specific section, H2 to add, paragraph to insert. Concrete. "Add an H2 'Step-by-step process' with a 200-word how-to that answers '[query]' in its first sentence." Not "improve content".]
 
    ACTION 4 - INTERNAL LINK:
    [Specific page on the same site that should link TO this page, with exact-match anchor text.]
@@ -82,6 +82,7 @@ STRIKING DISTANCE REPORT
 
 Date range: [from GSC export]
 Total rows analysed: [n]
+AI Mode follow-up queries excluded: [n] (a rough sign of AI Mode use, not scored)
 Rows in striking distance: [n]
 Total pages with striking-distance queries: [n]
 Target CTR used: [site's own median at positions 1-3 / default placeholders]
@@ -109,7 +110,7 @@ WHAT THIS REPORT DID NOT CHECK
 
 - Don't invent queries or pages not in the data.
 - Don't recommend keyword stuffing. If a query is already in the title, the title tweak is about ordering and prominence, not adding it again.
-- Title-tag proposals put the striking-distance query and the reason to click first. Google sets no length limit on titles and cuts the displayed title to fit the device width, so never pad a title to reach a length or cut a good one to hit a count.
+- Title-tag proposals put the striking-distance query and the reason to click first. Aim for 50 to 60 characters and show the count: this is a display guide, not a ranking rule, because Google cuts the displayed title by pixel width. Never pad a title to reach a length.
 - Meta description proposals lead with what the searcher gets. Google sets no length limit on meta descriptions either, and truncates the snippet to fit the device width.
 - Don't propose internal links FROM pages that don't exist in the data or the user's site map. If unsure, mark the link as "from the relevant hub page" and let the user resolve.
 - Australian English in all output (recognise, organise, optimise).

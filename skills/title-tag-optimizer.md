@@ -10,7 +10,7 @@ description: >
 
 # Title Tag Optimizer
 
-**What it does:** Finds the pages on your website where Google is showing you to customers but nobody's clicking. Then rewrites your title tags (the blue link people see in Google) to get more clicks without changing your rankings.
+**What it does:** Finds the pages on your website where Google is showing you to customers but nobody's clicking. Then rewrites your title tags (the blue link people see in Google) to get more clicks from the rankings you already have.
 
 **Who it's for:** Business owners who show up on Google but aren't getting as many clicks as they should.
 
@@ -42,6 +42,8 @@ If they have not already given it to you, ask in one message for:
 
 1. **Find the opportunities**: Look for pages with high impressions but low CTR for their position. Best test: compare each page with the site's own typical CTR at a similar position in the same export. Only when the data is too thin for that, fall back to these rough rules of thumb: below 5% at positions 1-3, below 3% at positions 4-10. A Pages export can't show which clicks came from branded searches, so don't try to remove them yourself: if the data wasn't filtered to exclude the brand, say brand effects weren't assessed and treat pages that mostly draw brand searches (the homepage, the About page) with caution. Remember too that AI Overviews and other SERP features can pull CTR down whatever the title says. A Pages export doesn't show which features appeared for which searches, so treat them as a possible cause, not a finding: only name one as the cause if the user has seen it in the live results for that page's main queries, and otherwise mark the cause unverified.
 
+   **Read the queries before you blame the title.** If they gave you a Queries export, look at the main queries behind each opportunity page. Ask the user whether those searches show an AI Overview in the live results, as above. Then look for one-word replies such as "yes" and long, conversational query strings that read like questions put to an AI assistant. These can add impressions without real people searching for those words, which makes CTR look worse than it is. Leave them out of the CTR judgement and say how many you left out. If you only have the Pages export, say the queries were not checked, so a title may not be the cause.
+
 2. **Fetch each opportunity page**: Read the current title tag, meta description, H1, and first 100 words. If you cannot fetch pages, say so and ask the user to paste the current title and H1 for each page. Never guess a current title.
 
 3. **Generate optimised titles**: For each page, create 3-5 title tag options.
@@ -65,7 +67,8 @@ Every title should follow one of these patterns (the examples show the shape onl
 
 ## Rules
 
-- Put the query and the reason to click first. Google sets no length limit on titles and cuts the displayed title to fit the device width, so do not pad a title to reach a length or cut a good one to hit a count. Show each option's character count for reference only
+- Put the query and the reason to click first
+- Aim for 50 to 60 characters. Show each option's character count and add a warning to any option outside that range. This is a display guide, not a ranking rule: Google cuts the displayed title by pixel width, so a title much past 60 characters is likely to be cut short on screen, and a very short one wastes space you could use for a reason to click
 - Put the keyword near the front, and keep the query the page already ranks for in the title
 - Only use prices, review counts, years in business or other proof the user gave you or that is on the page. If you have none, write a bracketed placeholder such as [review count] and say what belongs there
 - Keep the title consistent with the page's H1 and content. Google rewrites title links it finds too long, stuffed or out of step with the page
@@ -105,6 +108,11 @@ HOW TO CHANGE YOUR TITLE TAG:
 - Shopify: Edit the page > scroll to "Search engine listing" > Edit > "Page title"
 - Squarespace: Page settings > SEO tab > "SEO Title"
 - Other: Ask your web developer to change the <title> tag in the page's HTML
+
+AFTER YOU CHANGE IT:
+- Write down the date you changed each title
+- Rankings can move up or down when a title changes, not only clicks. In about 4 weeks, compare the page's clicks, CTR and average position in Search Console with the 4 weeks before the change
+- If position dropped and has not come back, consider putting the old title back
 ```
 
 ## Voice

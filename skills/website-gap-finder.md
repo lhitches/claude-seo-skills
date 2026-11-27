@@ -1,7 +1,7 @@
 ---
 name: website-gap-finder
 description: >
-  Finds every page your website is missing. Compares what your site covers vs what your customers
+  Finds the pages your website is likely missing. Compares what your site covers vs what your customers
   actually search for, then gives you a prioritised list of missing pages and a 4-week content plan.
   Works with a URL (if Claude has web access) or with pasted page content. Use when someone asks
   "what pages is my website missing", "what content should I add next", "find content gaps on my
@@ -10,7 +10,7 @@ description: >
 
 # Website Gap Finder
 
-**What it does:** Compares what your website covers vs what your customers are actually searching for. Shows you the exact pages you're missing, the questions your customers ask that your website doesn't answer.
+**What it does:** Compares what your website covers vs what your customers are actually searching for. Shows you the pages you're likely missing, the questions your customers probably ask that your website doesn't answer. Confirm each gap with Search Console before you build.
 
 **Who it's for:** Business owners who have a website but aren't sure what content to add next to get more traffic from Google.
 
@@ -74,6 +74,8 @@ Compare the two lists. Identify:
 - Topics the site **mentions but doesn't cover in depth**
 - Questions that have **no dedicated page**
 
+Then run a buyer-facts pass on the pages you read. Check for the facts a buyer looks for before they get in touch: pricing (even a "prices from" line), case studies or examples with real results, and a clear reason to choose this business over others. List any that are missing or hard to find. They are often the quickest gaps to close, and they help buyers whatever the search data says.
+
 ### 4. Prioritise the gaps
 Rank each gap by:
 - **Search intent**: Is this a buying query (high value) or just research (lower value)?
@@ -99,6 +101,12 @@ WHAT CUSTOMERS LIKELY SEARCH FOR:
 [Top 15-20 queries from the map, marked as likely searches unless confirmed by the user's data]
 
 COVERAGE: Your site covers [X] of the [Y] topics in this map.
+(This is scored against this skill's own list of likely searches, not measured search demand.)
+
+MISSING BUYER FACTS:
+Pricing: [present / hard to find / missing, with the page you checked]
+Case studies or results: [present / hard to find / missing]
+Why choose us: [present / hard to find / missing]
 
 YOUR BIGGEST GAPS:
 

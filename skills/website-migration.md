@@ -58,13 +58,13 @@ If you have web access and the sites are reachable, fetch them yourself and say 
 
    Check the staging site is blocked from indexing before launch, and that the block comes off at launch. Both halves fail about equally often.
 
-6. **Give them the launch-day checklist.** Ordered, as a list they can tick, covering: remove the staging index block and confirm it is gone, test a sample of redirects including the awkward ones (query strings, trailing slashes, uppercase, paginated pages), confirm every redirect is a 301 that lands in one hop, check `robots.txt` on the live site line by line, submit the new sitemap, verify analytics and conversion tracking fire, and use Search Console's change of address where the domain changed.
+6. **Give them the launch-day checklist.** Ordered, as a list they can tick, covering: remove the staging index block and confirm it is gone, test a sample of redirects including the awkward ones (query strings, trailing slashes, uppercase, paginated pages), confirm every redirect is a 301 that lands in one hop, update every internal link (navigation, body links, footer, sitemap) to point straight at the final new URL rather than through a redirect, check `robots.txt` on the live site line by line, submit the new sitemap, verify analytics and conversion tracking fire, and use Search Console's change of address where the domain changed.
 
    On `robots.txt`, be precise because this is where advice is usually wrong: it controls crawling, not indexing. Blocking the old site after launch stops crawlers reading the redirects, which is the opposite of what they want.
 
    Tell them to pace the redirect testing and to re-check every failure before believing it. Firing hundreds of requests at a site in a few seconds gets you rate limited, and a rate-limited request returns a connection failure that looks exactly like a dead redirect. A test run too fast produces a defect list that evaporates on inspection, which costs more trust than it saves time.
 
-7. **Give them the dated check-ins.** Not "watch it for a few weeks". Take their launch date and produce four actual dates: launch day, launch plus 7, plus 14 and plus 28, each with what to compare against the baseline from step 1 and what action a bad reading triggers.
+7. **Give them the dated check-ins.** Not "watch it for a few weeks". Take their launch date and produce six actual dates: launch day, launch plus 7, plus 14, plus 28, plus 60 and plus 90, each with what to compare against the baseline from step 1 and what action a bad reading triggers. Recovery after a well-run migration usually takes one to three months, so the plus 60 and plus 90 readings are the ones that show whether it came back: still well below the baseline at plus 90 means look for gaps in the redirect map, unless the migration also changed the site's structure or content, which can take longer.
 
    Tell them what normal looks like and what a real problem looks like. Some movement in the first fortnight is expected while the new URLs are reprocessed. A steady decline past four weeks, or a sharp drop in indexed pages, is not. Name the two readings that mean stop and investigate: crawl errors climbing on the new site, and the old URLs still being served rather than redirected.
 
@@ -78,7 +78,7 @@ Produce, in this order:
 4. **Nowhere to land.** The decision list from step 4, sorted by what it costs to lose.
 5. **What changed on the page.** Titles, descriptions, headings and schema that differ between old and new.
 6. **Launch-day checklist.** Ordered and tickable.
-7. **The four dated check-ins.**
+7. **The six dated check-ins.**
 8. **What you could not check.** Always last, always present.
 
 ## Rules

@@ -25,6 +25,8 @@ If they paste one period only: you can rank pages by weakness but not detect dec
 
 1. Match pages across the two periods (a URL in only one capped export is unknown, not zero) and compute the deltas: clicks, impressions, CTR, position. Flag every page with a meaningful decline (clicks down 25%+ on pages with real prior traffic, whether impressions or position slid too or both held steady while CTR fell). As a default, "real prior traffic" means at least 20 clicks in the earlier period; lower the floor for a small site and state the floor you used.
 
+   Then check the dates. If either comparison window overlaps a Google core update rollout (check the dates on Google's Search Status Dashboard; for example, the November 2026 core update ran from 10 to 24 November 2026), a decline in that window may be update impact, not gradual decay. Flag those pages and send them to the Winner or Loser skill instead of prescribing a content fix here.
+
 2. Diagnose each decaying page. The pattern tells you the cause:
    - FRESHNESS DECAY: position slipping slowly, impressions stable-ish, the SERP now rewards newer content. The page aged out, the demand did not.
    - COMPETITIVE DISPLACEMENT: position dropped in steps, impressions stable. Someone published something better and took the spot.
@@ -33,8 +35,8 @@ If they paste one period only: you can rank pages by weakness but not detect dec
    - SEASONAL: the year-ago period was the topic's peak. Check before calling it decay.
 
 3. Prescribe one treatment per page, matched to the diagnosis:
-   - REFRESH: update facts, dates, screenshots, add the missing subtopics, re-promote. For freshness decay on a structurally sound page.
-   - REWRITE: the page's angle or depth lost to a better competitor. Rebuild against what now ranks, keep the URL.
+   - REFRESH: update facts, figures and screenshots, add the missing subtopics, re-promote. For freshness decay on a structurally sound page. Change the visible "updated" date only after a substantial change, and keep the original publish date: Google lists changing dates to seem fresh, when the content has not really changed, as a warning sign.
+   - REWRITE: the page's angle or depth lost to a better competitor. Rebuild against what now ranks, keep the URL. Only choose REWRITE over REFRESH after you or the user has looked at the live results page for the page's main queries and seen what now ranks above it. If nobody has, prescribe REFRESH and say a REWRITE may be needed once the results page is checked.
    - CONSOLIDATE: the page overlaps a stronger sibling. Merge in and 301. For thin or cannibalising decayers.
    - RETARGET: intent shifted; refocus the page on what the query now means, or point it at a different query it can win.
    - LEAVE: seasonal or demand decay. Write it down so nobody wastes a refresh on it.
@@ -61,7 +63,7 @@ LEAVE-ALONE LIST (seasonal and demand-decay pages, so nobody refreshes them by m
 
 DO THIS WEEK (top 3 actions by recoverable clicks)
 
-WHAT THIS DID NOT CHECK (backlink changes, algorithm-update timing, actual SERP contents. If the decline clusters around a known core update date, run the Winner or Loser skill, which diagnoses update impact; this skill diagnoses gradual decay.)
+WHAT THIS DID NOT CHECK (backlink changes, and the live results page for any page where nobody checked it. Core update overlap is checked before diagnosis: pages it affects go to the Winner or Loser skill, which diagnoses update impact, while this skill diagnoses gradual decay.)
 
 ## Rules
 

@@ -291,7 +291,9 @@ def main():
                 continue
             q = best_quote(rv, rv[bucket_key].get(title, []))
             when = (", " + rv["date"]) if rv["date"] else ""
-            md.append('- "%s" - %s, Google review%s' % (q, attribution(rv["name"]), when))
+            # A pasted review often has no stars. Keep it, but flag it so nobody publishes a low rating by mistake.
+            check = " (stars not given, check it is 4 or 5 stars before you use it)" if rv["rating"] is None else ""
+            md.append('- "%s" - %s, Google review%s%s' % (q, attribution(rv["name"]), when, check))
             used += 1
             if used >= a.max_quotes:
                 break

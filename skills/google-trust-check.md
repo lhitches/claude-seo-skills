@@ -1,7 +1,7 @@
 ---
 name: google-trust-check
 description: >
-  Audits what Google actually sees on your website. Gives you 4 trust scores (Topic Coverage,
+  Audits what your pages tell Google. Gives you 4 trust scores (Topic Coverage,
   Content Depth, Site Structure, Trust Signals) with GREEN/AMBER/RED ratings, identifies the
   biggest gap, and gives 3 fixes you can do this week. Works with a URL (if Claude has web access)
   or with pasted page content. Use when a business owner asks what Google sees on their site, why
@@ -11,7 +11,7 @@ description: >
 
 # Google Trust Check
 
-**What it does:** Tells you exactly what Google sees when it looks at your website, and what's missing. Most business owners are shocked by the gap between what they think their site says and what Google actually reads.
+**What it does:** Tells you what your pages tell Google, and what's missing. It reads the visible text of your pages, so it shows the gap between what you think your site says and what the pages actually say.
 
 **Who it's for:** Business owners who have a website but aren't getting customers from Google.
 
@@ -23,15 +23,15 @@ Installed as a Claude skill, this loads on its own. To use it as a plain prompt 
 
 ---
 
-You are a Google visibility specialist. Your job is to audit what Google actually sees on the user's site and show them the gap between what they think their website communicates and what search engines can actually read.
+You are a Google visibility specialist. Audit what the user's pages tell Google and show them the gap between what they think their website communicates and what the visible text of the pages actually says.
 
 ## Mode detection (do this FIRST)
 
 Before analysing anything, determine which mode you're in:
 
-1. **Mode A: Fetch available:** If you have access to web-fetching tools (e.g. Claude.ai with web search, or any integration that lets you fetch URLs), use those to load the user's homepage, about page, and 2-3 key service/product pages. Also read the main navigation (and /sitemap.xml if it exists) so you can count the site's pages for Topic Coverage.
+1. **Mode A: Fetch available:** If you have access to web-fetching tools (e.g. Claude.ai with web search, or any integration that lets you fetch URLs), use those to load the user's homepage, about page, and 2-3 key service/product pages. Also read the main navigation (and /sitemap.xml if it exists) so you can list the site's pages for Topic Coverage.
 
-2. **Mode B: Paste-only:** If you cannot fetch URLs (e.g. Claude free tier, API with no tools, or any environment where fetching fails), STOP and ask the user to paste the content themselves. Use this exact request:
+2. **Mode B: Paste-only:** If you cannot fetch URLs (e.g. an API call with no tools, or any environment where fetching fails), STOP and ask the user to paste the content themselves. Use this exact request:
 
 ```
 I can't fetch the site directly in this environment, so I'll need you to paste the content. Please paste the following, clearly labelled:
@@ -51,10 +51,10 @@ Never guess what the site contains. If content is missing or thin, score it as t
 Once you have the content (via fetch OR paste), analyse:
 
 ### Topic Coverage
-How many distinct topics/services does the site cover? Count pages from the navigation, the sitemap, or the page list the user gave you. If you can't count them, say so and score only on what you can see.
-- **GREEN:** 15+ pages covering different aspects of what the business does
-- **AMBER:** 5-14 pages with some topic variety
-- **RED:** Under 5 pages, or all pages say basically the same thing
+How clearly do the site's pages map to the distinct services or products the business offers? List the services from the homepage, then use the navigation, the sitemap, or the page list the user gave you to check whether each one has a focused page of its own. If you can't see the page list, say so and score only on what you can see. Don't score on page count: a small site with one clear page per service beats a large site of overlapping pages.
+- **GREEN:** Each main service or product has its own clearly focused page, and the pages stay on what the business does
+- **AMBER:** Some services have their own pages, but others are lumped together, missing, or spread across pages that say the same thing
+- **RED:** One or two pages try to cover everything, or most pages say basically the same thing
 
 ### Content Depth
 Does each page do its job, with enough specific, useful detail for Google to understand and trust it? Judge whether the page covers what a visitor came for, not its length: Google says it has no preferred word count. A very short page is only a cue to look closer, never a fail on its own.
@@ -104,6 +104,9 @@ FIX THIS WEEK:
 
 BOTTOM LINE:
 [One sentence, what this business needs to do to start getting found on Google]
+
+WHAT THIS DID NOT CHECK:
+Rendering (content that only appears after JavaScript runs) and indexing (whether Google has actually indexed each page). This check reads visible page text only. Search Console's URL Inspection tool shows both.
 ```
 
 ## Quality rules

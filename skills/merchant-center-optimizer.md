@@ -28,12 +28,12 @@ If you only get a handful of products with no diagnostics, run the optimisation 
    - THE ID/SKU: never overwrite it. The ID is how Google tracks a product's entire performance history; changing it creates a brand-new product with zero history, and campaign performance drops immediately. Whole catalogues have been sunk this way.
    - PRICE, CURRENCY, AVAILABILITY, SALE PRICE and SALE DATES: fix these at the data source (the Shopify or WooCommerce product, or the feed app mapping), never as Merchant Center overrides. Google re-checks these against the landing page constantly, and a discrepancy disapproves the product fast.
 
-3. Audit and rewrite titles, the highest-leverage field in the feed. Think like a shopper typing a query: product type plus the narrowing attributes buyers actually search (scent, material, colour, size, count, burn time, model). Working structures by vertical: apparel leads with gender and category then brand, attributes and size; hard goods lead with brand and product type then key attributes. Front-load what matters: display truncates around the first 70 characters but Google indexes up to the 150-character limit, so query-matching terms go first and the attribute long tail fills the rest. Rewrite the supplied titles before-and-after, and state the pattern per product type so the store can apply it at scale. Specific and descriptive, never stuffed: no word-salad titles, no ALL CAPS, and no promotional text such as "free shipping", "sale" or "best price" (Google's title rules don't allow it, and it can trigger disapprovals).
+3. Audit and rewrite titles, the highest-leverage field in the feed. Think like a shopper typing a query: product type plus the narrowing attributes buyers actually search (scent, material, colour, size, count, burn time, model). Working structures by vertical: apparel runs brand, gender, product type, then attributes (colour, size, material); hard goods lead with brand and product type then key attributes. Front-load what matters: display truncates around the first 70 characters but Google indexes up to the 150-character limit, so query-matching terms go first and the attribute long tail fills the rest. Rewrite the supplied titles before-and-after, and state the pattern per product type so the store can apply it at scale. Specific and descriptive, never stuffed: no word-salad titles, no ALL CAPS, and no promotional text such as "free shipping", "sale" or "best price" (Google's title rules don't allow it, and it can trigger disapprovals).
 
 4. Audit the identifier layer, where the most common warnings live:
    - GTIN (UPC/EAN/ISBN, the barcode number): enter it wherever the product genuinely has one. Google presses hard for GTINs because the same product sold by other sellers carries cross-seller performance history it uses to optimise; an accurate GTIN plugs your product into that history.
-   - No GTIN: use brand plus MPN. If the product is your own manufacture with no MPN, assign one: any code that is unique within your catalogue and stays stable. This tells Google the product is repeatable-purchase and worth learning about.
-   - Genuinely one-of-a-kind items (vintage, unique pieces): mark identifier_exists accordingly rather than inventing an identifier; Google will not build repeat-purchase learning for a one-off, and that is correct.
+   - No GTIN: use brand plus MPN. If the product is your own manufacture with no MPN, assign one: any code that is unique within your catalogue and stays stable.
+   - Genuinely one-of-a-kind items (vintage, unique pieces): mark identifier_exists accordingly rather than inventing an identifier.
    - Never fabricate a real-looking GTIN. A made-up barcode matches someone else's product and causes mismatching or disapproval.
 
 5. Audit the attribute layer, the machine-readability of the catalogue:
@@ -52,7 +52,7 @@ If you only get a handful of products with no diagnostics, run the optimisation 
 
 7. Check feed-to-landing-page consistency, the silent killer: price, availability, and offer details must match what the landing page shows or products get disapproved in waves. Name the usual causes (currency handling, sale price on page but not at the source, stale feed schedule) and the fix, including feed refresh frequency.
 
-8. Cover the free and AI layers: free listings enabled (unpaid Shopping visibility); Product structured data on landing pages agreeing with the feed; and the forward layer, accurate feeds are what AI shopping assistants and emerging agentic-checkout protocols consume, so feed quality now compounds beyond Shopping ads. A product an agent cannot parse is a product an agent cannot buy.
+8. Cover the free and AI layers: free listings enabled (unpaid Shopping visibility); Product structured data on landing pages agreeing with the feed; and the forward layer, accurate feeds are what AI shopping assistants and emerging agentic-checkout protocols consume, so feed quality now compounds beyond Shopping ads. A product an agent cannot parse is a product an agent cannot buy. Add three current platform notes, one line each, and tell the user to confirm them on Google's own pages because they change: the Content API for Shopping was shut down on 18 August 2026, so any feed app or script still built on it must move to the Merchant API; Google's Merchant Center AI performance report (launched as a limited US beta) shows how feed products perform in AI Overviews and AI Mode, so check whether the account has it yet; and Google's Universal Commerce Protocol (UCP), announced in January 2026, lets shoppers check out inside AI Mode, which makes a complete, accurate feed and clean merchant trust signals a requirement rather than a bonus.
 
 9. Set the operating cadence so the feed stays healthy:
    - DAILY: glance at Merchant Center for the suspension banner and the needs-attention view; disapprovals on top sellers are same-day fixes.
@@ -76,7 +76,7 @@ IDENTIFIER AND ATTRIBUTE FIX LIST (GTIN/MPN calls per product, categories, varia
 
 CONSISTENCY CHECKS (feed vs landing page: price, availability, schema agreement, feed refresh cadence)
 
-FREE AND AI VISIBILITY LAYER (free listings status, Product schema alignment, agentic-shopping readiness note)
+FREE AND AI VISIBILITY LAYER (free listings status, Product schema alignment, agentic-shopping readiness note, the three current platform notes)
 
 THE CADENCE (the daily glance and the monthly re-optimisation, one line each)
 

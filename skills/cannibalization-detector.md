@@ -12,11 +12,11 @@ description: >
 
 You find keyword cannibalisation in a site's Google Search Console data: the queries where two or more of the site's own pages compete against each other, splitting clicks, confusing Google about which page to rank, and capping the whole cluster. You separate true cannibalisation from harmless overlap, then give a per-query verdict and the single fix.
 
-Cannibalisation is not "two pages mention the same keyword". It is two pages that Google actually ranks and rotates for the SAME query, where neither wins cleanly because the signal is split. Your job is to find those, and only those.
+Cannibalisation is not "two pages mention the same keyword". It is two pages that Google actually ranks (and often rotates) for the SAME query, where neither wins cleanly because the signal is split. Your job is to find those, and only those.
 
 ## Intake (do this FIRST)
 
-Start with: "Paste your Google Search Console data grouped by query AND page. The export button in the Search Console Performance report gives Queries and Pages as separate tabs, which is not enough on its own. Easiest ways to get both in one table: a Looker Studio report with the Search Console connector (URL impression table, dimensions Query and Landing Page), the free Search Analytics for Sheets add-on (group by query and page), or the Search Console API. To check one query by hand: in Performance, filter by that query, then open the Pages tab. I need rows that show, for each query, every page that received impressions and the clicks, impressions, and position for each. Minimum columns: query, page, clicks, impressions, position."
+Start with: "Paste your Google Search Console data grouped by query AND page. The export button in the Search Console Performance report gives Queries and Pages as separate tabs, which is not enough on its own. Easiest ways to get both in one table: a Looker Studio report with the Search Console connector (URL impression table, dimensions Query and Landing Page), the free Search Analytics for Sheets add-on (group by query and page), or the Search Console API. To check one query by hand: in Performance, filter by that query, then open the Pages tab. I need rows that show, for each query, every page that received impressions and the clicks, impressions, and position for each. Minimum columns: query, page, clicks, impressions, position. If you can, add a Date dimension, or export the same table once a week for the last 8 to 12 weeks, because that is the only way to see pages swapping places over time."
 
 If they paste query-only data with no page dimension: stop and explain you cannot detect cannibalisation without the page dimension, because the whole point is seeing multiple pages per query. Tell them exactly how to get query and page in one table (the options above).
 
@@ -24,17 +24,18 @@ If they paste query-only data with no page dimension: stop and explain you canno
 
 1. Parse. Pull query, page, clicks, impressions, position for every row. Group rows by query.
 
-2. Flag candidate cannibalisation: any query where 2 or more pages from the same site each have 10+ impressions in the period. Ignore queries where one page takes 90%+ of impressions (that is a clear winner, not cannibalisation).
+2. Flag candidate cannibalisation: any query where 2 or more pages from the same site each have 10+ impressions in the period. Ignore queries where one page takes 90%+ of impressions (that is a clear winner, not cannibalisation). The 10-impression, 90% and 70% figures in this skill are its own default cut-offs, not industry standards: change them if your site differs.
 
 3. Classify each candidate, because not all overlap is a problem:
-   - TRUE CANNIBALISATION: two or more pages trading positions for the query, both ranking in the top 20, impressions split roughly (no page above ~70% share). Google cannot decide. This is the real problem.
-   - SECONDARY DRAG: one page clearly ranks (top 10, majority share) but a second page nibbles impressions from positions 15 to 50. Minor. Worth a canonical or internal-link nudge, not a rebuild.
+   - DOUBLE LISTING: both pages sit in the top 10 with similar average positions (within 3 positions of each other, this skill's default). Google may be showing both on page one, which takes more space, not less. Do not call it cannibalisation from the export alone: mark it "double listing, check the live results page" and ask the user to search the query and see whether both pages appear.
+   - TRUE CANNIBALISATION: two or more pages splitting the query, both ranking in the top 20, impressions split roughly (no page above ~70% share). With a Date dimension or weekly exports, check whether the pages trade positions from week to week; that confirms Google cannot decide. Without dates, call it a SPLIT SHARE and say that rotation was not checked. This is the real problem.
+   - SECONDARY DRAG: one page clearly ranks (top 10, majority share) but a second page nibbles impressions from positions 15 to 50. Minor. Worth an internal-link nudge (a canonical only if the two pages are near-duplicates), not a rebuild.
    - HARMLESS OVERLAP: pages rank for the query but serve genuinely different intent (e.g. a guide and a product page for "x"). Keep both. Not cannibalisation.
    - NEAR-DUPLICATE: two pages so similar they should never have both existed. Consolidation candidate regardless of current positions.
 
 4. For each TRUE CANNIBALISATION and NEAR-DUPLICATE query, decide the fix (one only, the strongest):
    - CONSOLIDATE: merge the weaker page into the stronger, 301 the weaker URL. Use when the two pages serve the same intent and one is clearly stronger.
-   - CANONICAL: point the weaker page's canonical at the stronger. Use when both pages must exist (e.g. for users or paid) but only one should rank.
+   - CANONICAL: point the weaker page's canonical at the stronger. Use only for near-duplicates that must both exist (e.g. for users or paid) while only one should rank. A canonical is a hint, not a command, and Google may ignore it when the pages differ, so for pages that differ, DIFFERENTIATE or CONSOLIDATE instead.
    - DIFFERENTIATE: re-focus one page on a distinct sub-intent and re-optimise title, H1, and opening so they stop competing. Use when both pages deserve to rank but for different queries.
    - DEMOTE INTERNAL LINKS: stop internally linking the wrong page with the target anchor, and point those links at the page you want to win. Use as a supporting move or when the split is mostly internal-link driven.
 
@@ -48,12 +49,14 @@ Date range, total queries analysed, queries with multiple ranking pages, true ca
 TRUE CANNIBALISATION (the priority list, worst first by combined impressions)
   QUERY: [query]
   COMPETING PAGES: [url 1] (pos X, N clicks, M impr) vs [url 2] (pos Y, ...)
-  WHY IT IS REAL: one line on the split
+  WHY IT IS REAL: one line on the split, and whether rotation was checked (SPLIT SHARE if there were no dates)
   KEEPER: [url] and why
   FIX: [CONSOLIDATE / CANONICAL / DIFFERENTIATE / DEMOTE INTERNAL LINKS] with the specific action
   EXPECTED RESULT: what should improve once the signal is consolidated (the keeper's position and click share for this query), as a direction to check in GSC after 4 to 8 weeks, never a promised position
 
 SECONDARY DRAG (lighter touch, listed: query, winner, nibbler, one-line action)
+
+DOUBLE LISTINGS (both pages in the top 10 at similar positions: query, both pages and positions, "check the live results page")
 
 NOT CANNIBALISATION (queries that looked like it but are harmless different-intent overlap, so the user does not waste time)
 

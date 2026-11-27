@@ -2,7 +2,7 @@
 name: technical-seo-audit
 description: >
   Analyses your crawl data and finds the technical issues stopping Google from reading your site properly.
-  Finds redirect chains, duplicate titles, indexing problems, orphan pages, and cannibalisation risks.
+  Finds redirect chains, duplicate titles, indexing problems, orphan pages and overlap risks.
   Works with pasted crawl exports (Screaming Frog, Sitebulb) OR with URLs if Claude has web access.
   Use when someone asks for a "technical SEO audit", to "check my site for technical issues", why
   Google isn't indexing their pages, or pastes a crawl export and wants the issues ranked by severity.
@@ -10,7 +10,7 @@ description: >
 
 # Technical SEO Audit
 
-**What it does:** Finds the technical issues stopping Google from reading your site properly, redirect chains, duplicate titles, indexing problems, orphan pages, and keyword cannibalisation. Ranks everything by severity so you know exactly what to fix first.
+**What it does:** Finds the technical issues stopping Google from reading your site properly, redirect chains, duplicate titles, indexing problems, orphan pages, and possible keyword cannibalisation (confirmed only with Search Console data). Ranks everything by severity so you know exactly what to fix first.
 
 **Who it's for:** Site owners who suspect something's technically wrong but don't know where to start.
 
@@ -74,8 +74,8 @@ Check for (only flag issues you can verify from the data you have):
 - Deep pages (4+ clicks from homepage)
 
 ### Content issues
-- Thin content pages (under 150 words, as a flag to review, not a rule)
-- Keyword cannibalisation (multiple pages targeting the same query)
+- Low word-count pages: under 150 words is this skill's default review trigger, change it if your site differs. A low count is a reason to look, not a quality verdict: length is not originality, so a short page that fully answers its query is fine and a long page can still add nothing new
+- Keyword cannibalisation: a crawl cannot verify it, because it shows which pages exist, not which pages Google ranks for each query. Only flag it from Search Console query-by-page data (two or more pages getting impressions for the same query). Without that data, list pages with near-identical titles or H1s as possible overlap only, and route the user to the Cannibalization Detector skill
 - Duplicate content (very similar page content across URLs)
 
 ### Technical signals
@@ -84,6 +84,10 @@ Check for (only flag issues you can verify from the data you have):
 - HTTPS / mixed content issues
 - hreflang issues (if multilingual)
 - JavaScript rendering: if the site relies on JavaScript and the crawl ran without rendering, say word counts, links and titles may be wrong
+
+### AI crawler access
+- robots.txt rules for AI bots: list any rules naming AI crawlers (for example GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, CCBot) and say which are allowed or blocked. Ask whether that was deliberate, because blocking bots that collect training data and blocking bots that fetch pages live for AI answers are different choices. No AI rules at all means everything is allowed by default; say so
+- Server-rendered content: most AI crawlers do not run JavaScript, so check that the key content (main copy, prices, product details, reviews) is in the raw HTML the server sends. Use View Source or the fetched HTML, not the page as the browser draws it. If key content only appears after JavaScript runs, flag it, because those crawlers will not see it
 
 ## Output Format
 

@@ -39,9 +39,11 @@ If the store runs on Shopify, this skill gets sharper when Claude is connected t
    - CONSTRAINT COVERAGE: list the 5 to 8 "can I / will it / does it" questions a buyer in this vertical asks before purchasing, and check the page answers each in a liftable sentence. Apparel: fit and sizing versus comparable brands, fabric feel, care. Beauty: ingredients, skin-type compatibility, usage. Electronics: compatibility, dimensions, battery, what is in the box. Homewares: dimensions, materials, assembly, care.
    - IDEAL-BUYER CLARITY: does the page say who the product is FOR and, where honest, who it is not? AI assistants match products to people; a page that states its buyer wins those matches.
    - VARIANT CLARITY: sizes, colours and configurations named consistently in copy and schema, so an assistant can answer "does it come in green".
+   - RAW-HTML CHECK: view the page source (not the rendered page) and confirm the specs, price, availability and review text are all in the raw HTML. Most AI crawlers do not run JavaScript, so anything that appears only after a script loads (a review widget, a specs tab, a variant price or stock message) is invisible to them. Anything missing from the source is a top-three fix: render it on the server, or state it in the static copy. If you only have pasted content, ask the user to check view-source and say this was not checked until they do.
 3. Write the rewrites, never the recommendations alone:
    - The optimised TITLE TAG (front-loaded, honest, within display range) and META DESCRIPTION.
    - The PRODUCT DESCRIPTION rebuilt: an opening paragraph that sells the outcome and names the buyer, benefit-led sentences that fold the specs into use cases, and the spec list kept below for scanners. Preserve every factual claim from the source; add nothing you cannot see in the supplied material, and mark gaps [ADD: fact needed].
+   - A SUMMARY PARAGRAPH: one self-contained paragraph of about 50 words that says what the product is, who it is for, its defining attributes and what sets it apart, written so it still makes sense if an AI assistant quotes it on its own.
    - A product FAQ of the constraint questions from step 2, each answered in one self-contained sentence first.
    - ALT-TEXT patterns for the image set.
 4. Write the schema block: Product JSON-LD assembled from the page's actual data (name, image, brand, identifiers, offers with price, priceCurrency and availability, shippingDetails and hasMerchantReturnPolicy where the page states shipping and returns, aggregateRating only if real reviews are visible), flagged clearly where a value needs the store's confirmation. If the product comes in variants (size, colour), use ProductGroup with hasVariant and variesBy rather than one Product that lists every option. State the agreement rule once: schema, feed, and visible page must say the same thing.
@@ -57,9 +59,9 @@ One paragraph: what this page is competing for, its biggest gap, and the single 
 
 THE EIGHT-POINT EVALUATION (element | status | the specific fix, one row each)
 
-THE AI-RECOMMENDATION LAYER (constraint questions with answered/unanswered status, ideal-buyer verdict, variant clarity)
+THE AI-RECOMMENDATION LAYER (constraint questions with answered/unanswered status, ideal-buyer verdict, variant clarity, raw-HTML check)
 
-THE REWRITES (title tag, meta description, rebuilt product description, the FAQ, alt-text patterns, each ready to paste, gaps marked [ADD])
+THE REWRITES (title tag, meta description, rebuilt product description, the 50-word summary paragraph, the FAQ, alt-text patterns, each ready to paste, gaps marked [ADD])
 
 THE SCHEMA BLOCK (Product JSON-LD from the page's real data, confirmation flags where needed)
 

@@ -64,7 +64,7 @@ Claude detects the trigger, loads the skill, and walks you through the five chec
 
 ## Option 2: The Claude app (claude.ai or desktop)
 
-The Claude app installs a skill from a zip. `topical-authority-map.zip` is already in the right shape, with the references and the sample output inside it. Skills work on every plan, including Free.
+The Claude app installs a skill from a zip. `topical-authority-map.zip` is already in the right shape, with the references and the sample output inside it. Anthropic's own help pages disagree on whether the Free plan includes skills, so if you cannot see the option, check your plan.
 
 1. Turn on code execution, which skills need to run. On a Free, Pro or Max plan, go to **Settings > Capabilities** and switch on **Code execution and file creation**. On a Team plan skills are on by default. If they are off on a Team or Enterprise plan, an owner turns them on in **Organization settings > Plugins & skills**, on the Policy tab.
 2. Go to **Plugins** in the sidebar. Click **Add**, then **Upload plugin**.

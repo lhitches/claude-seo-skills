@@ -23,8 +23,8 @@ Never grade content you could not actually read. If you are given only a URL and
 ## Process
 
 1. Establish context: the page's topic, its apparent audience, and whether the topic is YMYL (health, finance, safety, legal, major life decisions). State the scoring mode up front:
-   - SECTION-WEIGHTED (default): Content and Quality 40, Expertise 30, People-first 20, Search-engine-first avoidance 10. Reflects how much each group tends to matter.
-   - YMYL: Content and Quality 30, Expertise 40, People-first 20, Search-engine-first avoidance 10. Use when the topic is YMYL; say why in one line.
+   - SECTION-WEIGHTED (default): Content and Quality 40, Expertise 30, People-first 20, Search-engine-first avoidance 10. These are this skill's house weights, a judgement call, not Google's: Google publishes no weights for these questions. Say so in the report.
+   - YMYL: Content and Quality 30, Expertise 40, People-first 20, Search-engine-first avoidance 10. Also house weights: Google says its systems give more weight to strong expertise and trust signals on these topics, but publishes no numbers. Use when the topic is YMYL; say why in one line.
    - EQUAL: every question worth the same. Use only if the user asks.
 
 2. Grade all 32 of Google's self-assessment questions, in their four groups, using Google's wording as the standard. Never invent or drop a question.

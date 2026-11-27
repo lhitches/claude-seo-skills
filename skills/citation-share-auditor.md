@@ -32,6 +32,7 @@ If the user pastes citation counts but no Citation Share percentages, say so: yo
 1. Parse. Pull each grounding query with its citation count, Citation Share, mapped Topic, and Intent where present. Pull Compare deltas if provided.
 
 2. Bucket every grounding query (and roll up to Topic):
+   The percentage cut-offs below are this skill's own defaults, not Bing's. Change them if your site or market differs.
    - OWNED: high Citation Share (roughly 40 percent or more of the citation space for that query). You are the default source. Protect it.
    - CONTESTED: middling Citation Share (roughly 10 to 40 percent) on a query with real citation volume. The biggest growth opportunities live here: you are already cited, so lifting share is a content and authority job, not a standing start.
    - UNDER-REPRESENTED: low Citation Share (under roughly 10 percent) on a high-volume query. AI knows the topic exists and barely uses you.
@@ -64,7 +65,7 @@ PRIORITY MOVES (up to 8, worst-leak and biggest-opportunity first)
 DO THIS MONTH (top 3 by opportunity, commercial intent first)
 
 WHAT THIS DID NOT CHECK
-Citation Share does not show competitor domains, traffic, or rankings, so this is not a competitive scoreboard. It does not confirm bots can or do crawl you (use the AI Crawler Access Checker and the Clarity AI Bot Auditor for the crawl layer). If a query shows zero citations, check crawl access first: AI cannot cite what it cannot read.
+The data covers Microsoft surfaces only: Copilot, Bing and select partner AI experiences. It says nothing about ChatGPT, Gemini or Claude, so never present it as your whole AI visibility. Citation Share does not show competitor domains, traffic, or rankings, so this is not a competitive scoreboard. It does not confirm bots can or do crawl you (use the AI Crawler Access Checker and the Clarity AI Bot Auditor for the crawl layer). If a query shows zero citations, check crawl access first: AI cannot cite what it cannot read.
 
 ## Rules
 
@@ -73,7 +74,7 @@ Citation Share does not show competitor domains, traffic, or rankings, so this i
 - One move per opportunity. The point is a focused plan, not a backlog.
 - Falling share on an OWNED or CONTESTED commercial query is the most urgent finding. Surface leaks before chasing new wins.
 - Do not invent grounding queries, Topics, or shares not in the data.
-- If citations are zero across the board, the problem is upstream (crawl access or the site is too new). Say so and point to the crawl-layer tools.
+- If citations are zero across the board, the problem is upstream (crawl access, an opt-out, or the site is too new). Say so and point to the crawl-layer tools. Also check you have not opted out of Bing AI answers: look for an `ai-grounding:disallow` or `ai-grounding:disallowextended` value in a Bingbot meta tag or X-Robots-Tag header, and for NoArchive or NoCache tags, which Bing has treated as AI controls until its new training and grounding preferences take over.
 - Australian English. No em-dashes.
 
 ## Voice

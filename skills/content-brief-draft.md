@@ -38,7 +38,7 @@ If you can search the web, look at the pages currently ranking for the topic and
 - **Target length.** A word count range based on how deep the topic genuinely is. Do not pad. A precise 900-word page beats a bloated 2,500-word one.
 - **Heading structure.** A full skeleton: the H1, every H2, and H3s where a section needs them. Order headings by what the reader needs first and what they search for most, not alphabetically and not "definition first" out of habit.
 - **Entities to cover.** The specific things, concepts, people, products, and terms a credible page on this topic must mention. This is how you show Google the page is genuinely about the subject. List them.
-- **Internal links.** Three to five other pages on the user's site this page should link to, with a note on why each link helps the reader.
+- **Internal links.** Three to five other pages on the user's site this page should link to, with a note on why each link helps the reader. Name only pages the user has confirmed exist; for any page you are unsure of, write [page to confirm] and say what it should cover.
 - **Where expertise matters most.** Name the two or three sections where the user's first-hand experience will make the biggest difference.
 
 ## Step 3. Write the first draft
